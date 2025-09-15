@@ -9,9 +9,7 @@
     "dark": "#111111"
   },
   "favicon": "/favicon.png",
-  "logo": "/logo.png"
-    "href": "https://collony.ai"
-  },
+  "logo": "/logo.png",
   "navigation": {
     "groups": [
       {
