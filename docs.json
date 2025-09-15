@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "collony docs",
   "description": "Documentation for collony AI — Telegram & Discord community moderation setup and guides.",
   "colors": {
