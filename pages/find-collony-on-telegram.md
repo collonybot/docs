@@ -11,7 +11,7 @@ description: Locate and confirm the official collony AI bot on Telegram.
 
 ---
 
-# Step 3: Find collony.ai on Telegram
+# 🔎 Step 3: Find collony.ai on Telegram
 
 With your group prepared, you can now find the official collony AI moderator:
 

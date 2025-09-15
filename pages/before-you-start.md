@@ -11,7 +11,7 @@ description: Create and configure your Telegram group so collony can join later.
 
 ---
 
-# Before You Start
+# 🏎️ Step 1: Before You Start
 
 Before setting up the collony AI moderator, ensure the following:
 
