@@ -3,7 +3,11 @@
   "theme": "maple",
   "name": "collony docs",
   "description": "collony AI — Telegram & Discord community moderator docs.",
-  "colors": { "primary": "#F4A700", "light": "#EFEDE6", "dark": "#111111" },
+  "colors": {
+    "primary": "#F4A700",
+    "light": "#EFEDE6",
+    "dark": "#111111"
+  },
   "favicon": "/public/favicon.png",
   "logo": {
     "light": "/public/darklogo.png",
@@ -14,40 +18,30 @@
     "groups": [
       { "group": "Get Started", "pages": ["index"] },
       {
-        "group": "Telegram Bot",
-        "pages": [],
-        "subGroups": [
-          {
-            "group": "Setup",
-            "pages": [
-              "before_you_start",
-              "prepare-your-telegram-group",
-              "find-collony-ai-on-telegram",
-              "add-collony-to-your-group"
-            ]
-          },
-          {
-            "group": "Customize",
-            "pages": [
-              "in-bot-setup-menu",
-              "add-project-description",
-              "add-project-knowledge-base",
-              "set-community-moderation-rules",
-              "set-community-mod-personality"
-            ]
-          },
-          {
-            "group": "Manage",
-            "pages": [
-              "manage-admins-and-moderators",
-              "setup-the-admin-dashboard-chat"
-            ]
-          }
+        "group": "Setup",
+        "pages": [
+          "before_you_start",
+          "prepare-your-telegram-group",
+          "find-collony-ai-on-telegram",
+          "add-collony-to-your-group"
         ]
       },
       {
-        "group": "Discord Bot (coming soon)",
-        "pages": []
+        "group": "Customize",
+        "pages": [
+          "in-bot-setup-menu",
+          "add-project-description",
+          "add-project-knowledge-base",
+          "set-community-moderation-rules",
+          "set-community-mod-personality"
+        ]
+      },
+      {
+        "group": "Manage",
+        "pages": [
+          "manage-admins-and-moderators",
+          "setup-the-admin-dashboard-chat"
+        ]
       }
     ]
   },
