@@ -14,30 +14,40 @@
     "groups": [
       { "group": "Get Started", "pages": ["index"] },
       {
-        "group": "Setup",
-        "pages": [
-          "before_you_start",
-          "prepare-your-telegram-group",
-          "find-collony-ai-on-telegram",
-          "add-collony-to-your-group"
+        "group": "Telegram Bot",
+        "pages": [],
+        "subGroups": [
+          {
+            "group": "Setup",
+            "pages": [
+              "before_you_start",
+              "prepare-your-telegram-group",
+              "find-collony-ai-on-telegram",
+              "add-collony-to-your-group"
+            ]
+          },
+          {
+            "group": "Customize",
+            "pages": [
+              "in-bot-setup-menu",
+              "add-project-description",
+              "add-project-knowledge-base",
+              "set-community-moderation-rules",
+              "set-community-mod-personality"
+            ]
+          },
+          {
+            "group": "Manage",
+            "pages": [
+              "manage-admins-and-moderators",
+              "setup-the-admin-dashboard-chat"
+            ]
+          }
         ]
       },
       {
-        "group": "Customize",
-        "pages": [
-          "in-bot-setup-menu",
-          "add-project-description",
-          "add-project-knowledge-base",
-          "set-community-moderation-rules",
-          "set-community-mod-personality"
-        ]
-      },
-      {
-        "group": "Manage",
-        "pages": [
-          "manage-admins-and-moderators",
-          "setup-the-admin-dashboard-chat"
-        ]
+        "group": "Discord Bot (coming soon)",
+        "pages": []
       }
     ]
   },
