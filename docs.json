@@ -42,9 +42,9 @@
     "global": {
       "anchors": [
         { "anchor": "Website",   "href": "https://collony.ai", "icon": "globe" },
-        { "anchor": "Telegram",  "href": "https://t.me/collonyai", "icon": "paper-airplane" },
         { "anchor": "X (Twitter)", "href": "https://x.com/collonyai", "icon": "x" },
         { "anchor": "LinkedIn",  "href": "https://www.linkedin.com/company/collony", "icon": "linkedin" }
+        { "anchor": "Telegram",  "href": "https://t.me/collonyai", "icon": "telegram" },
       ]
     }
   },
