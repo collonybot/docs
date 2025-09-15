@@ -13,4 +13,4 @@ Admins control the entire collony setup process – from inviting the bot to you
 
 ![Managing admins and moderators in collony AI](/public/Screenshot_2025-08-28_at_14.17.38.png)
 
-> 💡 **Tip:** Admins can be added or removed anytime, but all have equal rights – even the one who added collony can be removed. To avoid issues, keep the admin list small and limited to trusted team members.
+<Tip>💡 **Tip:** Admins can be added or removed anytime, but all have equal rights – even the one who added collony can be removed. To avoid issues, keep the admin list small and limited to trusted team members.</Tip>
