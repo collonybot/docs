@@ -20,7 +20,7 @@
       {
         "group": "Setup",
         "pages": [
-          "before_you_start",
+          "before-you-start",
           "prepare-your-telegram-group",
           "find-collony-ai-on-telegram",
           "add-collony-to-your-group"
