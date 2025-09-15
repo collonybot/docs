@@ -9,15 +9,13 @@
     "dark": "#111111"
   },
   "favicon": "/favicon.png",
-  "logo": {
-    "light": "/logo-light.png",
-    "dark": "/logo-dark.png",
+  "logo": "/logo.png"
     "href": "https://collony.ai"
   },
   "navigation": {
     "groups": [
       {
-        "group": "Onboarding",
+        "group": "Setup",
         "pages": [
           "before_you_start",
           "prepare-your-telegram-group",
@@ -26,7 +24,7 @@
         ]
       },
       {
-        "group": "Configuration",
+        "group": "Customize",
         "pages": [
           "in-bot-setup-menu",
           "add-project-description",
@@ -36,7 +34,7 @@
         ]
       },
       {
-        "group": "Operations",
+        "group": "Manage",
         "pages": [
           "manage-admins-and-moderators",
           "setup-the-admin-dashboard-chat"
