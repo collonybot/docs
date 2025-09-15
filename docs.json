@@ -1,68 +1,39 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "collony docs",
+  "description": "Documentation for collony AI — Telegram & Discord community moderation setup and guides.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#F4A700",
+    "light": "#FFE9A8",
+    "dark": "#111111"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
+  "logo": {
+    "light": "/logo-light.png",
+    "dark": "/logo-dark.png",
+    "href": "https://collony.ai"
+  },
+
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Docs",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "collony AI Setup Guide",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "before_you_start",
+              "prepare-your-telegram-group",
+              "find-collony-ai-on-telegram",
+              "add-collony-to-your-group",
+              "in-bot-setup-menu",
+              "add-project-description",
+              "add-project-knowledge-base",
+              "set-community-moderation-rules",
+              "set-community-mod-personality",
+              "manage-admins-and-moderators",
+              "setup-the-admin-dashboard-chat"
             ]
           }
         ]
@@ -70,58 +41,31 @@
     ],
     "global": {
       "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
+        { "anchor": "Website",   "href": "https://collony.ai", "icon": "globe" },
+        { "anchor": "Telegram",  "href": "https://t.me/collonyai", "icon": "paper-airplane" },
+        { "anchor": "X (Twitter)", "href": "https://x.com/collonyai", "icon": "x" },
+        { "anchor": "LinkedIn",  "href": "https://www.linkedin.com/company/collony", "icon": "linkedin" }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
+      { "label": "Support", "href": "https://t.me/collonyai" }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://collony.ai"
     }
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
+
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/collonyai",
+      "telegram": "https://t.me/collonyai",
+      "linkedin": "https://www.linkedin.com/company/collony",
+      "website": "https://collony.ai"
     }
   }
 }
