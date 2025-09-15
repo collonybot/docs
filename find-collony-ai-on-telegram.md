@@ -1,15 +1,15 @@
 ---
-title: "Find the Official collony AI Bot on Telegram"
+title: "Find the official collony AI Bot on Telegram"
 description: "Learn how to locate and verify the official collony AI moderator (@CollonyBot) on Telegram before adding it to your community group."
 ---
 
-# 🔎 Find collony AI on Telegram
+# 🔎 Find the Bot
 
-With your group prepared, you can now find and confirm the official **collony AI Telegram moderator**:
+Before adding collony to your group, make sure you’re connecting with the **official Telegram bot**:
 
-1. Open **Telegram** on your phone or desktop.
-2. In the **search bar**, type `collony.ai` or `@CollonyBot`.
-3. In **Global Search results**, the official collony bot should appear at the top.
+1. Open **Telegram** on your phone or desktop.  
+2. In the **search bar**, type `collony.ai` or `@CollonyBot`.  
+3. In **Global Search results**, the official collony bot should appear at the top.  
 
 ![Search results for collony AI on Telegram](/public/Screenshot_2025-08-28_at_15.57.21.png)
 

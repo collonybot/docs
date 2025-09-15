@@ -3,13 +3,15 @@ title: "Add a Project Knowledge Base in collony AI"
 description: "Add a knowledge base in collony AI so the moderator can provide accurate answers for your community."
 ---
 
-# 📚 Add Project Knowledge Base
+# 📚 Knowledge Base
 
-1. In the setup menu, select **Knowledge Base**.
+The knowledge base powers collony’s responses. By adding FAQs, key details, and links, you help the bot give accurate answers and reduce repetitive questions in your community.
 
-![collony AI knowledge base setup screen](/public/Screenshot_2025-08-28_at_14.43.40.png)
+1. In the setup menu, select **Knowledge Base**.  
 
-2. Add your project information or FAQs to help collony answer community questions more effectively.
-3. Save to activate.
+   ![collony AI knowledge base setup screen](/public/Screenshot_2025-08-28_at_14.43.40.png)
+
+2. Add your project information or FAQs to help collony answer community questions more effectively.  
+3. Save to activate.  
 
 > ⚡ The more details you add, the better collony can moderate and respond to your community.
