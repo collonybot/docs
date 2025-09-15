@@ -42,25 +42,7 @@
           "setup-the-admin-dashboard-chat"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        { "anchor": "Website", "href": "https://collony.ai", "icon": "globe" },
-        { "anchor": "X (Twitter)", "href": "https://x.com/collonyai", "icon": "x" },
-        { "anchor": "LinkedIn", "href": "https://www.linkedin.com/company/collony", "icon": "linkedin" },
-        { "anchor": "Telegram", "href": "https://t.me/collonyai", "icon": "paper-airplane" }
-      ]
-    }
-  },
-  "navbar": {
-    "links": [
-      { "label": "Support", "href": "https://t.me/collonyai" }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://collony.ai"
-    }
+    ]
   },
   "footer": {
     "socials": {
