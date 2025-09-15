@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "collony docs",
+  "name": "collony.ai",
   "description": "collony AI — Telegram & Discord community moderator docs.",
   "colors": {
     "primary": "#F4A700",
