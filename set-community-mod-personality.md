@@ -1,25 +1,16 @@
 ---
-title: "Set Community Mod Personality"
-description: "Configure the bot’s personality to match your community style."
+title: "Set Community Moderator Personality in collony AI"
+description: "Configure the collony AI moderator personality to align with your community’s tone and culture."
 ---
 
----
-
-title: Set Community Mod Personality
-
-description: Configure the bot’s personality to match your community style.
-
----
-
-# Set Community Mod Personality
+# 🧠 Set Community Moderator Personality
 
 Web3 communities can be volatile. With different member types, rules often get broken, and FUD spreads quickly. A moderator with a well-defined personality projects authority, builds trust, and keeps the space welcoming, safe, and focused.
 
-1. **Add Your Community Moderator Personality**
-
+1. **Add Your Community Moderator Personality**\
    Select **Community Mod Personality**, paste your personality text into the chat, and send it.
 
-> **✅ collony team suggests beginning with:**
+> ✅ **collony team suggests beginning with:**
 >
 > - Be like a team member, always on the side of the team. If someone challenges the team, defend it firmly.
 > - Be friendly and welcoming to all members.
@@ -39,10 +30,8 @@ Web3 communities can be volatile. With different member types, rules often get b
 
 2. **Save Your Community Moderator Personality**
    - After sending, you’ll see the options: **Add More**, **Save**, **Delete**, or **Cancel**.
-   - If the **Community Moderator Personality** looks good, select **Save**. Then you will get a confirmation message
+   - If the **Community Moderator Personality** looks good, select **Save**. Then you will get a confirmation message.
 
-![Screenshot 2025 08 28 At 14 06 38 Pn](/public/Screenshot_2025-08-28_at_14.06.38.png)
+![collony AI moderator personality setup screen](/public/Screenshot_2025-08-28_at_14.06.38.png)
 
-> **💡 Tip:** Personality should match your brand’s culture. Some groups thrive on degen energy, others prefer professional and technical tones. Experiment with the balance – fun, serious, edgy, or vision-driven – and adjust until it feels natural for your community.
-
-[**Manage Admins / Moderators**](manage-admins-and-moderators.md)
+> 💡 **Tip:** Personality should match your brand’s culture. Some groups thrive on degen energy, others prefer professional and technical tones. Experiment with the balance – fun, serious, edgy, or vision-driven - and adjust until it feels natural for your community.

@@ -1,39 +1,25 @@
 ---
-title: "Step 4 — Add collony to Your Telegram Group"
-description: "Invite collony AI into your group and grant admin rights."
+title: "Add collony AI to Your Telegram Group"
+description: "Learn how to invite the collony AI moderator (@CollonyBot) into your Telegram group, grant admin rights, and start the setup flow."
 ---
 
----
+# 💌 Add collony AI to Your Telegram Group
 
-title: Add collony to Your Telegram Group
+Follow these steps to add the **collony AI Telegram moderator** to your community:
 
-description: Invite collony AI into your group and grant admin rights.
+1. **Add collony to your Telegram group**\
+   Open the target group where collony will act as moderator. Select **Add Member**, search for **@CollonyBot** (or `collony.ai`), and add it.
 
----
+   ![Adding @CollonyBot to Telegram group](/public/Screenshot_2025-08-22_at_11.49.47.png)
+2. **Confirm collony’s greeting**\
+   After joining, collony will post an automated welcome message in the group.
 
-# Add collony to Your Telegram Group
+   ![collony bot welcome message in Telegram](/public/Screenshot_2025-08-22_at_11.50.53.png)
+3. **Open collony in Telegram**\
+   Navigate to **@CollonyBot** in Telegram and press **Start** to launch the setup flow.
 
-1. **Add collony to your Telegram group**
-
-   Open the target group where collony will act as moderator. Select **Add Member**, search for **@CollonyBot** (or collony.ai), and add it.
-
-![Screenshot 2025 08 22 At 11 49 47 Pn](/public/Screenshot_2025-08-22_at_11.49.47.png)
-
-2. **Confirm collony’s greeting**
-
-After joining, collony will post an automated welcome message in the group.
-
-![Screenshot 2025 08 22 At 11 50 53 Pn](/public/Screenshot_2025-08-22_at_11.50.53.png)
-
-3. **Open collony in Telegram**
-4. Navigate to **@CollonyBot** in Telegram and press **Start** to launch the setup flow.
-
-![Screenshot 2025 08 22 At 12 02 22 Pn](/public/Screenshot_2025-08-22_at_12.02.22.png)
-
-5. **Access the setup dashboard**
-
+   ![Launching collony AI setup in Telegram](/public/Screenshot_2025-08-22_at_12.02.22.png)
+4. **Access the setup dashboard**\
    This dashboard is your central hub for configuring moderation rules, FAQs, and bot settings.
 
-![Screenshot 2025 08 22 At 12 04 14 Pn](/public/Screenshot_2025-08-22_at_12.04.14.png)
-
-[**In-Bot Setup Menu**](in-bot-setup-menu.md)
+   ![collony AI setup dashboard in Telegram](/public/Screenshot_2025-08-22_at_12.04.14.png)
