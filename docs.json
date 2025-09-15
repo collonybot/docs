@@ -6,8 +6,8 @@
   "colors": { "primary": "#F4A700", "light": "#EFEDE6", "dark": "#111111" },
   "favicon": "/public/favicon.png",
   "logo": {
-    "light": "/public/lightlogo.png",
-    "dark": "/public/darklogo.png",
+    "light": "/public/darklogo.png",
+    "dark": "/public/lightlogo.png",
     "href": "https://collony.ai"
   },
   "navigation": {
