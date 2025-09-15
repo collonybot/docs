@@ -13,4 +13,6 @@ Before adding collony to your group, make sure you’re connecting with the **of
 
 ![Search results for collony AI on Telegram](/public/Screenshot_2025-08-28_at_15.57.21.png)
 
-> ⚠️ **Important:** Always verify that the handle is **@CollonyBot** and that the profile name matches the official collony bot before adding it to your group.
+<Warning>
+  Important:Always verify that the handle is **@CollonyBot** and that the profile name matches the official collony bot before adding it to your group.
+  </Warning>

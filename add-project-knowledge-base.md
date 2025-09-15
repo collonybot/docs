@@ -14,4 +14,6 @@ The knowledge base powers collony’s responses. By adding FAQs, key details, an
 2. Add your project information or FAQs to help collony answer community questions more effectively.  
 3. Save to activate.  
 
-> ⚡ The more details you add, the better collony can moderate and respond to your community.
+<Tip>
+  Tip: The more details you add, the better collony can moderate and respond to your community.
+  </Tip>

@@ -13,4 +13,6 @@ Your project description is shown when members interact with the bot. It helps o
 
 ![Adding a project description in collony AI setup](/public/Screenshot_2025-08-28_at_14.34.48.png)
 
-> 💡 Keep it short but informative – a strong description builds trust with new members.
+<Tip>
+  Keep it short but informative – a strong description builds trust with new members.
+</Tip>

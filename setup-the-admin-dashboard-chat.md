@@ -12,10 +12,9 @@ In addition to your main community chat, you’ll need a **private Telegram grou
 
 2. **Enable Visible Chat History**  
    In **Group Settings → Chat History for New Members**, set history to **Visible**.  
+<Warning> Required: Chat history must be visible in **both** your main community chat and your dashboard group for collony to function properly. </Warning>
 
-> ✅ **Required:** Chat history must be visible in **both** your main community chat and your dashboard group for collony to function properly.  
-
-3. **Add collony to the Dashboard Group**  
+4. **Add collony to the Dashboard Group**  
    As with your main chat, click **Add Member**, search for **@CollonyBot** (or `collony.ai`), and add it.  
 
 ![Adding collony bot to the dashboard group](/public/Screenshot_2025-08-22_at_12.08.54.png)
@@ -30,4 +29,6 @@ In addition to your main community chat, you’ll need a **private Telegram grou
 
 ![Example of collony AI admin dashboard log](/public/Screenshot_2025-08-24_at_17.47.53.png)
 
-> 🎉 **That’s it!** By completing these steps, you’ve fully configured the collony AI community moderator for your project.
+<Note>
+  That’s it! By completing these steps, you’ve fully configured the collony AI community moderator for your project.
+</Note>

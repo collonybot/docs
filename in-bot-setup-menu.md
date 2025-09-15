@@ -18,4 +18,6 @@ This is your **control panel**: it connects your community group, links your das
 
    ![Selecting a Telegram community group in collony AI setup menu](/public/Screenshot_2025-08-22_at_12.50.27.png)
 
-> 💡 Once your group is connected, you’ll configure project info, moderation rules, and bot personality in the following steps.
+<Tip>
+  Next: Once your group is connected, you’ll configure project info, moderation rules, and bot personality in the following steps.
+  </Tip>

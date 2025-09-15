@@ -11,4 +11,6 @@ Before setting up the **collony AI Telegram moderator**, make sure you have the 
 2. **Admin rights** – the account must have full administrator permissions in the target group/channel.
 3. **Target group/channel** – a Telegram group or channel where collony AI will operate (moderation \+ engagement).
 
-> **💡 Tip:** If you don’t have a Telegram community yet, create one first before inviting the collony bot.
+<Tip>
+  Tip: If you don’t have a Telegram community yet, create one first before inviting the collony bot.
+</Tip>
