@@ -3,26 +3,12 @@
   "theme": "maple",
   "name": "collony docs",
   "description": "collony AI — Telegram & Discord community moderator docs.",
-  "colors": {
-    "primary": "#F4A700",
-    "light": "#FFE9A8",
-    "dark": "#111111"
-  },
-
+  "colors": { "primary": "#F4A700", "light": "#EFEDE6", "dark": "#111111" },
   "favicon": "/public/favicon.png",
-
-  "logo": {
-    "light": "/public/logo_light.png",
-    "dark": "/public/logo_dark.png",
-    "href": "https://collony.ai"
-  },
-
+  "logo": "/public/logo.png",
   "navigation": {
     "groups": [
-      {
-        "group": "Home",
-        "pages": ["index"]
-      },
+      { "group": "Get Started", "pages": ["index"] },
       {
         "group": "Setup",
         "pages": [
@@ -51,7 +37,6 @@
       }
     ]
   },
-
   "footer": {
     "socials": {
       "x": "https://x.com/collonyai",
