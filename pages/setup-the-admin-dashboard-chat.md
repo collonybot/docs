@@ -1,0 +1,40 @@
+---
+title: "Set Up the Admin Dashboard Chat"
+description: "Configure your private admin dashboard chat for moderation alerts."
+---
+
+---
+
+title: Set Up the Admin Dashboard Chat
+
+description: Configure your private admin dashboard chat for moderation alerts.
+
+# Setup the Admin Dashboard Chat
+
+Besides your main community chat, you’ll need a separate **private Telegram group** that acts as your **collony admin dashboard**. This is where collony delivers internal alerts to your team – deleted messages, reasons for removals, suspicious activity, and other moderation reports.
+
+1. **Create a Private Telegram Group**
+
+   Name it something clear like **[Your Project] Dashboard** and add core team members who should receive moderation updates.
+2. **Enable Visible Chat History**
+
+   In **Group Settings → Chat History for New Members**, set history to **Visible**.
+
+> **✅ Required:** Chat history must be visible in **both** your main community chat and your dashboard group for collony to function properly.
+
+3. **Add collony to the Dashboard Group**
+
+As with your main chat, click **Add Member**, search for **@CollonyBot** (or collony.ai), and add it.
+
+![Screenshot 2025 08 22 At 12 08 54 Pn](/public/Screenshot_2025-08-22_at_12.08.54.png)
+
+4. **How the Dashboard Works**
+
+   When collony flags suspicious content, it will:
+   - Remove the message from the main chat
+   - Mute or ban the user (depending on rules)
+   - Post a detailed report in your **admin** **dashboard group** with sender info, removed content, and reason for action. This way, your team has full visibility without disrupting the community experience.
+
+![Screenshot 2025 08 24 At 17 47 53 Pn](/public/Screenshot_2025-08-24_at_17.47.53.png)
+
+**🎉 That’s it\!** By completing these steps, you’ve fully configured the collony AI community moderator for your project.
