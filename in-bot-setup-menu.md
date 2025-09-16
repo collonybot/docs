@@ -1,5 +1,5 @@
 ---
-title: "In-Bot Setup Menu in collony AI"
+title: "In-Bot Setup Menu"
 description: "Learn how to use the in-bot setup menu inside collony AI to connect groups, configure the dashboard, and manage your community settings."
 ---
 

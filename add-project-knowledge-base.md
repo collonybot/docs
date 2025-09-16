@@ -1,5 +1,5 @@
 ---
-title: "Add a Project Knowledge Base in collony AI"
+title: "Add a Project Knowledge Base"
 description: "Add a knowledge base in collony AI so the moderator can provide accurate answers for your community."
 ---
 

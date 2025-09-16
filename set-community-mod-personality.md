@@ -1,5 +1,5 @@
 ---
-title: "Set Community Moderator Personality in collony AI"
+title: "Set Community Moderator Personality"
 description: "Configure the collony AI moderator personality to align with your community’s tone and culture."
 ---
 

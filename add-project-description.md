@@ -1,5 +1,5 @@
 ---
-title: "Add a Project Description in collony AI"
+title: "Add a Project Description"
 description: "Learn how to add your project description inside collony AI so members understand your community and purpose."
 ---
 

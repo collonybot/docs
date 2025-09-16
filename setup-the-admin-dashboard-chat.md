@@ -1,5 +1,5 @@
 ---
-title: "Setup the Admin Dashboard Chat in collony AI"
+title: "Setup the Admin Dashboard"
 description: "Create a private Telegram dashboard chat in collony AI to receive alerts, moderation logs, and reports."
 ---
 

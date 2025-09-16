@@ -1,5 +1,5 @@
 ---
-title: "Add collony AI to Your Telegram Group"
+title: "Invite to Your Group"
 description: "Learn how to invite the collony AI moderator (@CollonyBot) into your Telegram group, grant admin rights, and start the setup flow."
 ---
 

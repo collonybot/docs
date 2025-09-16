@@ -1,5 +1,5 @@
 ---
-title: "Prepare Your Telegram Group for collony AI"
+title: "Prepare Your Telegram Group"
 description: "Adjust Telegram group settings and permissions so the collony AI moderator can join, review past messages, and moderate effectively."
 ---
 

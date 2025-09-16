@@ -1,5 +1,5 @@
 ---
-title: "Create a Telegram Group for collony AI Moderator"
+title: "Create a Telegram Group"
 description: "Learn how to set up and configure your Telegram group so the collony AI community moderator can join, manage, and engage your community."
 ---
 
