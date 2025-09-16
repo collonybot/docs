@@ -1,5 +1,5 @@
 ---
-title: "Find the official bot on Telegram"
+title: "Find @CollonyBot on Telegram"
 description: "Learn how to locate and verify the official collony AI moderator (@CollonyBot) on Telegram before adding it to your community group."
 ---
 
