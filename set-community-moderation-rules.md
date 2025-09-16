@@ -1,5 +1,5 @@
 ---
-title: "Set Community Moderation Rules"
+title: "Set Moderation Rules"
 description: "Define and enforce custom community rules in collony AI so your Telegram group stays safe and consistent."
 ---
 

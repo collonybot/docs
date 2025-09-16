@@ -1,5 +1,5 @@
 ---
-title: "Manage Admins and Moderators"
+title: "Manage Admins & Moderators"
 description: "Learn how to add and manage project admins and moderators in collony AI for your Telegram community."
 ---
 
