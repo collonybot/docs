@@ -3,7 +3,7 @@ title: "In-Bot Setup Menu"
 description: "Learn how to use the in-bot setup menu inside collony AI to connect groups, configure the dashboard, and manage your community settings."
 ---
 
-# 🏗️ Setup Menu
+# 🏗️ In-Bot Setup Menu
 
 Once collony AI is added to your groups and activated, you’ll see the **setup menu**.  
 This is your **control panel**: it connects your community group, links your dashboard group, and gives you access to all core configuration options.

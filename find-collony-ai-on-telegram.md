@@ -3,7 +3,7 @@ title: "Find collony.ai on Telegram"
 description: "Learn how to locate and verify the official collony AI moderator (@CollonyBot) on Telegram before adding it to your community group."
 ---
 
-# 🔎 Find the Bot
+# 🔎 Find collony.ai on Telegram
 
 Before adding collony to your group, make sure you’re connecting with the **official Telegram bot**:
 

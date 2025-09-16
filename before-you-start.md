@@ -3,7 +3,7 @@ title: "Create a Group"
 description: "Learn how to set up and configure your Telegram group so the collony AI community moderator can join, manage, and engage your community."
 ---
 
-# 🏎️  Before You Start
+# 🏎️  Create a Telegram Group
 
 Before setting up the **collony AI Telegram moderator**, make sure you have the following ready:
 

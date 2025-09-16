@@ -3,7 +3,7 @@ title: "Add Project Description"
 description: "Learn how to add your project description inside collony AI so members understand your community and purpose."
 ---
 
-# ✏️ Project Description
+# ✏️ Add Project Description
 
 Your project description is shown when members interact with the bot. It helps onboard newcomers, clarify your mission, and build trust in your community.
 

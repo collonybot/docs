@@ -1,9 +1,9 @@
 ---
-title: "Setup the Admin Dashboard"
+title: "Admin Dashboard Setup"
 description: "Create a private Telegram dashboard chat in collony AI to receive alerts, moderation logs, and reports."
 ---
 
-# ⚙️ Admin Dashboard
+# ⚙️ Admin Dashboard Setup
 
 In addition to your main community chat, you’ll need a **private Telegram group** that serves as your **collony dashboard**. This is where moderation alerts, removals, and suspicious activity reports will be sent for your team’s review.
 

@@ -3,7 +3,7 @@ title: "Set Moderation Rules"
 description: "Define and enforce custom community rules in collony AI so your Telegram group stays safe and consistent."
 ---
 
-# ⛏️ Define Moderation Rules
+# ⛏️ Set Moderation Rules
 
 Clear rules are essential for collony to moderate effectively. While the bot already blocks spam, scams, and harmful content, every Web3 community has unique standards. Your rules guide collony on when to delete, mute, or ban members.
 

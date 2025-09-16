@@ -3,7 +3,7 @@ title: "Set Moderator Personality"
 description: "Configure the collony AI moderator personality to align with your community’s tone and culture."
 ---
 
-# 🧠 Define Moderator Personality
+# 🧠 Set Moderator Personality
 
 Web3 communities can be volatile. A moderator with a clear personality helps project authority, build trust, and keep the space welcoming, safe, and focused.
 

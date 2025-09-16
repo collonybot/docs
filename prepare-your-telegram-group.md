@@ -3,7 +3,7 @@ title: "Prepare Your Group"
 description: "Adjust Telegram group settings and permissions so the collony AI moderator can join, review past messages, and moderate effectively."
 ---
 
-# 🔩 Adjust Group Settings
+# 🔩 Prepare Your Telegram Group
 
 Before inviting the collony AI moderator, update your Telegram group permissions so the bot can function properly:
 
