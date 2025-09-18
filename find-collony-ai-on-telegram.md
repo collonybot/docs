@@ -8,7 +8,7 @@ description: "Learn how to locate and verify the official collony AI moderator (
 Before adding collony to your group, make sure you’re connecting with the **official Telegram bot**:
 
 1. Open **Telegram** on your phone or desktop.  
-2. In the **search bar**, type `collony.ai` or `@CollonyBot`.  
+2. In the **search bar**, type `collony.ai` or [@CollonyBot](https://t.me/CollonyBot). 
 3. In **Global Search results**, the official collony bot should appear at the top.  
 
 ![Search results for collony AI on Telegram](/public/Screenshot_2025-08-28_at_15.57.21.png)
