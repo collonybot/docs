@@ -39,8 +39,11 @@
       {
         "group": "Manage",
         "pages": [
+          "setup-the-admin-dashboard-chat",
           "manage-admins-and-moderators",
-          "setup-the-admin-dashboard-chat"
+          "user-history-management",
+          "content-moderation",
+          "bot-schedule-configuration"
         ]
       }
     ]
