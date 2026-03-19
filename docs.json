@@ -4,9 +4,9 @@
   "name": "collony.ai",
   "description": "collony AI — Telegram & Discord community moderator docs.",
   "colors": {
-    "primary": "#FEAC01",
-    "light": "#EFEDE6",
-    "dark": "#111111"
+    "primary": "#C8C8D8",
+    "light": "#EDEDED",
+    "dark": "#0A0A0A"
   },
   "favicon": "/public/favicon.png",
   "logo": {
@@ -55,5 +55,15 @@
       "linkedin": "https://www.linkedin.com/company/collony",
       "website": "https://collony.ai"
     }
+  },
+  "background": {
+    "color": {
+      "light": "#EDEDED",
+      "dark": "#0A0A0A"
+    },
+    "decoration": "gradient"
+  },
+  "fonts": {
+    "family": "Geist"
   }
 }
