@@ -10,8 +10,8 @@
   },
   "favicon": "/public/favicon.png",
   "logo": {
-    "light": "/public/darklogo.png",
-    "dark": "/public/lightlogo.png",
+    "light": "/public/lightlogo.png",
+    "dark": "/public/darklogo.png",
     "href": "https://collony.ai"
   },
   "navigation": {
@@ -61,9 +61,12 @@
       "light": "#EDEDED",
       "dark": "#0A0A0A"
     },
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "fonts": {
     "family": "Geist"
+  },
+  "appearance": {
+    "strict": true
   }
 }
