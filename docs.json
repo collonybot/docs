@@ -2,14 +2,21 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "collony.ai",
-  "description": "collony AI — Telegram & Discord community moderator docs.",
+  "description": "collony AI – Telegram & Discord community moderator docs.",
   "colors": {
     "primary": "#C8C8D8",
     "light": "#EDEDED",
-    "dark": "#0A0A0A"
+    "dark": "#0F0F12"
   },
   "favicon": "/public/favicon.png",
-  "logo": "/public/lightlogo.png",
+  "logo": {
+    "light": "/public/darklogo.png",
+    "dark": "/public/lightlogo.png"
+  },
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://collony.ai"
+  },
   "navigation": {
     "groups": [
       { "group": "Get Started", "pages": ["index"] },
@@ -55,7 +62,7 @@
   "background": {
     "color": {
       "light": "#EDEDED",
-      "dark": "#0A0A0A"
+      "dark": "#0F0F12"
     },
     "decoration": "gradient"
   },
