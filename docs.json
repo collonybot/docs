@@ -9,11 +9,7 @@
     "dark": "#0A0A0A"
   },
   "favicon": "/public/favicon.png",
-  "logo": {
-    "light": "/public/lightlogo.png",
-    "dark": "/public/darklogo.png",
-    "href": "https://collony.ai"
-  },
+  "logo": "/public/lightlogo.png",
   "navigation": {
     "groups": [
       { "group": "Get Started", "pages": ["index"] },
@@ -61,7 +57,7 @@
       "light": "#EDEDED",
       "dark": "#0A0A0A"
     },
-    "decoration": "grid"
+    "decoration": "gradient"
   },
   "fonts": {
     "family": "Geist"
