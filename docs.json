@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "collony.ai",
-  "description": "collony – AI moderation for Telegram and Discord communities.",
+  "description": "AI-powered moderation and community intelligence for Telegram and Discord.",
   "colors": {
     "primary": "#1A7BE6",
     "light": "#EDEDF0",
@@ -61,7 +61,8 @@
       "x": "https://x.com/collonybot",
       "telegram": "https://t.me/collony_official",
       "linkedin": "https://www.linkedin.com/company/collony",
-      "website": "https://collony.ai"
+      "website": "https://www.collony.ai/",
+      "discord": "https://discord.gg/na6xcu7xV7"
     }
   },
   "background": {
@@ -69,16 +70,16 @@
       "light": "#EDEDF0",
       "dark": "#0F0F15"
     },
-    "decoration": "gradient"
+    "decoration": "windows"
   },
   "fonts": {
     "family": "Geist"
   },
   "appearance": {
-    "strict": true
+    "strict": false
   },
   "icons": {
-    "library": "fontawesome"
+    "library": "lucide"
   },
   "navbar": {
     "links": []
@@ -97,7 +98,6 @@
     "prompt": "Search docs..."
   },
   "thumbnails": {
-    "appearance": "light",
     "background": "/images/thumbnailbg.png",
     "fonts": {
       "family": "Geist"
