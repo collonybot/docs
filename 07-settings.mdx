@@ -1,0 +1,42 @@
+---
+title: "Settings"
+description: "Per-project toggles for moderation behavior, bot functionality, and access controls."
+---
+
+Project Settings contains per-project toggles that control what the bot analyses and how it responds. Changes apply to the currently selected project only.
+
+<Frame>
+  ![Settings](/images/settings.png)
+</Frame>
+
+## Bot Enabled
+
+Turns the bot on or off for this project. Takes up to 5 minutes to apply. This is the same control as the master toggle in Schedule.
+
+## Moderation Settings
+
+| Setting | What it does |
+| --- | --- |
+| **Sticker Moderation** | Analyses sticker messages for inappropriate content and removes them if they violate rules |
+| **Animation Moderation** | Analyses GIFs and animations for inappropriate content |
+| **Image Moderation** | Uses AI vision to scan photo messages for inappropriate content |
+| **Respond to Admins** | When on, the bot replies to messages from admins and moderators. Turn off to silence chat and FAQ responses for your own team - moderation still runs. **Off by default - we recommend keeping it off** to avoid the bot cluttering internal team discussions |
+| **Allow Bot to Ban Directly** | When on, the bot bans users immediately. When off, it mutes and creates a pending ban request for an admin to approve. **Off by default - we recommend leaving it off** while you're getting familiar with how the bot moderates your specific community |
+
+<Tip>
+  Start with both **Allow Bot to Ban Directly** and **Respond to Admins** off. Once you've reviewed a few weeks of incidents and you're confident in how the bot handles your community, you can enable direct banning for the threat types you trust it on.
+</Tip>
+
+## Functionality Settings
+
+| Setting | What it does |
+| --- | --- |
+| **Basic Chat** | Allows the bot to reply to greetings, @mentions, and general social messages |
+| **FAQ Responses** | Allows the bot to answer questions using the Knowledge Base |
+| **Emoji Reactions** | Allows the bot to add emoji reactions to noteworthy messages |
+
+Disabling **Basic Chat** and **FAQ Responses** while keeping security rules active puts the bot into a silent moderation mode - it acts on violations but never initiates or joins conversations.
+
+## Project Status
+
+Shows your current role in this project (Owner, Admin, Moderator, or Superuser) and your access level. Role permissions are managed from the Members page.

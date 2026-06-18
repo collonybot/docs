@@ -1,0 +1,42 @@
+---
+title: "Projects"
+description: "Add collony to a Telegram group or Discord server and configure it as a project."
+---
+
+A **project** is a community collony is actively protecting. Each project maps to one or more connected channels across Telegram and Discord, and has its own configuration, rules, and analytics.
+
+The Projects page lists all your active projects and any channels the bot has joined but not yet been assigned to a project.
+
+<Frame>
+  ![Projects 1](/images/projects-1.png)
+</Frame>
+
+## Add the bot to Telegram
+
+1. From the Projects page, click **\+ Add bot → Add to Telegram**.
+2. Add @CollonyBot as an administrator to your group with these permissions: **delete messages, restrict members, pin messages**.
+3. The group appears under **Unconfigured channels**. Click **Configure** to assign it to a new or existing project.
+
+<Warning>
+  collony requires delete messages, restrict members, and pin messages admin rights to operate. Without these, moderation actions will fail silently.
+</Warning>
+
+## Add the bot to Discord
+
+1. From the Projects page, click **\+ Add bot → Add to Discord**.
+2. Complete the OAuth authorization flow - select the server and confirm the permissions.
+3. The server appears under **Unconfigured channels**. Click **Configure** to assign it to a project.
+
+## Unconfigured channels
+
+Any group or server the bot has joined but not yet linked to a project appears in the **Unconfigured channels** section at the bottom of the Projects page. The bot is inactive in these channels until configured.
+
+<Frame>
+  ![Unconfigured](/images/unconfigured.png)
+</Frame>
+
+Click **Configure** next to any channel to create a new project or add it to an existing one.
+
+## Project status
+
+Each project card shows its current plan and last active date. To change a plan or start a free trial, click **Choose a plan** from the banner at the top of any dashboard page.

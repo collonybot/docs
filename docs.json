@@ -2,11 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "collony.ai",
-  "description": "collony AI – Telegram & Discord community moderator docs.",
+  "description": "collony – AI moderation for Telegram and Discord communities.",
   "colors": {
-    "primary": "#C8C8D8",
-    "light": "#EDEDED",
-    "dark": "#0F0F12"
+    "primary": "#0ea5e9",
+    "light": "#EDEDF0",
+    "dark": "#0F0F15"
   },
   "favicon": "/public/favicon.png",
   "logo": {
@@ -19,34 +19,39 @@
   },
   "navigation": {
     "groups": [
-      { "group": "Get Started", "pages": ["index"] },
       {
-        "group": "Setup",
+        "group": "Getting Started",
         "pages": [
-          "before-you-start",
-          "prepare-your-telegram-group",
-          "find-collony-ai-on-telegram",
-          "add-collony-to-your-group"
+          "01-introduction",
+          "02-login",
+          "03-projects",
+          "15-billing"
         ]
       },
       {
-        "group": "Customize",
+        "group": "Configuration",
         "pages": [
-          "in-bot-setup-menu",
-          "add-project-description",
-          "add-project-knowledge-base",
-          "set-community-moderation-rules",
-          "set-community-mod-personality"
+          "04-bot-setup",
+          "05-channels",
+          "06-schedule",
+          "07-settings"
         ]
       },
       {
-        "group": "Manage",
+        "group": "Moderation",
         "pages": [
-          "setup-the-admin-dashboard-chat",
-          "manage-admins-and-moderators",
-          "user-history-management",
-          "content-moderation",
-          "bot-schedule-configuration"
+          "08-incidents",
+          "09-chat-history",
+          "10-members",
+          "11-member-details"
+        ]
+      },
+      {
+        "group": "Analytics",
+        "pages": [
+          "12-overview",
+          "13-sentiment",
+          "14-activity"
         ]
       }
     ]
@@ -61,8 +66,8 @@
   },
   "background": {
     "color": {
-      "light": "#EDEDED",
-      "dark": "#0F0F12"
+      "light": "#EDEDF0",
+      "dark": "#0F0F15"
     },
     "decoration": "gradient"
   },

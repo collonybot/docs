@@ -1,0 +1,42 @@
+---
+title: "Billing"
+description: "Plans, pricing, and subscription management for collony.ai."
+---
+
+Each project has its own subscription. Plans are billed monthly or yearly, with a daily message cap that resets at 00:00 UTC.
+
+<Frame>
+  ![Billing](/images/billing.png)
+</Frame>
+
+## Plans
+
+| Plan | Monthly | Yearly | Daily message cap |
+| --- | --- | --- | --- |
+| **Starter** | \$49 / mo | \$468 / yr | 1,000 messages / day |
+| **Pro** | \$99 / mo | \$960 / yr | 2,000 messages / day |
+| **Business** | \$199 / mo | \$1,908 / yr | 5,000 messages / day |
+
+Yearly plans save ~20% compared to monthly billing.
+
+## Free trial
+
+Every project gets a 7-day free trial - no credit card required. The trial includes 100 messages per day. Once the trial ends, the bot is disabled until a paid plan is activated. Your project config, rules, and history are preserved.
+
+<Tip>
+  Use the trial period to dial in your rules and knowledge base before going live with a paid plan. The bot needs a few days of real traffic to surface false positives worth fixing.
+</Tip>
+
+## Subscribing
+
+Open **Billing** from the sidebar, select a plan, and choose monthly or yearly. Payment is handled via Stripe's secure checkout - collony never stores your card details.
+
+## Daily message cap
+
+The cap counts messages processed by the bot - including moderation checks, chat responses, and sentiment analysis. It resets daily at 00:00 UTC. Today's usage is shown at the top of the Billing page.
+
+When the cap is reached, the bot stops processing new messages until the next reset. Security rules continue to apply at a reduced rate.
+
+## Canceling or changing plans
+
+Cancel or switch plans from the Billing page at any time. On cancellation, the bot is disabled at the end of the current billing period. Your project data remains intact - resubscribe anytime to resume.

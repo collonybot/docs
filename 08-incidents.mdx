@@ -1,0 +1,51 @@
+---
+title: "Incidents"
+description: "Review every moderation action collony has taken, by severity, state, and time range."
+---
+
+The Incidents page is a full log of every moderation action collony has taken in the current project. Use it to audit bot behavior, identify repeat offenders, and correct false positives.
+
+<Frame>
+  ![Incidents](/images/Incidents.png)
+</Frame>
+
+## Summary stats
+
+At the top of the page, four counters show totals for the selected time range:
+
+- **Total incidents** - all moderation events combined
+- **Bans** - users banned in this period
+- **Mutes** - users muted in this period
+- **Deletions** - messages removed in this period
+
+The charts below break down incidents per day, by hour, and by severity.
+
+## Incident states
+
+Filter incidents by state using the tabs:
+
+| State | Meaning |
+| --- | --- |
+| **Active** | The incident stands - restriction is in place or the deletion was correct |
+| **Forgiven** | An admin cleared the incident and lifted any resulting restriction |
+| **collony mistake** | Marked as a false positive - action was revoked |
+
+## Severity
+
+Each incident is classified as High, Medium, or Low based on the type of violation and the action taken.
+
+- **High** - bans and severe content violations (phishing, scams, explicit material)
+- **Medium** - mutes and repeated rule violations
+- **Low** - single deletions and minor infractions
+
+## Top Offenders
+
+Below the charts, the Top Offenders list shows users with the most incidents in the selected period. Click any user to open their Member Details profile.
+
+## Marking a user as trusted
+
+When resolving an incident, you'll see the option to mark the user as trusted. Trusted users bypass collony's automatic security checks for this project. You can revoke trusted status at any time from the user's Member Details page.
+
+<Note>
+  Use trusted status sparingly - for verified team members, long-standing community contributors, or partner accounts that consistently trigger false positives.
+</Note>

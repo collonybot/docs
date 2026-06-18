@@ -1,0 +1,64 @@
+---
+title: "Chat History"
+description: "Browse, search, and moderate messages across all connected channels from one view."
+---
+
+Chat History gives you a searchable, annotated feed of every message collony has processed in the current project. Each message is tagged with sentiment and topic classifications, and inline moderation actions are available without leaving the page.
+
+<Frame>
+  ![Chat History](/images/chat-history.png)
+</Frame>
+
+## Searching messages
+
+Use the search bar at the top to filter by username or message text. Results update as you type.
+
+## Color legend
+
+Each message is labeled with one or more tags from two categories:
+
+**Topic tags**
+
+- Question
+- Technical
+- Social
+- Meme
+- Sarcastic
+- Shilling
+- FUD
+
+**Sentiment tags**
+
+- Positive
+- Neutral
+- Negative
+
+Tags help you quickly scan for patterns - a spike in FUD or Shilling tags, for example, often precedes a coordinated attack.
+
+## Inline moderation actions
+
+Every message has an action row with four options:
+
+| Action | What it does |
+| --- | --- |
+| **Delete** | Removes the message from the community chat |
+| **Mute** | Mutes the sender for 1h, 24h, or 36h |
+| **Ban** | Bans the sender permanently (or for a set duration on Telegram) |
+| **▾ (expand)** | Opens the full sentiment breakdown for that message |
+
+<Warning>
+  Moderation actions from the dashboard take effect immediately in the community. There is no confirmation step.
+</Warning>
+
+## Message details
+
+Click any message to open its full detail view, which includes:
+
+- Complete sentiment scores (positivity, maliciousness, sarcasm, shilling, FUD)
+- Topic classification flags
+- Reaction count
+- Chat context - the surrounding messages before and after
+
+## Auto-update
+
+Enable **Auto-update** at the top of the page to keep the feed live. New messages appear as they arrive without needing to refresh.
