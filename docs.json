@@ -59,7 +59,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/collonybot",
-      "telegram": "https://t.me/collony_ai",
+      "telegram": "https://t.me/collony_official",
       "linkedin": "https://www.linkedin.com/company/collony",
       "website": "https://collony.ai"
     }
@@ -69,12 +69,38 @@
       "light": "#EDEDF0",
       "dark": "#0F0F15"
     },
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "fonts": {
     "family": "Geist"
   },
   "appearance": {
-    "strict": true
+    "strict": false
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "navbar": {
+    "links": []
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "assistant"
+    ],
+    "display": "header"
+  },
+  "search": {
+    "prompt": "Search docs..."
+  },
+  "thumbnails": {
+    "appearance": "light",
+    "background": "/images/thumbnailbg.png",
+    "fonts": {
+      "family": "Geist"
+    }
   }
 }
