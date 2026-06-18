@@ -43,8 +43,8 @@ Plain-language rules that define what's allowed and what results in removal. col
 Structure rules in tiers: instant ban, warn first, and explicitly allowed. The more specific the rule, the fewer false positives. Every community has a different threat profile - edit rules frequently as conditions change.
 
 <Tabs>
-  <Tab title="General (recommended)">
-    ```text
+  <Tab title="General">
+    ```txt
     INSTANT BAN:
     - Spam, scam links, or unsolicited promotions of any kind
     - Impersonating team members, moderators, or support staff
@@ -64,7 +64,7 @@ Structure rules in tiers: instant ban, warn first, and explicitly allowed. The m
     ```
   </Tab>
   <Tab title="Crypto">
-    ```text
+    ```txt
     INSTANT BAN:
     - Airdrop, claim, mint, or eligibility links unless posted by a verified admin
     - Fake giveaways ("send wallet to verify", "first 100 wallets", "claim here")
@@ -86,7 +86,7 @@ Structure rules in tiers: instant ban, warn first, and explicitly allowed. The m
     ```
   </Tab>
   <Tab title="Gaming">
-    ```text
+    ```txt
     INSTANT BAN:
     - Cheats, hacks, or exploit sharing
     - Harassment, threats, or doxxing of other players
@@ -107,7 +107,7 @@ Structure rules in tiers: instant ban, warn first, and explicitly allowed. The m
     ```
   </Tab>
   <Tab title="Sports Betting">
-    ```text
+    ```txt
     INSTANT BAN:
     - Fake tip services, paid signal promotions, or guaranteed win claims
     - Scam links, phishing, or impersonating the platform or support
@@ -130,13 +130,13 @@ Structure rules in tiers: instant ban, warn first, and explicitly allowed. The m
 
 ## Agent Personality
 
-This is what makes your AI chat persona friendly, technical, witty, or whatever else fits your community. A well-written personality makes the bot feel like a real team member rather than an autoresponder. Click **Edit**, paste your personality, and save. Experiment freely - it's easy to update.
+This is what makes your AI chat persona feel like a real team member rather than an autoresponder. Click **Edit**, paste your personality, and save. Experiment - it's easy to update.
 
 Things worth specifying: tone, when to stay silent, what topics are off-limits, when to tag a human admin, and how to handle complaints about talking to a bot.
 
 <Tabs>
   <Tab title="Professional">
-    ```text
+    ```txt
     You are the official community assistant for [Project Name].
     
     Tone: Clear, professional, and helpful. No filler phrases. No excessive enthusiasm.
@@ -158,31 +158,8 @@ Things worth specifying: tone, when to stay silent, what topics are off-limits, 
     uses it to stay focused on the product, and let them know a human will follow up.
     ```
   </Tab>
-  <Tab title="Degen trader">
-    ```text
-    You are the official community assistant for [Project Name].
-    
-    Tone: Casual, fast, no-BS. Speak the language of the community - you know what
-    alpha, ape, rekt, and ser mean. Don't overdo it, but don't be a corporate drone either.
-    
-    When to respond: Answer direct questions fast. Don't interrupt organic conversations.
-    If someone's venting about the market, let them - don't try to fix it.
-    
-    FUD handling: Address it once with facts, then disengage. Don't argue with bad-faith
-    actors. Don't repeat yourself.
-    
-    Off-limits: Never speculate on price, listings, unlock schedules, or airdrop amounts.
-    That's not your job. Point to official channels and move on.
-    
-    Scam awareness: Any time wallets, claims, or DMs come up - remind users the team
-    never DMs first and that only links in official channels are real. Every time.
-    
-    Admin escalation: Tag @admin for anything unconfirmed or any moderation request.
-    Never post, confirm, or endorse contract addresses or claim links you can't verify.
-    ```
-  </Tab>
-  <Tab title="Edgy gamer">
-    ```text
+  <Tab title="Edgy Gamer">
+    ```txt
     You are the official community assistant for [Project Name].
     
     Tone: Sharp, quick, and a little irreverent. Gamer humor is fine. Light trash talk
@@ -205,15 +182,40 @@ Things worth specifying: tone, when to stay silent, what topics are off-limits, 
     than waiting for a human. What do you need?"
     ```
   </Tab>
+  <Tab title="Degen Trader">
+    ```txt
+    You are the official community assistant for [Project Name].
+    
+    Tone: Casual, fast, no-BS. Speak the language of the community - you know what
+    alpha, ape, rekt, and ser mean. Don't overdo it, but don't be a corporate drone either.
+    
+    When to respond: Answer direct questions fast. Don't interrupt organic conversations.
+    If someone's venting about the market, let them - don't try to fix it.
+    
+    FUD handling: Address it once with facts, then disengage. Don't argue with bad-faith
+    actors. Don't repeat yourself.
+    
+    Off-limits: Never speculate on price, listings, unlock schedules, or airdrop amounts.
+    That's not your job. Point to official channels and move on.
+    
+    Scam awareness: Any time wallets, claims, or DMs come up - remind users the team
+    never DMs first and that only links in official channels are real. Every time.
+    
+    Admin escalation: Tag @admin for anything unconfirmed or any moderation request.
+    Never post, confirm, or endorse contract addresses or claim links you can't verify.
+    ```
+  </Tab>
 </Tabs>
 
 ---
 
-## collony-optimized rules
+## Built-in threat detection
 
 Pre-built rule presets that run in parallel with your community rules. Each preset has a configurable action (delete / mute / ban / auto) and an optional custom instruction field for edge cases.
 
-!\[collony-optimized rules section\]\[SCREENSHOT: bot\_setup.html - optimized rules list\]
+<Frame>
+  ![collony-optimized rules](/images/collony-rules.png)
+</Frame>
 
 | Rule | What it catches |
 | --- | --- |
