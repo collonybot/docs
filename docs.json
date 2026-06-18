@@ -69,8 +69,7 @@
     "color": {
       "light": "#EDEDF0",
       "dark": "#0F0F15"
-    },
-    "decoration": "windows"
+    }
   },
   "fonts": {
     "family": "Geist"
