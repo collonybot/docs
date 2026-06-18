@@ -4,9 +4,9 @@
   "name": "collony.ai",
   "description": "AI-powered moderation and community intelligence for Telegram and Discord.",
   "colors": {
-    "primary": "#1A7BE6",
-    "light": "#5BA8F5",
-    "dark": "#1560C0"
+    "primary": "#0073E6",
+    "light": "#0073E6",
+    "dark": "#0073E6"
   },
   "favicon": "/public/favicon.png",
   "logo": {
