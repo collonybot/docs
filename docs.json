@@ -101,5 +101,10 @@
     "fonts": {
       "family": "Geist"
     }
+  },
+  "errors": {
+    "404": {
+      "redirect": true
+    }
   }
 }

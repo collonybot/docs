@@ -11,9 +11,7 @@ Bot Setup is where you define what the agent knows and how it behaves. All chang
 
 ## Project About
 
-A short 2-5 sentence summary of your project or community. This is loaded first, before the full knowledge base, to give the agent immediate context when it joins a conversation.
-
-Keep it factual and concise - think of it as the agent's briefing, not a marketing pitch.
+A short 2-5 sentence summary of your project or community. This is loaded first, before the full knowledge base, to give the agent immediate context when it joins a conversation. Keep it factual and concise - think of it as the agent's briefing, not a marketing pitch.
 
 <Note>
   **Example:** "We're a platform that helps indie game developers publish and monetize their games. Our community is a mix of developers sharing work-in-progress, players giving feedback, and newcomers learning the ropes. The team is small - three people - and we rely on the community to stay welcoming and on-topic."
@@ -21,68 +19,193 @@ Keep it factual and concise - think of it as the agent's briefing, not a marketi
 
 ## Knowledge Base
 
-The content the agent draws on when answering member questions. A thorough knowledge base is the single biggest factor in response quality - it's the difference between a bot that actually helps and one that makes things up.
+The knowledge base is what powers the AI chat function. The more complete and well-structured it is, the better the bot answers questions, handles edge cases, and avoids making things up. A thin or vague knowledge base produces a bot that either says "I don't know" to everything or confidently gives wrong answers.
 
-**The fastest way to build it:** gather everything - your website, docs, FAQs, help articles, recent announcements, socials - and paste it all into Claude, ChatGPT, Gemini, or whichever LLM you use. Ask it to restructure the content by topic, remove repetition, and export as plain text. Then paste the result here.
+**The fastest way to build it:** gather everything - your website, whitepaper, docs, FAQs, help center articles, recent announcements, socials, blog posts - and paste it all into Claude, ChatGPT, Gemini, or whichever LLM you use. Ask it to restructure the content by topic, remove repetition, and export as plain text. Then paste the result here.
 
-Good knowledge bases cover: what the project is and how it works, common questions and their answers, official links, key policies, and your team's contact handles so the bot knows who to tag when a question falls outside what it can answer.
+A complete knowledge base covers:
 
-Click **Edit** to open the editor. Include your team's handles (e.g. `@alice, @bob`) so the bot can tag them when a question falls outside the knowledge base.
+- What the project is, how it works, and what problems it solves
+- Every question your community asks regularly, with clear answers
+- Official links, social handles, and where to find what
+- Key policies - what's allowed, what's not, how support works
+- Team contact handles so the bot knows who to tag when something falls outside its scope
+- Scam awareness reminders - who the team will and won't contact members through
 
-<Tip>
-  The more specific your knowledge base, the fewer questions fall through to your team. Think about the 10 questions your community asks most often - make sure every one of them has a clear answer in here.
-</Tip>
+<Warning>
+  The AI chat function is only as good as what's in the knowledge base. If something isn't in here, the bot will either guess or decline to answer. Keep it updated as your project evolves.
+</Warning>
 
 ## Community Rules
 
-Plain-language rules that define what's allowed and what results in removal. collony enforces these alongside its built-in detection.
+Plain-language rules that define what's allowed and what results in removal. collony enforces these alongside its built-in detection. Click **Edit**, paste your rules, and save - collony applies them immediately.
 
-Click **Edit**, paste your rules, and save. collony applies them immediately.
+Structure rules in tiers: instant ban, warn first, and explicitly allowed. The more specific the rule, the fewer false positives. Every community has a different threat profile - edit rules frequently as conditions change.
 
-Structure your rules in two tiers: what gets an **instant ban** and what gets a **warning first**. Be explicit - the more specific the rule, the fewer false positives.
-
-<Note>
-  **Example structure:**
-
-  **Instant removal:**
-
-  - Spam, scam links, or unsolicited promotions
-  - Impersonating team members, moderators, or support staff
-  - Harassment, hate speech, or targeted personal attacks
-  - Sharing others' personal information
-
-  **Warn first, then escalate:**
-
-  - Repeated off-topic messages
-  - Excessive self-promotion
-  - Deliberately derailing conversations
-
-  **Allowed (don't over-moderate):**
-
-  - Criticism and negative feedback
-  - Competitor mentions and comparisons
-  - Heated but good-faith debate
-
-  Every community has a different threat profile. A gaming server deals with different problems than a SaaS support group or a creator community. Set rules to match your actual situation and don't be afraid to edit them as conditions change - the right ruleset takes a few iterations to dial in.
-</Note>
+<Tabs>
+  <Tab title="General (recommended)">
+    ```text
+    INSTANT BAN:
+    - Spam, scam links, or unsolicited promotions of any kind
+    - Impersonating team members, moderators, or support staff
+    - Harassment, hate speech, or targeted personal attacks
+    - Sharing others' personal information without consent
+    - Fake giveaways or phishing links
+    
+    WARN FIRST, THEN ESCALATE:
+    - Repeated off-topic messages
+    - Excessive self-promotion
+    - Deliberately derailing conversations
+    
+    ALLOWED:
+    - Criticism and negative feedback about the project
+    - Competitor mentions and comparisons
+    - Heated but good-faith debate
+    ```
+  </Tab>
+  <Tab title="Crypto">
+    ```text
+    INSTANT BAN:
+    - Airdrop, claim, mint, or eligibility links unless posted by a verified admin
+    - Fake giveaways ("send wallet to verify", "first 100 wallets", "claim here")
+    - DM-first impersonation - anyone posing as team, support, or mod
+    - Wallet phishing - seed phrase, private key, or connect wallet prompts
+    - Unsolicited crypto wallet addresses
+    - External project promotions, unauthorized tokens, or spam links
+    
+    WARN FIRST, THEN ESCALATE:
+    - Spam or repeated messages
+    - Persistent off-topic derailment
+    - Excessive price speculation or FUD without basis
+    
+    ALLOWED:
+    - Price discussions and negative sentiment
+    - Tokenomics frustration and criticism
+    - Competitor mentions and market talk
+    - Technical debate
+    ```
+  </Tab>
+  <Tab title="Gaming">
+    ```text
+    INSTANT BAN:
+    - Cheats, hacks, or exploit sharing
+    - Harassment, threats, or doxxing of other players
+    - Scam links or fake giveaways
+    - Impersonating developers or moderators
+    
+    WARN FIRST, THEN ESCALATE:
+    - Trash talk that crosses into targeted harassment
+    - Spamming server invites or self-promotion
+    - Spoilers without warnings
+    - Repeated off-topic content
+    
+    ALLOWED:
+    - Game criticism and negative reviews
+    - Competitor game discussions
+    - Memes and community banter
+    - Content creator self-promotion (once per post)
+    ```
+  </Tab>
+  <Tab title="Sports Betting">
+    ```text
+    INSTANT BAN:
+    - Fake tip services, paid signal promotions, or guaranteed win claims
+    - Scam links, phishing, or impersonating the platform or support
+    - Sharing referral codes or affiliate links without permission
+    - Harassment or targeted attacks on other members
+    
+    WARN FIRST, THEN ESCALATE:
+    - Spam or repeated messages
+    - Promoting external betting platforms or competitors
+    - Excessive loss-venting that disrupts the community
+    
+    ALLOWED:
+    - Bet discussions, predictions, and analysis
+    - Criticism of odds, platform decisions, or outcomes
+    - General sports discussion and banter
+    - Responsible gambling reminders and discussion
+    ```
+  </Tab>
+</Tabs>
 
 ## Agent Personality
 
-This is what makes your AI chat persona friendly, technical, witty, or whatever else fits your community. A well-written personality makes the bot feel like a real team member rather than an autoresponder.
+This is what makes your AI chat persona friendly, technical, witty, or whatever else fits your community. A well-written personality makes the bot feel like a real team member rather than an autoresponder. Click **Edit**, paste your personality, and save. Experiment freely - it's easy to update.
 
-Click **Edit**, enter your personality guidelines, and save. Experiment - personality has a big impact on how members respond to the bot, and it's easy to update.
+Things worth specifying: tone, when to stay silent, what topics are off-limits, when to tag a human admin, and how to handle complaints about talking to a bot.
 
-<Note>
-  **Things worth specifying:**
-
-  - Tone - casual and warm, technically precise, playful, or professionally neutral
-  - When to stay silent - if two users are talking to each other, the bot shouldn't interrupt
-  - What topics are off-limits - anything you don't want the bot speculating on
-  - When to tag a human - moderation requests, escalations, anything the bot can't confidently answer
-  - How to handle complaints about talking to a bot - don't be defensive, acknowledge it and explain briefly why the team uses one
-
-  A concrete example: "Be friendly and clear. Use casual language but stay professional. Don't interrupt conversations between members - only respond when someone asks a direct question or needs help. For anything you're not sure about, tag @alice rather than guessing."
-</Note>
+<Tabs>
+  <Tab title="Professional">
+    ```text
+    You are the official community assistant for [Project Name].
+    
+    Tone: Clear, professional, and helpful. No filler phrases. No excessive enthusiasm.
+    Treat members like adults who don't need hand-holding.
+    
+    When to respond: Only respond to direct questions or requests for help.
+    Stay silent when members are talking to each other.
+    
+    Accuracy: Always verify against the knowledge base before answering.
+    If the knowledge base doesn't cover it, say so and tag @admin rather than guessing.
+    
+    Off-limits: No speculation on timelines, pricing, or unconfirmed features.
+    Never make promises on behalf of the team.
+    
+    Admin escalation: Tag @admin for anything outside your scope or any moderation request.
+    Don't handle moderation actions yourself.
+    
+    If someone complains about talking to a bot: Acknowledge it briefly, explain the team
+    uses it to stay focused on the product, and let them know a human will follow up.
+    ```
+  </Tab>
+  <Tab title="Degen trader">
+    ```text
+    You are the official community assistant for [Project Name].
+    
+    Tone: Casual, fast, no-BS. Speak the language of the community - you know what
+    alpha, ape, rekt, and ser mean. Don't overdo it, but don't be a corporate drone either.
+    
+    When to respond: Answer direct questions fast. Don't interrupt organic conversations.
+    If someone's venting about the market, let them - don't try to fix it.
+    
+    FUD handling: Address it once with facts, then disengage. Don't argue with bad-faith
+    actors. Don't repeat yourself.
+    
+    Off-limits: Never speculate on price, listings, unlock schedules, or airdrop amounts.
+    That's not your job. Point to official channels and move on.
+    
+    Scam awareness: Any time wallets, claims, or DMs come up - remind users the team
+    never DMs first and that only links in official channels are real. Every time.
+    
+    Admin escalation: Tag @admin for anything unconfirmed or any moderation request.
+    Never post, confirm, or endorse contract addresses or claim links you can't verify.
+    ```
+  </Tab>
+  <Tab title="Edgy gamer">
+    ```text
+    You are the official community assistant for [Project Name].
+    
+    Tone: Sharp, quick, and a little irreverent. Gamer humor is fine. Light trash talk
+    between members is part of the culture - don't police the vibe. Save the serious
+    tone for actual problems.
+    
+    When to respond: Jump in when someone has a question. If members are just chatting,
+    stay out of it unless you're directly addressed.
+    
+    Banter: You can match the energy of the community. Dry wit and mild sarcasm are fine,
+    especially for obvious questions or repeated complaints.
+    
+    Off-limits: Don't speculate on things you can't confirm. Don't start drama.
+    Know when to stop the bit and give a straight answer.
+    
+    Admin escalation: Tag @admin for anything that needs a human - especially moderation
+    requests. Don't try to handle it yourself.
+    
+    If someone complains about talking to a bot: Own it. "Yeah, I'm a bot. Still faster
+    than waiting for a human. What do you need?"
+    ```
+  </Tab>
+</Tabs>
 
 ---
 
@@ -90,9 +213,7 @@ Click **Edit**, enter your personality guidelines, and save. Experiment - person
 
 Pre-built rule presets that run in parallel with your community rules. Each preset has a configurable action (delete / mute / ban / auto) and an optional custom instruction field for edge cases.
 
-<Frame>
-  ![Collony Rules](/images/collony-rules.png)
-</Frame>
+!\[collony-optimized rules section\]\[SCREENSHOT: bot\_setup.html - optimized rules list\]
 
 | Rule | What it catches |
 | --- | --- |
