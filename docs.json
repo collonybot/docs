@@ -5,7 +5,7 @@
   "description": "collony – AI moderation for Telegram and Discord communities.",
   "colors": {
     "primary": "#0ea5e9",
-    "light": "#EDEDF0",
+    "light": "#38bdf8",
     "dark": "#0F0F15"
   },
   "favicon": "/public/favicon.png",
@@ -22,36 +22,36 @@
       {
         "group": "Getting Started",
         "pages": [
-          "introduction",
-          "login",
-          "projects",
-          "billing"
+          "01-introduction",
+          "02-login",
+          "03-projects",
+          "15-billing"
         ]
       },
       {
         "group": "Configuration",
         "pages": [
-          "bot-setup",
-          "channels",
-          "schedule",
-          "settings"
+          "04-bot-setup",
+          "05-channels",
+          "06-schedule",
+          "07-settings"
         ]
       },
       {
         "group": "Moderation",
         "pages": [
-          "incidents",
-          "chat-history",
-          "members",
-          "member-details"
+          "08-incidents",
+          "09-chat-history",
+          "10-members",
+          "11-member-details"
         ]
       },
       {
         "group": "Analytics",
         "pages": [
-          "overview",
-          "sentiment",
-          "activity"
+          "12-overview",
+          "13-sentiment",
+          "14-activity"
         ]
       }
     ]
@@ -59,7 +59,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/collonybot",
-      "telegram": "https://t.me/collony_official",
+      "telegram": "https://t.me/collony_ai",
       "linkedin": "https://www.linkedin.com/company/collony",
       "website": "https://collony.ai"
     }
@@ -69,13 +69,13 @@
       "light": "#EDEDF0",
       "dark": "#0F0F15"
     },
-    "decoration": "grid"
+    "decoration": "gradient"
   },
   "fonts": {
     "family": "Geist"
   },
   "appearance": {
-    "strict": false
+    "strict": true
   },
   "icons": {
     "library": "fontawesome"
