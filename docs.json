@@ -4,8 +4,8 @@
   "name": "collony.ai",
   "description": "collony – AI moderation for Telegram and Discord communities.",
   "colors": {
-    "primary": "#0ea5e9",
-    "light": "#38bdf8",
+    "primary": "#1A7BE6",
+    "light": "#EDEDF0",
     "dark": "#0F0F15"
   },
   "favicon": "/public/favicon.png",
@@ -22,36 +22,36 @@
       {
         "group": "Getting Started",
         "pages": [
-          "01-introduction",
-          "02-login",
-          "03-projects",
-          "15-billing"
+          "introduction",
+          "login",
+          "projects",
+          "billing"
         ]
       },
       {
         "group": "Configuration",
         "pages": [
-          "04-bot-setup",
-          "05-channels",
-          "06-schedule",
-          "07-settings"
+          "bot-setup",
+          "channels",
+          "schedule",
+          "settings"
         ]
       },
       {
         "group": "Moderation",
         "pages": [
-          "08-incidents",
-          "09-chat-history",
-          "10-members",
-          "11-member-details"
+          "incidents",
+          "chat-history",
+          "members",
+          "member-details"
         ]
       },
       {
         "group": "Analytics",
         "pages": [
-          "12-overview",
-          "13-sentiment",
-          "14-activity"
+          "overview",
+          "sentiment",
+          "activity"
         ]
       }
     ]
@@ -59,7 +59,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/collonybot",
-      "telegram": "https://t.me/collony_ai",
+      "telegram": "https://t.me/collony_official",
       "linkedin": "https://www.linkedin.com/company/collony",
       "website": "https://collony.ai"
     }
