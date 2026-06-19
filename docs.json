@@ -100,7 +100,8 @@
     "background": "/images/thumbnailbg.png",
     "fonts": {
       "family": "Geist"
-    }
+    },
+    "appearance": "light"
   },
   "errors": {
     "404": {
