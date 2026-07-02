@@ -5,8 +5,8 @@
   "description": "AI-powered moderation and community intelligence for Telegram and Discord.",
   "colors": {
     "primary": "#0073E6",
-    "light": "#0073E6",
-    "dark": "#0073E6"
+    "light": "#4A97F0",
+    "dark": "#0066CC"
   },
   "favicon": "/public/favicon.png",
   "logo": {
@@ -67,8 +67,8 @@
   },
   "background": {
     "color": {
-      "light": "#EDEDF0",
-      "dark": "#0F0F15"
+      "light": "#F4F4FA",
+      "dark": "#08080B"
     }
   },
   "fonts": {
