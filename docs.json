@@ -11,7 +11,8 @@
   "favicon": "/public/favicon.png",
   "logo": {
     "light": "/public/darklogo.png",
-    "dark": "/public/lightlogo.png"
+    "dark": "/public/lightlogo.png",
+    "href": "https://www.collony.ai"
   },
   "topbarCtaButton": {
     "name": "Get Started",
@@ -62,7 +63,7 @@
       "telegram": "https://t.me/collony_official",
       "linkedin": "https://www.linkedin.com/company/collony",
       "website": "https://www.collony.ai/",
-      "discord": "https://discord.gg/na6xcu7xV7"
+      "discord": "https://discord.com/invite/na6xcu7xV7"
     }
   },
   "background": {
