@@ -1,5 +1,4 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "collony.ai",
   "description": "AI-powered moderation and community intelligence for Telegram and Discord.",
@@ -8,15 +7,75 @@
     "light": "#4A97F0",
     "dark": "#0066CC"
   },
-  "favicon": "/public/favicon.png",
   "logo": {
     "light": "/public/darklogo.png",
     "dark": "/public/lightlogo.png",
     "href": "https://www.collony.ai"
   },
-  "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://collony.ai"
+  "favicon": "/public/favicon.png",
+  "appearance": {
+    "strict": false
+  },
+  "background": {
+    "color": {
+      "light": "#F4F4FA",
+      "dark": "#08080B"
+    }
+  },
+  "navbar": {
+    "links": []
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/collonybot",
+      "telegram": "https://t.me/collony_official",
+      "linkedin": "https://www.linkedin.com/company/collony",
+      "website": "https://www.collony.ai/",
+      "discord": "https://discord.com/invite/na6xcu7xV7"
+    }
+  },
+  "search": {
+    "prompt": "Search docs..."
+  },
+  "fonts": {
+    "family": "Geist"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/introduction",
+      "permanent": true
+    }
+  ],
+  "errors": {
+    "404": {
+      "redirect": true
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "assistant"
+    ],
+    "display": "header"
+  },
+  "thumbnails": {
+    "appearance": "light",
+    "background": "/images/thumbnailbg.png",
+    "fonts": {
+      "family": "Geist"
+    }
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://www.collony.ai/docs"
+    }
   },
   "navigation": {
     "groups": [
@@ -56,68 +115,5 @@
         ]
       }
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/collonybot",
-      "telegram": "https://t.me/collony_official",
-      "linkedin": "https://www.linkedin.com/company/collony",
-      "website": "https://www.collony.ai/",
-      "discord": "https://discord.com/invite/na6xcu7xV7"
-    }
-  },
-  "background": {
-    "color": {
-      "light": "#F4F4FA",
-      "dark": "#08080B"
-    }
-  },
-  "fonts": {
-    "family": "Geist"
-  },
-  "appearance": {
-    "strict": false
-  },
-  "icons": {
-    "library": "lucide"
-  },
-  "navbar": {
-    "links": []
-  },
-  "metadata": {
-    "timestamp": true
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "assistant"
-    ],
-    "display": "header"
-  },
-  "search": {
-    "prompt": "Search docs..."
-  },
-  "thumbnails": {
-    "background": "/images/thumbnailbg.png",
-    "fonts": {
-      "family": "Geist"
-    },
-    "appearance": "light"
-  },
-  "errors": {
-    "404": {
-      "redirect": true
-    }
-  },
-  "seo": {
-    "metatags": {
-      "canonical": "https://www.collony.ai/docs"
-    }
-  },
-  "redirects": [
-    {
-      "source": "/home",
-      "destination": "/introduction",
-      "permanent": true
-    }
-  ]
+  }
+}
