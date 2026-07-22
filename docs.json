@@ -113,5 +113,11 @@
     "metatags": {
       "canonical": "https://www.collony.ai/docs"
     }
-  }
-}
+  },
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/introduction",
+      "permanent": true
+    }
+  ]
