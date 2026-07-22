@@ -108,5 +108,12 @@
     "404": {
       "redirect": true
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/introduction",
+      "permanent": true
+    }
+  ]
 }
