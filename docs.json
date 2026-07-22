@@ -108,5 +108,10 @@
     "404": {
       "redirect": true
     }
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://www.collony.ai/docs"
+    }
   }
 }
