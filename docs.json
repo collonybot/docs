@@ -109,11 +109,6 @@
       "redirect": true
     }
   },
-  "seo": {
-    "metatags": {
-      "canonical": "https://www.collony.ai/docs"
-    }
-  },
   "redirects": [
     {
       "source": "/home",
@@ -121,3 +116,4 @@
       "permanent": true
     }
   ]
+}
