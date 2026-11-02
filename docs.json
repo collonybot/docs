@@ -76,10 +76,16 @@
     "display": "header"
   },
   "thumbnails": {
-    "appearance": "light",
-    "background": "/images/thumbnailbg.png",
+    "appearance": "dark",
     "fonts": {
       "family": "Geist"
+    },
+    "preset": "classic",
+    "surface": "neutral",
+    "eyebrow": {
+      "source": "group",
+      "style": "plain",
+      "color": "#0073E6"
     }
   },
   "metadata": {
