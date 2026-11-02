@@ -1,43 +1,56 @@
 ---
 title: "Incidents"
-description: "Review every moderation action collony has taken in your community. Filter incidents by severity, state, and time range to audit decisions fast."
+description: "Review every moderation action in your community, work through the Needs review queue, and correct collony.ai mistakes."
 ---
 
-The Incidents page is a full log of every moderation action collony has taken in the current project. Use it to audit bot behavior, identify repeat offenders, and correct false positives.
+The Incidents page lists every moderation action in the current project, by the bot or by your team. Use it to check the bot's decisions, handle cases it flagged for you, and spot repeat offenders.
 
 <Frame>
-  ![Incidents](/images/incidents.png)
+  ![Incidents page](/images/incidents.png)
 </Frame>
 
-## Summary stats
+## Needs review
 
-At the top of the page, four counters show totals for the selected time range:
+Cases the bot wants you to look at, for example a **Ban suggested** when the bot is not allowed to ban on its own (see [Enforcement and filters](/enforcement#allow-bot-to-ban)) or a message a blocklist flagged.
 
-- **Total incidents** - all moderation events combined
-- **Bans** - users banned in this period
-- **Mutes** - users muted in this period
-- **Deletions** - messages removed in this period
+For each case, click **Open** to see it in full, or **Mark reviewed** when the bot got it right.
 
-The charts below break down incidents per day, by hour, and by severity.
+## Summary
+
+For the selected range (24h, 7d or 30d):
+
+- Incidents and actions, with the change against the previous period
+- Deleted, muted and banned counts
+- A chart of incidents and actions per day
+
+### By type
+
+Shows who or what acted: **AI**, **Instant guard**, **Moderator** and the other layers, each with its deletions, mutes and bans.
+
+### Top offenders
+
+The members with the most incidents in the range. Click **All offenders** or a member to see more.
+
+## Incident list
+
+Two tabs: **Incidents** for single cases and **Offenders** for members grouped by their incidents.
+
+Filter the list by:
+
+| Filter | Options |
+| --- | --- |
+| **Type** | AI, Instant guard, Story filter, Moderator, Blocklist, Surge Guard, Impersonation |
+| **Severity** | Critical, High, Medium, Low |
+| **State** | Active, Forgiven, collony.ai mistake |
+
+Use the search box to find a member or message.
 
 ## Incident states
 
-Filter incidents by state using the tabs:
-
 | State | Meaning |
 | --- | --- |
-| **Active** | The incident stands - restriction is in place or the deletion was correct |
-| **Forgiven** | An admin cleared the incident and lifted any resulting restriction |
-| **collony mistake** | Marked as a false positive - action was revoked |
+| **Active** | The incident stands. The restriction is in place or the deletion was correct. |
+| **Forgiven** | You cleared the incident and lifted any restriction. It no longer counts toward [repeat offender bans](/enforcement#ban-repeat-offenders). |
+| **collony.ai mistake** | Marked as a false positive. The action was reverted. |
 
-## Severity
-
-Each incident is classified as High, Medium, or Low based on the type of violation and the action taken.
-
-- **High** - bans and severe content violations (phishing, scams, explicit material)
-- **Medium** - mutes and repeated rule violations
-- **Low** - single deletions and minor infractions
-
-## Top Offenders
-
-Below the charts, the Top Offenders list shows users with the most incidents in the selected period. Click any user to open their Member Details profile.
+Click **Forgive** or **Mistake** on any incident to change its state. Marking mistakes helps collony.ai improve detection for your community. You can do the same from the chat with `/forgive` and `/fp`. See [Chat commands](/chat-commands).

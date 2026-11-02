@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-description: "Set when and how the collony bot is active in your community, with full timezone support and 30-minute slot precision for quiet hours."
+description: "Set when and how the collony.ai bot is active in your community, with full timezone support and 30-minute slot precision for quiet hours."
 ---
 
 The Schedule page controls when the bot is active and what it does during each time block. Use it to run full moderation 24/7, limit AI chat responses to peak hours, or go security-only overnight.
@@ -15,7 +15,7 @@ The master toggle. When off, the bot is completely inactive regardless of the sc
 
 ## Timezone
 
-Set this first. Choose the timezone that matches your community's primary location - the schedule grid displays in that timezone. The current UTC time is shown next to the selector for reference. All blocks are stored in UTC internally and converted for display.
+Set this first. Choose the timezone that matches your community's primary location. The schedule grid displays in that timezone. The current UTC time is shown next to the selector for reference. All blocks are stored in UTC internally and converted for display.
 
 ## Modes
 
@@ -23,18 +23,18 @@ Each time block on the schedule can be set to one of three modes:
 
 | Mode | What the bot does |
 | --- | --- |
-| **Chat \+ Security** | Full operation - moderation, AI chat responses, FAQ answers, emoji reactions |
+| **Chat + Security** | Full operation: moderation, AI chat responses, FAQ answers, emoji reactions |
 | **Security only** | Moderation runs, but the bot does not respond to messages or engage in chat |
 | **Inactive** | Bot is off for that block |
 
 ## Setting a schedule
 
 1. Set your **Timezone** first.
-2. Select a mode from the legend (Security only / Chat \+ Security / Inactive).
+2. Select a mode from the legend (Security only, Chat + Security or Inactive).
 3. Click and drag on the weekly grid to paint time blocks. Slots are 30 minutes each.
 4. Click a day label to fill the entire day with the selected mode.
 5. Click an hour label to fill that hour across all days.
-6. Click **Save changes**. Unsaved changes are flagged - clicking away without saving discards them.
+6. Click **Save changes**. Unsaved changes are flagged. Clicking away without saving discards them.
 
 <Tip>
   A common setup: Chat \+ Security during peak hours, Security only overnight, Inactive during planned maintenance windows. This keeps scam protection running 24/7 while reducing unnecessary bot activity when no one's around to engage.

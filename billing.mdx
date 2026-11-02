@@ -1,38 +1,66 @@
 ---
 title: "Billing"
-description: "Plans, pricing, and subscription management for collony.ai. Compare tiers, upgrade or downgrade, and manage invoices and payment details."
+description: "Plans, pricing, and subscription management for collony.ai. Compare Free, Protect, Grow and Scale, start a free trial, switch plans and manage invoices."
 ---
 
-Each project has its own subscription. Plans are billed monthly or yearly, with a daily message cap that resets at 00:00 UTC.
+Each project has its own subscription. Paid plans are billed monthly or yearly. Usage is measured in daily credits that reset at 00:00 UTC.
 
 ## Plans
 
-| Plan | Monthly | Yearly | Daily message cap |
-| --- | --- | --- | --- |
-| **Starter** | \$49 / mo | \$468 / yr | 1,000 messages / day |
-| **Pro** | \$99 / mo | \$960 / yr | 2,000 messages / day |
-| **Business** | \$199 / mo | \$1,908 / yr | 5,000 messages / day |
+| Plan | Monthly | Billed yearly | Platforms | Daily usage |
+| --- | --- | --- | --- | --- |
+| **Free** | \$0 | \$0 | Telegram or Discord | Up to 1,000 messages, no AI |
+| **Protect** | \$29 / mo | \$24.17 / mo | Telegram or Discord | 500 security credits |
+| **Grow** | \$99 / mo | \$82.50 / mo | Telegram and Discord | 2,000 security + 2,000 chat credits |
+| **Scale** | Custom | Custom | Telegram and Discord | Sized to your community |
 
-Yearly plans save ~20% compared to monthly billing.
+Yearly billing gives you 2 months free.
+
+### What each plan includes
+
+<AccordionGroup>
+  <Accordion title="Free">
+    Blocklists, link and scam source checks, Surge Guard and flood limits, the review queue and the audit log. One platform, up to 1,000 messages a day, no AI.
+  </Accordion>
+
+  <Accordion title="Protect">
+    Everything in Free, plus AI moderation with your own rules and image, GIF and sticker checks. One platform, 500 security credits a day.
+  </Accordion>
+
+  <Accordion title="Grow">
+    Everything in Protect, plus AI answers and chat replies, insights, scheduled posts and the MCP server. Telegram and Discord, 2,000 security credits and 2,000 chat credits a day.
+  </Accordion>
+
+  <Accordion title="Scale">
+    Everything in Grow, with volume sized to your community, several projects on one bill, and setup, tuning and priority support from the collony.ai team. [Book a call](https://calendly.com/klybas/collony-ai-24-7-ai-mod) to set it up.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Grow and Scale run Telegram and Discord together. The MCP server, which lets you run collony.ai from your own AI tools, is available on Grow and Scale.
+</Note>
 
 ## Free trial
 
-Every project gets a 7-day free trial - no credit card required. The trial includes 100 messages per day. Once the trial ends, the bot is disabled until a paid plan is activated. Your project config, rules, and history are preserved.
+Protect and Grow come with a 7-day free trial, no credit card required. The trial includes everything in the plan you picked. If you do not subscribe when the trial ends, the project moves to the Free plan. Your config, rules and history are kept.
 
 <Tip>
-  Use the trial period to dial in your rules and knowledge base before going live with a paid plan. The bot needs a few days of real traffic to surface false positives worth fixing.
+  Use the trial to dial in your rules and knowledge base before you commit. The bot needs a few days of real traffic to surface false positives worth fixing.
 </Tip>
+
+## Credits
+
+- **Security credits**: one credit per message checked.
+- **Chat credits**: one credit per AI reply the bot sends.
+
+Credits reset daily at 00:00 UTC. Today's usage is shown at the top of the Billing page.
+
+When credits run out, protection never stops. AI chat replies pause first and you get a notice, so scams and spam keep getting removed until the next reset.
 
 ## Subscribing
 
-Open **Billing** from the sidebar, select a plan, and choose monthly or yearly. Payment is handled via Stripe's secure checkout - collony never stores your card details.
+Open **Billing** from the sidebar, select a plan, and choose monthly or yearly. Payment is handled by Stripe's secure checkout. collony.ai never stores your card details.
 
-## Daily message cap
+## Changing or canceling plans
 
-The cap counts messages processed by the bot - including moderation checks, chat responses, and sentiment analysis. It resets daily at 00:00 UTC. Today's usage is shown at the top of the Billing page.
-
-When the cap is reached, the bot stops processing new messages until the next reset. Security rules continue to apply at a reduced rate.
-
-## Canceling or changing plans
-
-Cancel or switch plans from the Billing page at any time. On cancellation, the bot is disabled at the end of the current billing period. Your project data remains intact - resubscribe anytime to resume.
+Switch plans from the Billing page at any time. The difference is prorated, so you only pay for what you use. If you cancel, your paid features stay on until the end of the current billing period and the project then moves to the Free plan. Your project data stays intact, so you can resubscribe anytime.

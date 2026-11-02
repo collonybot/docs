@@ -1,58 +1,54 @@
 ---
 title: "Member Details"
-description: "A full profile for each community member - sentiment history, message breakdown, moderation record, and actions."
+description: "A full profile for each community member: roles, moderation record, actions per platform, sentiment and connections."
 ---
 
-The Member Details page is a complete profile for a single community member. Access it by clicking any member in the Members table or any username in the Incidents, Chat History, or Overview pages.
+Member Details is the full profile of one community member. Open it by clicking a member on the Members page, or any name in Incidents, Chat History or Insights. Click **Back to Members** to return.
 
 <Frame>
-  ![Member Detail 1](/images/member-detail-1.png)
+  ![Member Details page](/images/member-detail-1.png)
 </Frame>
 
-## Identity and status
+## Identity
 
-At the top of the profile: display name, @username, first seen date, last active timestamp, and current platform.
+The member's name and handles on each platform, whether they have a collony.ai web account, when they joined and when they were last active. **Open in Telegram** and **Open in Discord** take you to them on the platform.
 
-Below that, the moderation record: warnings, forgiven incidents, mutes, and bans - all time totals.
+The record below shows messages sent, the share deleted, incidents, warnings, forgiven incidents, mutes and bans.
 
 ## Roles
 
-Current roles are shown as badges. Add or remove roles directly from this page using the **\+ Admin**, **\+ Moderator**, and **\+ Whitelist** buttons.
+Current roles show as badges. Add roles with **\+ Admin**, **\+ Moderator**, **\+ Team member** and **\+ Whitelist**, or remove one with its **×**.
 
 ## Moderation actions
 
-Take action on this member without leaving their profile:
+Actions are shown separately for each platform the member uses, with their current status there, for example **Unrestricted**.
 
 | Action | Options |
 | --- | --- |
-| **Mute** | 1 hour / 6 hours / 24 hours / 3 days / 7 days |
-| **Ban** | Permanent (duration support varies by platform) |
-| **Unrestrict** | Lifts all active restrictions (unmute \+ unban) |
-| **Whitelist user** | Adds whitelist role - bypasses malicious content detection |
+| **Mute** | 24 hours (default), 1 hour or 7 days |
+| **Ban** | Permanent on Discord. Telegram bans can have a duration from the chat. |
+| **Delete recent messages** | Removes the member's latest messages on that platform |
+| **Whitelist user** | Marks the member as trusted. They skip automatic security checks in this project until you revoke it. |
+
+<Warning>
+  Actions from the app take effect in the community right away.
+</Warning>
 
 ## Sentiment and engagement
 
-Four at-a-glance stats:
+- **Avg Sentiment**: average positivity across their scored messages
+- **Impact Score**: how much the member shapes the community
+- **Reactions**: reactions received, with the average per message
+- **Analyzed**: messages scored out of all messages sent
 
-- **Avg Sentiment** - average positivity score across analyzed messages
-- **Impact Score** - a composite measure of the member's influence in the community
-- **Reactions** - total reactions received, with average per message
-- **Analyzed** - number of messages scored out of total messages sent
+**Sentiment over time** charts the last 30 days. Filter it by message type: Questions, Technical, Helpful, Social, Memes, Sarcastic or Swearing.
 
-**Sentiment over time** shows a 30-day chart of positivity scores. Filter by message type (Questions, Technical, Helpful, Social, Memes, Sarcastic, Swearing) to see sentiment patterns within specific categories.
+**Message profile** breaks their messages down by topic. **Community love** shows the reactions they received, and **Most loved messages** lists their most reacted-to posts.
 
-## Message profile
+## Top connections
 
-A breakdown of the member's messages by topic tag - how many were Questions, Social, Technical, and so on. Useful for quickly classifying a user's behavior pattern.
-
-## Community impact and reactions
-
-**Community Impact** shows how this member's activity affects overall community health. **Community Love** shows reactions received - a signal of positive standing in the community.
+The members this person reacted to and replied to most. Click **See User Network** for the full graph, useful for spotting coordinated accounts.
 
 ## Recent messages
 
-The last several messages from this member, with full inline moderation controls (Delete, Mute, Ban) and sentiment tags. Click any message to open its full detail view.
-
-## User Network
-
-Click **See User Network** to view connections between this member and others - useful for identifying coordinated activity or bot networks.
+Their latest messages by day, with the channel, labels, reactions and **Delete**, **Mute** and **Ban** on each one. Click a message to open its [details](/message).

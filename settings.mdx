@@ -1,42 +1,54 @@
 ---
 title: "Settings"
-description: "Per-project toggles for moderation behavior, bot functionality, and access controls. Tune how collony acts in each community you run."
+description: "Project settings for collony.ai: bot status, project name, bot language, chat features and deactivating a project."
 ---
 
-Project Settings contains per-project toggles that control what the bot analyses and how it responds. Changes apply to the currently selected project only.
+Project Settings holds the switches for the current project. Moderation settings such as image checks and ban permissions are on the [Protection](/enforcement) page.
 
 <Frame>
-  ![Settings 1](/images/settings-1.png)
+  ![Project Settings page](/images/settings-1.png)
 </Frame>
 
-## Bot Enabled
+## Bot status
 
-Turns the bot on or off for this project. Takes up to 5 minutes to apply. This is the same control as the master toggle in Schedule.
+Turns the bot on or off for this project. Changes can take up to 5 minutes to apply.
 
-## Moderation Settings
+## Project name
+
+The name shown in the project switcher and on the Projects page. Click **Save** after you change it.
+
+## Bot language
+
+The language for bot menus, chat notices and admin alerts: English, Spanish, French, Hindi, Ukrainian, Chinese (Traditional), Chinese (Simplified) or Russian.
+
+The bot answers members in their own language and falls back to this one.
+
+## Project status
+
+Shows your role in the project and your access level. Roles are managed on the [Members](/members) page.
+
+## Assistant
+
+These switches control how the bot talks in your community.
 
 | Setting | What it does |
 | --- | --- |
-| **Sticker Moderation** | Analyses sticker messages for inappropriate content and removes them if they violate rules |
-| **Animation Moderation** | Analyses GIFs and animations for inappropriate content |
-| **Image Moderation** | Uses AI vision to scan photo messages for inappropriate content |
-| **Respond to Admins** | When on, the bot replies to messages from admins and moderators. Turn off to silence chat and FAQ responses for your own team - moderation still runs. |
-| **Allow Bot to Ban Directly** | When on, the bot bans users immediately. When off, it mutes and creates a pending ban request for an admin to approve. |
+| **Basic Chat** | Lets the bot reply to greetings, @mentions and other social messages |
+| **FAQ Responses** | Lets the bot answer questions from your [Knowledge Base](/bot-setup#knowledge-base) |
+| **Emoji Reactions** | Lets the bot react to noteworthy messages |
+| **Respond to Admins** | When on, the bot also replies to admins and moderators. Turn it off to silence chat and FAQ replies for your team. Moderation still runs. |
 
-<Tip>
-  Start with both **Allow Bot to Ban Directly** and **Respond to Admins** off. Once you've reviewed a few weeks of incidents and you're confident in how the bot handles your community, you can enable direct banning for the threat types you trust it on.
-</Tip>
+Turn off **Basic Chat** and **FAQ Responses** to run the bot in silent mode: it moderates but never joins the conversation.
 
-## Functionality Settings
+Chat replies are part of the Grow and Scale plans. See [Billing](/billing).
 
-| Setting | What it does |
-| --- | --- |
-| **Basic Chat** | Allows the bot to reply to greetings, @mentions, and general social messages |
-| **FAQ Responses** | Allows the bot to answer questions using the Knowledge Base |
-| **Emoji Reactions** | Allows the bot to add emoji reactions to noteworthy messages |
+## Danger zone
 
-Disabling **Basic Chat** and **FAQ Responses** while keeping security rules active puts the bot into a silent moderation mode - it acts on violations but never initiates or joins conversations.
+**Deactivate project** does more than turn the bot off. It suspends the whole project:
 
-## Project Status
+- The bot stops.
+- The project moves to your **Deactivated projects** list.
+- Any paid subscription is canceled at the end of the current billing period.
+- Promo credits run until their end date.
 
-Shows your current role in this project (Owner, Admin, Moderator, or Superuser) and your access level. Role permissions are managed from the Members page.
+Type the project name to confirm. You can reactivate it later from the [Projects](/projects) page.

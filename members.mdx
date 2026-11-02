@@ -1,45 +1,42 @@
 ---
 title: "Members"
-description: "View, search, and manage roles for every member collony has seen in your community, including trust levels and moderation history."
+description: "Find every member collony.ai has seen in your community and manage their roles: owner, admin, moderator, team member and whitelist."
 ---
 
-The Members page lists every user collony has encountered in the current project, along with their assigned roles, message counts, and emoji activity. Use it to assign roles, search for specific users, and navigate to individual member profiles.
+The Members page lists every user collony.ai has seen in the current project, with their roles, message counts and reactions. Use it to assign roles, find a member and open their profile.
 
 <Frame>
-  ![Members 1](/images/members-1.png)
+  ![Members page](/images/members-1.png)
 </Frame>
 
 ## Roles
 
-collony uses four roles with distinct permission levels:
-
-| Role | What they can do |
+| Role | What it means |
 | --- | --- |
-| **Owner** | Full control - manage the project, all settings, roles, and moderation |
-| **Admin** | Manage settings, channels, content, and moderate users |
-| **Moderator** | Delete messages, mute and ban users |
-| **Whitelist** | Bypasses malicious content detection only - no moderation permissions |
+| **Owner** | Full control of the project, its settings, roles and moderation |
+| **Admin** | Manages settings, channels, content and moderation |
+| **Moderator** | Deletes messages, mutes and bans members |
+| **Team member** | Part of your team, with no moderation permissions. Never slowed down by [Surge Guard](/surge-guard). |
+| **Whitelist** | Skips malicious content detection. No moderation permissions. |
 
-A user can hold multiple roles. Roles stack - a user with both Admin and Moderator has the combined permissions of both.
+A member can hold several roles, and the permissions add up.
+
+<Warning>
+  Give your real admins and moderators their roles here. The impersonation checks use these roles to tell your team from accounts copying them. Without them, your own team can get flagged.
+</Warning>
 
 ## Assigning roles
 
-Click **\+ Role** next to any member and select the role to assign. You can assign admin, moderator, or whitelist from the member table directly.
+Click **\+ Role** next to a member and pick the role. To assign a role to several members at once, select them and add the role in one step. Remove a role from the member's [profile](/member-details).
 
-To remove a role, open the member's profile page and manage roles from there.
+You can also manage the whitelist from the chat with `/whitelist` and `/unwhitelist`. See [Chat commands](/chat-commands).
 
 <Tip>
-  Assign Whitelist to verified team members, partner accounts, or long-standing contributors who consistently trigger false positives. It lets them post freely while keeping full moderation active for everyone else.
+  Whitelist verified partners and long-standing contributors who keep getting caught by checks. They can post freely while everyone else stays fully protected.
 </Tip>
 
-## Searching members
+## Searching and sorting
 
-Use the search bar to find a member by @username or display name. The **Active only** filter narrows results to members who have sent at least one message in the selected date range.
+Search by @username or display name. **Active only** narrows the list to members who sent at least one message in the selected range. Click a column header to sort by it.
 
-## Sorting
-
-Click any column header to sort by that field - useful for finding the most active members or identifying accounts with no message history.
-
-## Member details
-
-Click any row to open the member's full profile. See [Member Details](/member-details) for what's available there.
+Click a row to open the member's [profile](/member-details).

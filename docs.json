@@ -48,6 +48,16 @@
       "source": "/home",
       "destination": "/introduction",
       "permanent": true
+    },
+    {
+      "source": "/sentiment",
+      "destination": "/insights",
+      "permanent": true
+    },
+    {
+      "source": "/activity",
+      "destination": "/insights",
+      "permanent": true
     }
   ],
   "errors": {
@@ -98,20 +108,39 @@
         ]
       },
       {
+        "group": "Protection",
+        "pages": [
+          "protection",
+          "ai-rules",
+          "enforcement",
+          "blocklists",
+          "surge-guard"
+        ]
+      },
+      {
         "group": "Moderation",
         "pages": [
           "incidents",
           "chat-history",
+          "message",
           "members",
-          "member-details"
+          "member-details",
+          "audit-log",
+          "chat-commands"
         ]
       },
       {
         "group": "Analytics",
         "pages": [
           "overview",
-          "sentiment",
-          "activity"
+          "insights"
+        ]
+      },
+      {
+        "group": "AI tools",
+        "pages": [
+          "assistant",
+          "mcp"
         ]
       }
     ]

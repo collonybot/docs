@@ -1,36 +1,38 @@
 ---
 title: "Projects"
-description: "Add collony to a Telegram group or Discord server, configure it as a project, and manage all your connected communities from one dashboard."
+description: "Add collony.ai to a Telegram group or Discord server, manage your projects, and deactivate or reactivate them."
 ---
 
-A **project** is a community or group that you want collony to protect. Each project maps to one or more connected channels across Telegram and Discord, and has its own configuration, rules, and analytics.
+A **project** is a community you want collony.ai to protect. It can hold channels from Telegram and Discord, and it has its own settings, rules, analytics and plan.
 
-The Projects page lists all your active projects and any channels the bot has joined but not yet been assigned to a project.
-
-!\[Projects list\]\[SCREENSHOT: projects.html - project cards with plan/status badges\]
+The Projects page, **Your communities**, lists your projects with their status, plan, your role and when they were last active.
 
 ## Add the bot to Telegram
 
-1. From the Projects page, click **\+ Add bot → Add to Telegram**.
-2. Add @CollonyBot as an administrator to your group with these permissions: **delete messages, restrict members, pin messages**.
-3. The group appears under **Unconfigured channels**. Click **Configure** to assign it to a new or existing project.
+1. Click **\+ Add bot**, then **Add to Telegram**.
+2. Telegram opens its chat picker. Pick your group and confirm the admin rights: **delete messages, restrict members, pin messages**.
+3. Finish setup from the list on the Projects page.
 
 <Warning>
-  collony requires delete messages, restrict members, and pin messages admin rights to operate. Without these, moderation actions will fail silently.
+  collony.ai needs the delete messages, restrict members and pin messages rights. Without them, moderation actions fail.
 </Warning>
 
 ## Add the bot to Discord
 
-1. From the Projects page, click **\+ Add bot → Add to Discord**.
-2. Complete the OAuth authorization flow - select the server and confirm the permissions.
-3. The server appears under **Unconfigured channels**. Click **Configure** to assign it to a project.
+1. Click **\+ Add bot**, then **Add to Discord**.
+2. Authorize the bot on your server and confirm the permissions.
+3. Finish setup from the list on the Projects page.
 
-## Unconfigured channels
+Then set what the bot does in each channel on the [Channels](/channels) page.
 
-Any group or server the bot has joined but not yet linked to a project appears in the **Unconfigured channels** section at the bottom of the Projects page. The bot is inactive in these channels until configured.
+## Plans
 
-Click **Configure** next to any channel to create a new project or add it to an existing one.
+Every new project starts on the Free plan. To start a 7-day trial of Protect or Grow, or to change plan, open [Billing](/billing) from the sidebar.
 
-## Project status
+## Deactivated projects
 
-Each project card shows its current plan and last active date. To change a plan or start a free trial, click **Choose a plan** from the banner at the top of any dashboard page.
+Projects you deactivate from [Settings](/settings#danger-zone) move to **Deactivated projects** at the bottom of the page. A deactivated project is suspended: the bot is off, billing is canceled and it is hidden from members. Click **Reactivate** to bring it back with its settings and history.
+
+## Feedback
+
+Click **Feedback** in the app to send the team an idea, a problem or a question. The team reads every one. You can also chat with the team on [Telegram](https://t.me/collony_official).

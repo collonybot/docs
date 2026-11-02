@@ -1,0 +1,63 @@
+---
+title: "Protection"
+description: "How collony.ai checks every message: Surge Guard, impersonation protection, blocklists, then AI rules."
+keywords: ["protection", "moderation layers", "anti-spam", "scam protection"]
+---
+
+The Protection page controls what collony.ai removes or restricts in your community. Open it from **Protection** in the sidebar.
+
+## How a message is checked
+
+Every message passes through the layers in this order. The first layer that acts on a message decides what happens to it.
+
+<Steps>
+  <Step title="Surge Guard">
+    Watches the message rate in each channel and turns on slow mode during a flood or raid. See [Surge Guard](/surge-guard).
+  </Step>
+  <Step title="Impersonation protection">
+    Catches accounts that copy the name or look of your admins and moderators. It relies on your team having the right roles in [Members](/members).
+  </Step>
+  <Step title="Blocklists">
+    Words, phrases and domains you or collony.ai have blocked. Handled instantly, with no AI involved. See [Blocklists](/blocklists).
+  </Step>
+  <Step title="AI rules">
+    Everything the earlier layers did not catch is read by the AI, using your community rules and the rule presets. See [AI rules](/ai-rules).
+  </Step>
+</Steps>
+
+<Note>
+  The AI layer is part of the Protect, Grow and Scale plans. On the Free plan, Surge Guard, blocklists and the link and scam source checks still run. See [Billing](/billing).
+</Note>
+
+## Activity summary
+
+The top of the page shows what Protection did in the selected range (24h, 7d or 30d):
+
+- **Actions and incidents**, with the change against the previous period
+- **Deleted, muted and banned** counts
+- A chart of incidents and actions per day
+
+## By layer
+
+The **By layer** panel splits the same numbers by the layer that acted: Surge and flood, Impersonation, Blocklists, AI rules and Filters. Each row shows how many messages were deleted and how many members were muted or banned. Click **Incidents** to see the individual cases.
+
+Use it to spot which layer is doing the work. If AI rules carry almost everything, adding the most common scam domains to a blocklist makes those removals instant.
+
+## Protection tabs
+
+<Columns cols={2}>
+  <Card title="Enforcement and filters" href="/enforcement">
+    Media checks, cleanup, new member links and how far the bot can go on its own.
+  </Card>
+  <Card title="AI rules" href="/ai-rules">
+    Your community rules and the rule presets the AI enforces.
+  </Card>
+  <Card title="Blocklists" href="/blocklists">
+    Blocked and allowed words, phrases and domains.
+  </Card>
+  <Card title="Surge Guard" href="/surge-guard">
+    Automatic slow mode for floods and raids.
+  </Card>
+</Columns>
+
+The **Impersonation** tab turns impersonation protection on or off for the project.

@@ -1,0 +1,47 @@
+---
+title: "Chat commands"
+description: "Moderate straight from your Telegram group or Discord server with /mute, /ban, /fp and more."
+keywords: ["commands", "slash commands", "/ban", "/mute", "telegram", "discord"]
+---
+
+Moderate from your community chat without opening the app. Commands work in every Telegram group and Discord server connected to the project. The same list is on the **Guide** page in the app.
+
+## Who can use them
+
+Project owners, admins and moderators. Chat admins on the platform count too. Anyone else gets a short "admins only" reply that deletes itself after a few seconds.
+
+- **Discord**: native slash commands. Type `/`, pick the command from Discord's menu and choose the target with the user picker. Only you see the response. Typing them as plain text also works.
+- **Telegram**: group admins get the same commands in the `/` autocomplete menu.
+
+## Commands
+
+| Command | Alias | What it does | Example |
+| --- | --- | --- | --- |
+| `/whitelist` | `/wl` | Whitelists the user. Their messages skip malicious content detection. | Reply with `/whitelist` |
+| `/unwhitelist` | `/unwl` | Removes the whitelist role | `/unwhitelist @username` |
+| `/role` | `/roles` | Shows the user's project roles | `/role @username` |
+| `/mute` | | Mutes the user. Add a duration (`30m`, `2h`, `1d`), or leave it out for a permanent mute. | `/mute @username 2h` |
+| `/unmute` | | Lifts a mute | Reply with `/unmute` |
+| `/ban` | | Bans the user. A duration works on Telegram (`1d`). Discord bans are always permanent. | `/ban @username` |
+| `/unban` | | Lifts a ban | `/unban @username` |
+| `/unrestrict` | | Lifts every restriction (unmute and unban) | Reply with `/unrestrict` |
+| `/forgive` | | Clears the user's warnings, resolves their active incidents and lifts any mute or ban | Reply with `/forgive` |
+| `/falsepositive` | `/fp` | Marks the user's latest incident as a collony.ai mistake, reverts its actions and lifts any mute or ban | Reply with `/fp` |
+| `/userstats` | `/stats` | Quick summary: messages sent, warnings, first and last seen, 7-day sentiment | `/userstats @username` |
+
+## Picking the target user
+
+On Discord, slash commands ask for the user with a picker. Text commands find the user in this order:
+
+1. **Reply** to one of their messages. This is the most reliable way and works even if they have no username.
+2. **Mention** them: `@username` on Telegram, a regular mention on Discord.
+
+<Tip>
+  On Telegram mobile, tapping a command in the `/` menu sends it at once. Swipe-reply on the user's message first, then tap the command.
+</Tip>
+
+The bot must have seen the user at least once, meaning they sent a message in a connected chat. Otherwise it cannot identify them yet.
+
+## Running alongside other bots
+
+Using Rose, Combot or a similar bot in the same group? Commands addressed to another bot, such as `/stats@combot`, are ignored. If a bare command triggers two bots at once, address collony.ai directly, for example `/userstats@CollonyBot`, or use the alias that does not clash.

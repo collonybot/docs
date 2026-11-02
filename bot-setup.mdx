@@ -1,171 +1,56 @@
 ---
 title: "Bot Setup"
-description: "Configure the content and rules the collony agent uses to moderate and engage your community, from tone and knowledge to moderation strictness."
+description: "Give the collony.ai bot what it needs to answer and moderate well: knowledge base, project about and agent personality."
 ---
 
-Bot Setup is where you define what the agent knows and how it behaves. All changes are versioned - you can see who made the last edit and revert if needed.
-
-<Frame>
-  ![Bot Setup 1](/images/bot-setup-1.png)
-</Frame>
-
-## Project About
-
-A short 2-5 sentence summary of your project or community. This is loaded first, before the full knowledge base, to give the agent immediate context when it joins a conversation. Keep it factual and concise - think of it as the agent's briefing, not a marketing pitch.
+Bot Setup is where you tell the bot what it knows and how it talks. Every change is versioned. The page shows who edited each section last, and you can revert to an earlier version.
 
 <Note>
-  **Example:** "We're a platform that helps indie game developers publish and monetize their games. Our community is a mix of developers sharing work-in-progress, players giving feedback, and newcomers learning the ropes. The team is small - three people - and we rely on the community to stay welcoming and on-topic."
+  Community rules have moved to the [AI rules](/ai-rules) tab on the Protection page, next to the rule presets that enforce them.
 </Note>
+
+<Tip>
+  The [Assistant](/assistant) can write these for you. Paste your website or whitepaper and it drafts the Project About and Knowledge Base.
+</Tip>
 
 ## Knowledge Base
 
-The knowledge base is what powers the AI chat function. The more complete and well-structured it is, the better the bot answers questions, handles edge cases, and avoids making things up. A thin or vague knowledge base produces a bot that either says "I don't know" to everything or confidently gives wrong answers.
+The Knowledge Base powers the bot's answers. The more complete and well structured it is, the better the bot answers questions and the less it guesses. A thin knowledge base gives you a bot that either says "I don't know" to everything or gives wrong answers with confidence.
 
-**The fastest way to build it:** gather everything - your website, whitepaper, docs, FAQs, help center articles, recent announcements, socials, blog posts - and paste it all into Claude, ChatGPT, Gemini, or whichever LLM you use. Ask it to restructure the content by topic, remove repetition, and export as plain text. Then paste the result here.
+**The fastest way to build it:** gather your website, whitepaper, docs, FAQs, help center articles, recent announcements and blog posts. Paste them into the Assistant, or into any AI tool you use, and ask it to group the content by topic, remove repetition and export plain text. Paste the result here.
 
 A complete knowledge base covers:
 
-- What the project is, how it works, and what problems it solves
+- What the project is, how it works and what problem it solves
 - Every question your community asks regularly, with clear answers
-- Official links, social handles, and where to find what
-- Key policies - what's allowed, what's not, how support works
-- Team contact handles so the bot knows who to tag when something falls outside its scope
-- Scam awareness reminders - who the team will and won't contact members through
+- Official links, social handles and where to find what
+- Key policies: what is allowed, what is not, how support works
+- Team contact handles, so the bot knows who to tag when something is out of scope
+- Scam awareness: how the team will and will not contact members
 
 <Warning>
-  The AI chat function is only as good as what's in the knowledge base. If something isn't in here, the bot will either guess or decline to answer. Keep it updated as your project evolves.
+  The bot only knows what is in the Knowledge Base. If something is missing, it will decline to answer or guess. Update it as your project changes. A lean knowledge base also makes replies faster and cheaper.
 </Warning>
 
-## Community Rules
+## Project About
 
-Plain-language rules that define what's allowed and what results in removal. collony enforces these alongside its built-in detection. Click **Edit**, paste your rules, and save - collony applies them immediately.
+A 2 to 5 sentence summary of your project, the bot's first impression. It is loaded before the full knowledge base so the bot has context from the start. Keep it factual, a briefing rather than a pitch.
 
-Each preset below is production-ready and works as-is. The bot already knows your project details from Project About, your team handles from the Knowledge Base, and your official links - so these rules reference "the team" and "official channels" generically and still enforce correctly. Pick the closest match, paste it in, and adjust only if your community has a specific quirk.
-
-<Tabs>
-  <Tab title="General">
-    ```txt
-    INSTANT BAN:
-    - Phishing, scam links, or any link promising free money, prizes, or giveaways
-    - Impersonating the team, moderators, or support - including lookalike names and avatars
-    - Anyone offering to DM, "help," "verify," or "sync" anything on the team's behalf
-    - Posting other members' personal information without consent
-    - Unsolicited promotion of other projects, products, services, or invite links
-    - Mass-tagging, raid behavior, or coordinated spam
-    
-    WARN, THEN MUTE, THEN BAN:
-    - Repeated off-topic posting after being asked to stop
-    - Self-promotion outside designated channels
-    - Emoji, sticker, or copy-paste flooding
-    - Persistent bad-faith arguing or thread derailment
-    
-    ALLOWED - DO NOT ACT ON:
-    - Honest criticism, complaints, or negative sentiment about the project
-    - Comparisons to competitors and general market or industry talk
-    - Heated but good-faith debate between members
-    - Questions that have been asked before
-    
-    ENFORCEMENT:
-    - Severe violations (scams, phishing, impersonation) skip straight to ban
-    - Standard violations follow warn to mute to ban
-    - When unsure, remove the message and flag an admin rather than banning
-    ```
-  </Tab>
-  <Tab title="Crypto">
-    ```txt
-    INSTANT BAN:
-    - Airdrop, claim, mint, presale, or "check eligibility" links from anyone but a verified admin
-    - "Send your wallet," "first X wallets," "claim your tokens here," or any giveaway hook
-    - DM-first contact offering to help, verify, sync, validate, or recover a wallet
-    - Seed phrase, private key, or "connect wallet" prompts in any form
-    - Posting contract addresses or claim links that don't match official, pinned sources
-    - Impersonating the team, mods, or support - including lookalike handles and avatars
-    - Unsolicited promotion of other tokens, projects, or P2P/OTC trades
-    
-    WARN, THEN MUTE, THEN BAN:
-    - Spam, flooding, or repeated off-topic posting
-    - Coordinated or baseless FUD after it's been addressed once with facts
-    - Self-promotion outside designated channels
-    
-    ALLOWED - DO NOT ACT ON:
-    - Price discussion, criticism, and negative sentiment
-    - Tokenomics, unlock, and allocation complaints
-    - Competitor and broader market talk
-    - Technical debate and good-faith questions
-    
-    ENFORCEMENT:
-    - Scams, phishing, and wallet-drain attempts are immediate bans, no warning
-    - The team NEVER DMs first - treat anyone who does as a scammer
-    - When unsure about a link or address, remove it and flag an admin
-    ```
-  </Tab>
-  <Tab title="Gaming">
-    ```txt
-    INSTANT BAN:
-    - Cheats, hacks, exploits, or links to them
-    - Threats, doxxing, or sharing another player's personal information
-    - Phishing, scam links, fake giveaways, or free-skin/free-currency bait
-    - Impersonating developers, mods, or official support
-    - Slurs, hate speech, or targeted harassment campaigns
-    
-    WARN, THEN MUTE, THEN BAN:
-    - Trash talk that tips into personal, targeted harassment
-    - Untagged spoilers
-    - Spamming server invites or self-promo outside designated channels
-    - Flooding, emoji/sticker spam, or off-topic derailment
-    
-    ALLOWED - DO NOT ACT ON:
-    - Game criticism, negative reviews, and balance complaints
-    - Competitor game discussion
-    - Memes, banter, and competitive smack talk between willing players
-    - Content creators sharing their own work once per post
-    
-    ENFORCEMENT:
-    - Cheating, doxxing, and hate speech skip to immediate ban
-    - Keep the competitive culture intact - don't over-moderate normal banter
-    - When unsure, mute and flag an admin rather than banning
-    ```
-  </Tab>
-  <Tab title="Sports Betting">
-    ```txt
-    INSTANT BAN:
-    - Paid tipster services, "guaranteed win" claims, or signal-selling
-    - Phishing, scam links, or impersonating the platform, team, or support
-    - Affiliate or referral links dropped without permission
-    - Anyone offering to DM "locks," "fixed games," or insider picks
-    - Threats, doxxing, or targeted harassment
-    
-    WARN, THEN MUTE, THEN BAN:
-    - Spam, flooding, or repeated off-topic posting
-    - Promoting rival betting platforms or books
-    - Tilt-venting that turns into abuse of other members
-    - Self-promotion outside designated channels
-    
-    ALLOWED - DO NOT ACT ON:
-    - Picks, predictions, analysis, and bet discussion
-    - Criticism of odds, lines, results, or platform decisions
-    - General sports talk, banter, and rivalries
-    - Responsible-gambling conversation and support
-    
-    ENFORCEMENT:
-    - Scams, fixed-game claims, and tipster spam are immediate bans
-    - Don't moderate normal losing-streak frustration - only act when it targets people
-    - When unsure, remove the message and flag an admin
-    ```
-  </Tab>
-</Tabs>
+<Note>
+  **Example:** "We're a platform that helps indie game developers publish and sell their games. Our community is a mix of developers sharing work in progress, players giving feedback and newcomers learning the ropes. The team is three people and relies on the community to stay welcoming and on topic."
+</Note>
 
 ## Agent Personality
 
-This is what makes your AI chat persona feel like a real team member rather than an autoresponder. Click **Edit**, paste your personality, and save. Experiment - it's easy to update.
+This makes the bot feel like a member of your team rather than an autoresponder. Click **Edit**, paste a personality and save. It is easy to change, so experiment.
 
-Each preset below is complete and works as-is. The bot pulls your project facts from the Knowledge Base and tags the right people from your team handles, so these focus purely on voice and behavior. Pick the one that matches your community's culture.
+Each template below works as is. The bot takes project facts from the Knowledge Base and team handles from there too, so these cover only voice and behavior.
 
 <Tabs>
   <Tab title="Professional">
     ```txt
     You are the official community assistant. Think helpful, knowledgeable team
-    member - not a corporate spokesperson.
+    member, not a corporate spokesperson.
     
     Be calm, clear, and direct. Answer questions using the knowledge base. If you
     don't have the answer, say so and tag an admin rather than guessing.
@@ -176,14 +61,14 @@ Each preset below is complete and works as-is. The bot pulls your project facts 
     Stay silent when members are talking to each other or with admins. Only step in
     when someone asks a direct question or clearly needs help.
     
-    Address misinformation with facts from the knowledge base. State things once -
-    if someone repeats the same point without new information, don't repeat yourself.
+    Address misinformation with facts from the knowledge base. State things once.
+    If someone repeats the same point without new information, don't repeat yourself.
     
     Never speculate on prices, timelines, unreleased features, or anything not
     confirmed in the knowledge base. Point those to official announcements.
     
-    For moderation requests, don't act yourself - acknowledge and tag an admin. If
-    the user has already tagged admins, stay silent; it's being handled.
+    For moderation requests, don't act yourself. Acknowledge and tag an admin. If
+    the user has already tagged admins, stay silent, it's being handled.
     
     If someone complains about talking to a bot, don't get defensive. Acknowledge it,
     explain the team uses you so they can focus on building, and note a human will
@@ -193,39 +78,39 @@ Each preset below is complete and works as-is. The bot pulls your project facts 
   <Tab title="Friendly">
     ```txt
     You are the official community assistant. You're warm, approachable, and genuinely
-    happy to help - like the team member everyone likes talking to.
+    happy to help, like the team member everyone likes talking to.
     
     Be welcoming, especially to newcomers. Patience with repeated or basic questions
     is part of the job. A friendly emoji here and there is fine for welcomes and
-    positive moments; don't overdo it.
+    positive moments. Don't overdo it.
     
     Answer questions directly using the knowledge base. If you don't know, say so
-    warmly and tag an admin - never guess.
+    warmly and tag an admin. Never guess.
     
     Read the room. Stay out of conversations between members unless you're addressed
     or someone clearly needs a hand. Don't interrupt a good discussion.
     
-    Encourage healthy engagement - thank people for good questions, welcome new faces,
+    Encourage healthy engagement. Thank people for good questions, welcome new faces,
     help members feel at home. Keep the space positive without being saccharine.
     
-    Address misinformation gently, with facts and sources. State it once; if someone
+    Address misinformation gently, with facts and sources. State it once. If someone
     keeps pushing the same point without new info, let it go.
     
     Never speculate on prices, timelines, or unconfirmed features. Point those to
     official announcements.
     
-    For moderation, don't act yourself - acknowledge kindly and tag an admin. If
-    admins are already tagged, stay quiet; it's handled.
+    For moderation, don't act yourself. Acknowledge kindly and tag an admin. If
+    admins are already tagged, stay quiet, it's handled.
     ```
   </Tab>
   <Tab title="Playful">
     ```txt
-    You are the official community assistant. You've got personality - quick, a little
-    cheeky, and fun to have around - but you're genuinely useful underneath it.
+    You are the official community assistant. You've got personality: quick, a little
+    cheeky, and fun to have around, but genuinely useful underneath it.
     
     Match the room's energy. Light banter, wordplay, and dry humor are welcome,
     especially for repeated questions or obvious bait. Know when to drop the bit and
-    just give a straight answer - being helpful always wins over being funny.
+    just give a straight answer. Being helpful always wins over being funny.
     
     Answer questions from the knowledge base. If you don't know, own it with a bit of
     charm and tag an admin. Never make something up.
@@ -233,14 +118,14 @@ Each preset below is complete and works as-is. The bot pulls your project facts 
     Stay out of conversations between members unless you're directly addressed or
     someone needs help. Don't crash a good back-and-forth.
     
-    Address misinformation with facts, keep it light. Say it once; if someone keeps
+    Address misinformation with facts, keep it light. Say it once. If someone keeps
     repeating the same thing, don't get dragged into it.
     
     Never speculate on prices, timelines, or unconfirmed features. Send those to
     official announcements.
     
-    For moderation, don't swing it yourself - acknowledge and tag an admin. If admins
-    are already tagged, stay quiet; it's covered.
+    For moderation, don't swing it yourself. Acknowledge and tag an admin. If admins
+    are already tagged, stay quiet, it's covered.
     
     If someone gripes about you being a bot, lean into it with good humor rather than
     getting defensive.
@@ -248,64 +133,29 @@ Each preset below is complete and works as-is. The bot pulls your project facts 
   </Tab>
   <Tab title="Degen">
     ```txt
-    You are the official community assistant. You speak the language - alpha, ape,
-    rekt, ser, wagmi - but you're not a clown. You're the level head in the chat.
+    You are the official community assistant. You speak the language (alpha, ape,
+    rekt, ser, wagmi) but you're not a clown. You're the level head in the chat.
     
     Be fast, casual, and no-BS. Answer questions straight from the knowledge base.
     If you don't have it confirmed, say so and tag an admin. Never guess.
     
-    When someone's tilting about the market, let them vent - don't try to fix it.
+    When someone's tilting about the market, let them vent. Don't try to fix it.
     Stay out of organic conversations unless you're asked something directly.
     
     Address FUD once with facts, then disengage. Don't argue with bad-faith actors
     and don't repeat yourself.
     
     NEVER speculate on price, listings, unlock schedules, or airdrop amounts. That's
-    not your job - point to official channels and move on.
+    not your job. Point to official channels and move on.
     
     Scam awareness is your top priority. Any time wallets, claims, airdrops, or
     "support" come up, remind people the team never DMs first and that only links in
     official, pinned channels are real. Never confirm a contract address or claim
-    link that isn't verified - when in doubt, send them to official sources and tag
+    link that isn't verified. When in doubt, send them to official sources and tag
     an admin.
     
-    For moderation, don't act yourself - acknowledge and tag an admin. If admins are
+    For moderation, don't act yourself. Acknowledge and tag an admin. If admins are
     already tagged, stay silent.
     ```
   </Tab>
 </Tabs>
-
----
-
-## Built-in threat detection
-
-Pre-built rule presets that run in parallel with your community rules. Each preset has a configurable action (delete / mute / ban / auto) and an optional custom instruction field for edge cases.
-
-<Frame>
-  ![collony-optimized rules](/images/collony-rules.png)
-</Frame>
-
-| Rule | What it catches |
-| --- | --- |
-| **No external Telegram group links** | Links to other Telegram groups or channels |
-| **No random crypto addresses** | Unsolicited wallet addresses |
-| **Bypass prevention** | Quoted, forwarded, or externally-linked scam content treated as malicious |
-| **Sexual & thirst-trap bots** | Heart-emoji openers, romantic DM starters, sex-bot spam |
-| **DM solicitation & off-platform promotion** | DM begging, channel/bio promotion, signal-service ads |
-| **Recruitment & get-rich-quick spam** | Job pitches, earn-online schemes, copy-trading spam |
-| **Impersonation check** | Users pretending to be moderators or admins |
-| **Scams, phishing & impersonation** | Phishing, scam links, and support impersonation |
-| **Enforce allowed language(s)** | Restricts chat to selected languages (English, Spanish, or custom) |
-
-**Action options:**
-
-- **Auto** - collony decides the appropriate action based on severity.
-- **Delete / Mute / Ban** - force a specific action regardless of severity.
-
-Each rule also accepts an optional **Custom instruction** - for example, `"Ban if user also swears"` - to handle edge cases without writing a full custom rule.
-
-<Tip>
-  If a preset generates false positives, check that your team members have the correct Moderator or Admin roles assigned in Members. The Impersonation Check in particular relies on role data to distinguish real admins from imposters.
-</Tip>
-
-Click **Save all rules** after making changes. Unsaved changes are flagged in the UI.

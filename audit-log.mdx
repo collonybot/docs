@@ -1,0 +1,34 @@
+---
+title: "Audit Log"
+description: "Every change and moderation action in your project: who did it, when, and what changed."
+keywords: ["audit log", "change history", "who changed what"]
+---
+
+The Audit Log records every change made in the project and every manual moderation action, with the person who made it. Changes made by the [Assistant](/assistant) and the [MCP server](/mcp) show here too.
+
+## Filters
+
+| Filter | Options |
+| --- | --- |
+| **Category** | All, Billing, Channels, Content, Moderation, Roles, Settings |
+| **Actor** | Everyone who made a change in the project |
+| **From** and **To** | A date range |
+| **Bot actions** | Include actions the bot took on its own |
+
+Click **Apply** to run the filters.
+
+## Entries
+
+Each row shows the time, the actor, the category, the action, the target (a user, channel or content item), the details and whether it succeeded. Click a row to expand it.
+
+Examples of what is logged:
+
+- Roles added or removed, including batch changes from the Members page
+- Channels turned on or off and channel role changes
+- Content saved in [Bot Setup](/bot-setup), with the version number and a diff of what changed
+- Bans, mutes and other actions taken from the app
+- Settings changes, such as dismissing or restoring the setup guide
+
+<Tip>
+  If the bot starts behaving differently, filter by **Content** or **Settings** first. A recent edit to the Agent Personality or Knowledge Base is the usual cause.
+</Tip>
