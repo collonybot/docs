@@ -8,11 +8,11 @@
     "dark": "#0066CC"
   },
   "logo": {
-    "light": "/public/darklogo.png",
-    "dark": "/public/lightlogo.png",
+    "light": "/logo/collony-wordmark-ink.svg",
+    "dark": "/logo/collony-wordmark-white.svg",
     "href": "https://www.collony.ai"
   },
-  "favicon": "/public/favicon.png",
+  "favicon": "/favicon.svg",
   "appearance": {
     "strict": false
   },
