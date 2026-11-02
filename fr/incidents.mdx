@@ -1,0 +1,66 @@
+---
+title: "Incidents"
+description: "Vérifiez chaque action de modération de votre communauté, traitez la file à vérifier, agissez sur les récidivistes et corrigez les erreurs de collony.ai."
+---
+
+La page Incidents liste chaque cas de modération du projet actuel, du bot ou de votre équipe. Utilisez-la pour vérifier les décisions du bot, traiter les cas qu'il vous a signalés et gérer les récidivistes.
+
+Choisissez la période en haut : 24h, 7j, 30j, ou **Plus** pour d'autres options ou une plage personnalisée. Passez d'un **Fil** de cartes à un **Tableau**.
+
+<Frame>
+  ![Page Incidents avec les incidents par jour, la répartition par type et la file à vérifier](/images/app/incidents.png)
+</Frame>
+
+## Résumé
+
+- Incidents et actions menées, avec l'évolution par rapport à la période précédente
+- Nombre de suppressions, de mises en sourdine et de bannissements
+- **Incidents par jour**, en couleur selon ce qui a été fait : bannissement, sourdine, suppression ou rien
+- **Par type** : ce qui a repéré chaque cas, comme l'IA, l'Instant guard, une liste de blocage ou Surge Guard, avec ses suppressions, mises en sourdine et bannissements
+
+## Onglet Incidents
+
+### Filtres
+
+| Filtre | Options |
+| --- | --- |
+| **Afficher** | Tous les incidents, À vérifier, Actifs, Pardonnés, Erreur de collony.ai |
+| **Type** | IA, Instant guard, Liste de blocage, Surge Guard et les autres couches qui ont agi sur la période |
+| **Gravité** | Critique, Élevée, Moyenne, Faible |
+
+### À vérifier
+
+Les cas que le bot veut vous faire confirmer, en haut de la liste. Par exemple une **suggestion de bannissement** quand le bot n'a pas le droit de bannir seul (voir [Sanctions et filtres](/fr/enforcement)), ou un message signalé par une liste de blocage ou par la vérification d'usurpation.
+
+Chaque carte indique le membre, le canal, ce qui l'a repéré, la règle enfreinte, la raison donnée par le bot, le message et ce qui a été fait. Utilisez **Marquer comme vérifié** quand le bot a eu raison, ou ouvrez le menu pour agir. Sélectionnez plusieurs cartes pour les marquer comme vérifiées ensemble.
+
+### Actions sur un incident
+
+| Action | Effet |
+| --- | --- |
+| **Bannir, comme le suggère le bot** | Retire le membre, comme le bot l'a suggéré |
+| **Marquer comme vérifié** | Le bot a eu raison. Rien ne change. |
+| **Pardonner** | Annule ce qui a été fait et lève la sourdine ou le bannissement. L'incident ne compte plus pour les [bannissements de récidivistes](/fr/enforcement). |
+| **Marquer comme erreur** | Annule tout et apprend à collony.ai à ne pas recommencer. Vous pouvez décrire ce qui n'allait pas. |
+
+Le menu permet aussi de mettre en sourdine, de supprimer le message et d'ouvrir l'incident, le message ou le membre.
+
+Vous pouvez aussi pardonner et marquer des erreurs depuis le chat avec `/forgive` et `/fp`. Voir [Commandes du chat](/fr/chat-commands).
+
+## Onglet Récidivistes
+
+Les membres regroupés par incidents sur la période, avec leur nombre d'incidents, leur dernier incident, leur statut actuel et la suggestion du bot, par exemple **Bannir (demandé par le bot)**. Agissez depuis la ligne : ouvrir le membre, mettre en sourdine, bannir ou ajouter à la liste blanche. Les membres bannis sont masqués sauf si vous choisissez de les afficher.
+
+## Page de l'incident
+
+Cliquez sur **Ouvrir l'incident** pour voir le cas complet :
+
+- **Le message** et son score d'humeur, avec traduire et ouvrir dans Telegram ou Discord
+- **Ce qui s'est passé** : chaque vérification déclenchée, avec son score
+- **Contexte du chat** : les messages d'avant et d'après
+- **Chronologie** : l'envoi du message et chaque action du bot, avec les délais
+- **Incident** : état, gravité, ce qui l'a repéré, la règle et la raison du bot
+- **Analyse de collony AI** : scores d'infraction aux règles et de malveillance
+- **Utilisateur** : l'historique du membre, son statut et ses rôles, avec des boutons de rôle rapides
+
+Le menu **Actions** met en sourdine, bannit, supprime les messages récents ou ouvre le profil du membre.

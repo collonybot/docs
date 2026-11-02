@@ -1,0 +1,59 @@
+---
+title: "Suplantación"
+description: "Detecta a los miembros que copian los nombres, @usuarios o fotos de tu equipo, incluso con letras parecidas o fotos recortadas."
+---
+
+La protección contra suplantación detecta a los miembros que copian a alguien de tu equipo: su nombre, su @usuario o su foto de perfil. También detecta copias disfrazadas, como letras parecidas, una o dos letras cambiadas o una foto recortada o volteada. No usa IA y los cambios se guardan al instante.
+
+Los miembros se revisan al unirse, al cambiar su perfil y en cada mensaje. Ábrela desde la pestaña **Suplantación** de la página [Protección](/es/protection), en la vista Avanzada.
+
+<Frame>
+  ![Pestaña Suplantación con los niveles de coincidencia y sus acciones](/images/app/impersonation.png)
+</Frame>
+
+## Quién está protegido
+
+- Propietarios, administradores, moderadores y miembros del equipo del proyecto
+- Los administradores de cada chat de Telegram (el bot los busca solo)
+- El staff del servidor de Discord: el propietario y los miembros con permisos de moderación
+
+Dale a cualquier otra persona de tu equipo el rol **Miembro del equipo** en [Miembros](/es/members). No da permisos, pero la protege de las copias. Las fotos se comparan cuando el bot ya las ha visto.
+
+## Qué pasa
+
+Cada coincidencia se clasifica según la seguridad del bot. Tú eliges la acción para cada nivel.
+
+| Nivel | Cuándo |
+| --- | --- |
+| **Seguro** | Dos cosas copiadas a la vez (nombre y foto, o nombre y @usuario), o un nombre copiado con palabras como "Support" o "Admin" |
+| **Probable** | Una cosa copiada: un nombre o @usuario que se lee igual, o la misma foto |
+| **Posible** | Solo un nombre corto (4 letras o menos) que se lee parecido. Muchos miembros lo comparten. |
+
+Acciones para cada nivel: **No hacer nada**, **Marcar para revisión**, **Eliminar mensaje + marcar**, **Silenciar + marcar para revisión** o **Banear**.
+
+Marcar envía al miembro a **Pendiente de revisión** en la página [Incidentes](/es/incidents). Eliminar, silenciar y banear también quitan el mensaje que lo delató. Cada copia se reporta una sola vez.
+
+## Comparar
+
+Elige qué cuenta como copia: **Nombres**, **@usuarios** y **Fotos**.
+
+- Los **nombres** son los que muestra el chat: nombre y apellido en Telegram, apodo en el servidor y nombre visible en Discord.
+- Las **fotos** se comparan por su aspecto, no por el archivo. Una copia ampliada o volteada sigue contando. Volver a guardarla, redimensionarla, cambiarle el color o añadirle un borde no la oculta.
+
+## Ejemplos
+
+La página muestra cómo juzga el bot las copias de uno de tus administradores. Con un administrador llamado Taylor Quinn (@taylor_quinn):
+
+| El miembro aparece como | Coincidencia |
+| --- | --- |
+| Taylor Quinn, misma foto, @tayIor_quinn | Seguro |
+| Taylor Quinn \| Support, foto propia | Seguro |
+| Talyor Quinn (una letra cambiada), foto volteada | Seguro |
+| Otro nombre, la misma foto ampliada | Probable |
+| TayIor Quinn (letras parecidas) | Probable |
+| Quinn Taylor (palabras invertidas) | Probable |
+| Taylor (solo el nombre) | Sin coincidencia |
+
+<Tip>
+  Si tu propio equipo aparece marcado, comprueba que todos tengan el rol correcto en [Miembros](/es/members).
+</Tip>

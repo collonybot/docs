@@ -1,0 +1,47 @@
+---
+title: "Canaux"
+description: "Choisissez dans quels canaux Telegram et Discord travaille collony.ai, et quel canal reçoit les rapports pour les modérateurs."
+mode: "default"
+---
+
+La page Canaux liste tous les canaux que le bot voit dans le projet actuel, regroupés par plateforme. Pour chacun, vous choisissez si le bot est actif et quel rôle joue le canal.
+
+Le bot ne lit pas, ne modère pas et ne répond pas dans les canaux désactivés. Il reste dans le groupe ou le serveur, mais n'y fait rien.
+
+<Frame>
+  ![Page Canaux avec les paramètres des nouveaux canaux, les filtres et la liste des canaux](/images/app/channels.png)
+</Frame>
+
+## Rôles des canaux
+
+| Rôle | Protège | Répond |
+| --- | --- | --- |
+| **Chat de la communauté** (par défaut) : là où les membres discutent. Le bot protège le chat et répond aux questions. | Oui | Oui |
+| **Sécurité uniquement** : le bot supprime le spam et les arnaques, met en sourdine et bannit, sans jamais répondre. | Oui | Non |
+| **Chat et support uniquement** : le bot répond aux questions et discute. Il ne modère pas ici. | Non | Oui |
+| **Notifications des modérateurs** : un canal privé pour vos modérateurs. Le bot y publie des rapports sur ce qu'il a supprimé, mis en sourdine ou banni. | Non | Publie des rapports |
+
+Cliquez sur le rôle à côté d'un canal pour le changer. Dans les canaux où le bot répond, les réponses suivent aussi votre [Planning](/fr/schedule) et les réglages de chat dans les [Paramètres](/fr/settings).
+
+<Tip>
+  Mettez les canaux d'annonces et hors sujet en **Sécurité uniquement** pour que le bot les garde propres sans participer. Créez un canal privé pour votre équipe et mettez-le en **Notifications des modérateurs** pour suivre ce que fait le bot en temps réel.
+</Tip>
+
+## Activer et désactiver des canaux
+
+Activez ou désactivez un canal depuis sa ligne. Pour modifier plusieurs canaux à la fois, sélectionnez-les et utilisez **Définir le rôle…**, **Activer** ou **Désactiver**.
+
+## Nouveaux canaux
+
+Les paramètres **Nouveaux canaux** gèrent les canaux que le bot découvre plus tard, par exemple un nouveau canal Discord :
+
+- **Activer le bot dans les nouveaux canaux** : si c'est désactivé, les nouveaux canaux attendent sur cette page que vous les activiez.
+- **Rôle des nouveaux canaux** : le rôle donné aux nouveaux canaux, Chat de la communauté par défaut.
+
+## Filtres
+
+Filtrez la liste par **Rôle** et **Accès du bot** (Accès complet, Limité, Aucun accès, Pas encore vérifié). Chaque ligne affiche aussi le type de canal et sa dernière activité.
+
+<Warning>
+  Un canal en accès **Limité** ou **Aucun accès** n'a pas les permissions dont le bot a besoin. La modération peut y échouer tant que vous n'avez pas corrigé les permissions du bot sur la plateforme.
+</Warning>

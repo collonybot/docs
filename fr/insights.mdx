@@ -1,0 +1,87 @@
+---
+title: "Insights"
+description: "Comment votre communauté se sent, parle et grandit : humeur, sujets, questions sans réponse, personnes de la semaine, réactions et rythme."
+---
+
+Insights montre comment votre communauté s'est sentie et a parlé sur la période choisie. La page a deux vues, **Simple** et **Avancée**. Passez de l'une à l'autre en haut de la page.
+
+Choisissez la période en haut : 24h, 7j, 30j, ou **Plus** pour d'autres options ou une plage personnalisée.
+
+<Frame>
+  ![Page Insights en vue Simple avec l'humeur, les messages, les questions et les personnes de la semaine](/images/app/insights.png)
+</Frame>
+
+## Vue Simple
+
+Une lecture de la communauté sur une seule page, en cartes :
+
+| Carte | Ce qu'elle montre |
+| --- | --- |
+| **Humeur** | Score de -100 à +100, une phrase comme "Plutôt positif", l'évolution par rapport à la période précédente et la répartition positif, neutre et négatif |
+| **Messages** | Messages des membres, l'évolution par rapport à la période précédente et une barre par jour |
+| **Qui parle** | Combien de membres ont pris la parole sur le total du chat, répartis entre habitués, revenus et nouveaux |
+| **Questions** | La part des questions auxquelles collony AI a répondu, et en combien de temps |
+| **Meilleure heure pour publier** | L'heure la plus active de la période, en UTC |
+| **Message le plus aimé** | Le message qui a le plus de réactions, et qui a réagi |
+| **Emoji préféré** | L'emoji le plus utilisé et les suivants |
+| **Série** | Jours d'affilée avec des messages |
+| **Personnes de la semaine** | Le membre le plus actif, la voix la plus positive et celui à surveiller (humeur la plus basse) |
+
+### De quoi ils parlent
+
+- **Sujets** : la part des messages par sujet, comme Social, Technique, Question, Grossièretés et Sarcastique, et le sujet qui a le plus évolué
+- **Sans réponse** : les questions récentes auxquelles personne n'a répondu. Cliquez sur **Améliorer les réponses** pour les ajouter à votre base de connaissances.
+- **Canaux les plus actifs** : la part des messages par canal
+
+<Tip>
+  Les questions qui reviennent dans **Sans réponse** sont le gain le plus rapide. Ajoutez les réponses à votre [base de connaissances](/fr/bot-setup) et le bot s'en chargera la prochaine fois.
+</Tip>
+
+### Croissance
+
+Les nouveaux membres arrivés et la répartition des membres entre Telegram et Discord, avec la part des messages de chaque plateforme.
+
+## Vue Avancée
+
+Le haut de la vue Avancée affiche l'humeur par jour, les messages des membres, les réactions, les réponses du bot, les messages supprimés et combien de membres ont parlé ou seulement réagi. En dessous, six onglets.
+
+<Tabs>
+  <Tab title="Vue d'ensemble">
+    L'activité de la communauté.
+
+    - **Chronologie d'activité** : les messages dans le temps, en direct, avec des niveaux de zoom de 1h à 30j. Faites glisser sur le graphique pour zoomer. Les bandes grisées indiquent les périodes de mode lent de [Surge Guard](/fr/surge-guard).
+    - **Membres actifs par jour** : membres qui ont envoyé un message et membres qui ont seulement réagi, par jour
+    - **Questions et assistant** : la part des questions auxquelles ont répondu collony AI ou les membres, ou restées sans réponse, le délai médian de réponse et le délai par jour
+  </Tab>
+  <Tab title="Membres">
+    Qui parle le plus, quels messages reçoivent des réactions et qui réagit.
+
+    - **Engagement** : un entonnoir des membres du chat jusqu'à ceux qui ont réagi, parlé, reçu des réactions et été aimés (5 réactions ou plus), comparé à la période précédente
+    - **Carte des membres** : chaque membre placé selon ses messages et son humeur, avec une taille selon les réactions reçues
+    - Classements **Les plus actifs**, **Les plus réactionnés** et **Ceux qui réagissent le plus**
+
+    Cliquez sur un membre pour ouvrir son [profil](/fr/member-details).
+  </Tab>
+  <Tab title="Réactions">
+    Les messages que la communauté a le plus aimés, avec qui a réagi et quand, et les emojis que les membres utilisent le plus.
+  </Tab>
+  <Tab title="Humeur">
+    L'humeur du chat, notée message par message.
+
+    - Part positive, neutre et négative avec le nombre de messages, et l'humeur nette
+    - **Humeur dans le temps**, avec l'amplitude de l'humeur nette et le jour le plus actif
+    - **Membres les plus positifs** et **Membres les plus négatifs**, avec le nombre de messages et le score moyen
+
+    <Tip>
+      Une négativité persistante des mêmes comptes annonce souvent des problèmes. Regardez ces membres avant que cela ne devienne un incident.
+    </Tip>
+  </Tab>
+  <Tab title="Rythme">
+    Quand la communauté est active, en UTC : un calendrier des dernières semaines, le jour et le jour de la semaine les plus actifs, la plus longue série, l'activité par jour de la semaine et par heure, et une carte de chaleur jour par heure.
+
+    Utilisez-le pour choisir le moment de vos annonces et AMA, et pour régler votre [Planning](/fr/schedule).
+  </Tab>
+  <Tab title="Messages">
+    Les messages notés derrière les chiffres, pour lire ce que les membres ont vraiment dit.
+  </Tab>
+</Tabs>

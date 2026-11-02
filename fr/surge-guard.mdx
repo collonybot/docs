@@ -1,0 +1,56 @@
+---
+title: "Surge Guard"
+description: "Mode lent automatique contre les afflux de messages et les raids sur Telegram et Discord."
+---
+
+Surge Guard surveille le rythme des messages dans chaque canal. Quand un canal déborde, le bot active le mode lent de lui-même et le retire une fois le calme revenu. Ouvrez-le depuis l'onglet **Surge protection** de la page [Protection](/fr/protection), en vue Avancée, ou depuis la ligne **Surge Guard** en vue Simple. Activez-le ou désactivez-le en haut. Les changements sont enregistrés immédiatement.
+
+Quand Surge Guard est désactivé, l'**Instant guard** arrête toujours les membres qui inondent le chat seuls.
+
+Le haut de l'onglet montre les 7 derniers jours : actions, passages en mode lent et leur durée, messages retenus, ce que l'Instant guard a supprimé ou mis en sourdine, et le canal où le mode lent a duré le plus longtemps.
+
+Votre équipe (administrateurs, modérateurs et membres de l'équipe) n'est jamais ralentie. Les membres sur liste blanche, si.
+
+<Frame>
+  ![Onglet Surge protection avec les réglages du déclencheur et du mode lent](/images/app/surge-guard.png)
+</Frame>
+
+## Déclencheur
+
+Le mode lent démarre quand les deux conditions sont réunies :
+
+- Un canal reçoit le nombre de messages fixé dans l'intervalle (par exemple 30 messages en 1 minute), **ou** son rythme bondit soudain à 4 fois la normale, avec au moins 15 messages par minute.
+- Assez de membres différents écrivent. Vous fixez le minimum, par exemple 3 membres.
+
+Le minimum de membres évite qu'une seule personne qui tape vite déclenche le mode lent. C'est l'Instant guard qui gère celui qui inonde seul.
+
+## Mode lent
+
+Pendant le mode lent, tout le chat est limité à environ un message toutes les quelques secondes. L'attente de chaque membre augmente avec le nombre de personnes qui écrivent, entre l'attente minimale et maximale que vous fixez (de 10 secondes à 1 heure). L'attente de tout le chat peut être réglée à la main ou laissée en automatique.
+
+| Plateforme | Application du mode lent |
+| --- | --- |
+| **Discord** | **Mode lent de la plateforme** utilise le réglage natif de Discord. Le bot a besoin de la permission Gérer les salons. Ou choisissez **Appliqué par le bot**. |
+| **Telegram** | Les bots Telegram ne peuvent pas activer le mode lent, le bot l'applique donc toujours en supprimant les messages envoyés trop tôt. |
+
+## Annoncer dans le chat
+
+Avec **Annoncer dans le chat** activé, le bot publie un court message dans le canal quand le mode lent commence et un autre quand il se termine.
+
+## Exemples
+
+Avec un déclencheur de 30 messages en 1 minute et au moins 3 membres :
+
+| Situation | Résultat |
+| --- | --- |
+| 1 membre qui écrit toutes les 3 s | Ne se déclenche pas. Un seul membre, l'Instant guard s'en charge. |
+| 2 membres, toutes les 20 s chacun | Ne se déclenche pas. Seulement 2 membres. |
+| 5 membres, toutes les 15 s chacun | Peut se déclencher comme pic, si le chat tourne d'habitude sous 5 messages par minute. |
+| 10 membres, toutes les 10 s chacun | Se déclenche. 60 messages dans l'intervalle. |
+| Raid : 30 membres, toutes les 5 s chacun | Se déclenche. 360 messages dans l'intervalle. |
+
+La page affiche le même tableau avec vos réglages, pour les vérifier avant un lancement ou un AMA.
+
+## Graphique d'activité
+
+La **chronologie d'activité** en bas affiche le volume de messages sur 1h, 6h, 24h ou 7j, en direct. Les bandes grisées indiquent quand le mode lent était actif. Faites glisser sur le graphique pour zoomer, puis cliquez sur **Réinitialiser le zoom** pour revenir.

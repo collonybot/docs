@@ -1,0 +1,97 @@
+---
+title: "Protezione"
+description: "Scegli con una sola impostazione quanto è severo collony.ai, poi perfeziona regole anti-truffa, blocklist, impersonificazione e Surge Guard."
+---
+
+La pagina Protezione controlla ciò che il bot blocca da solo. Aprila da **Protezione** nella barra laterale. Ha due viste, **Semplice** e **Avanzata**. Passa dall'una all'altra in alto nella pagina.
+
+<Frame>
+  ![Pagina Protezione in vista Semplice con i livelli di severità, gli ultimi 7 giorni e i livelli di protezione](/images/app/protection.png)
+</Frame>
+
+## Vista Semplice
+
+### Livello di severità
+
+Una sola scelta imposta insieme sanzioni, impersonificazione, Surge Guard, controllo dei media e pulizia. Le tue regole IA e le blocklist restano come le hai impostate.
+
+| Livello | Cosa fa |
+| --- | --- |
+| **Rilassato** | Ti chiede prima di ogni ban. Silenziamenti brevi, meno controlli. |
+| **Bilanciato** (consigliato) | Elimina, silenzia e banna i recidivi da solo. Adatto alla maggior parte delle community. |
+| **Severo** | Banna al 2° silenziamento, tutti i controlli attivi, Surge Guard attivo. Per chat grandi o spesso sotto raid. |
+
+### Ultimi 7 giorni
+
+Quanti messaggi il bot ha rimosso per te, quanti ne ha inviati in **Da revisionare** e quanti hai segnato come errore. La barra li divide in bannati, silenziati, eliminati e da revisionare.
+
+### Impostazioni rapide
+
+- **Lascia che il bot banni da solo**: se attivo, i ban sono immediati e puoi annullarli da [Incidenti](/it/incidents). Se spento, il bot suggerisce il ban e ti aspetta.
+- **Durata del silenziamento**: usata per ogni silenziamento e mentre un suggerimento di ban è in attesa. 1 ora, 24 ore, 3 giorni o 7 giorni.
+- **Recidivi**: quando bannare, per esempio al 3° silenziamento in 30 giorni, o mai. Gli incidenti perdonati non contano.
+
+### Livelli
+
+Sotto le impostazioni rapide, ogni livello di protezione è una riga che puoi aprire. Ognuna mostra quanti messaggi ha intercettato negli ultimi 7 giorni.
+
+| Livello | Cosa copre |
+| --- | --- |
+| **Regole anti-truffa e spam** | L'IA legge ogni messaggio cercando questi schemi, oltre alle regole della tua community. Vedi [Regole IA](/it/ai-rules). |
+| **Blocklist** | Parole e link gestiti all'istante, senza IA. Vedi [Blocklist](/it/blocklists). |
+| **Impersonificazione** | Individua gli account che copiano nomi o foto del tuo team. Vedi [Impersonificazione](/it/impersonation). |
+| **Surge Guard** | Modalità lenta automatica durante ondate e raid. Vedi [Surge Guard](/it/surge-guard). |
+
+Apri una riga per cambiarne le impostazioni principali. **Altro in Avanzata** ti porta a tutte le impostazioni.
+
+## Vista Avanzata
+
+La vista Avanzata mostra tutte le impostazioni e tutti i numeri.
+
+### Come viene controllato un messaggio
+
+Ogni messaggio passa dai livelli in quest'ordine. Il primo livello che agisce su un messaggio decide cosa gli succede.
+
+<Steps>
+  <Step title="Surge Guard">
+    Controlla il ritmo dei messaggi in ogni canale e attiva la modalità lenta durante un'ondata o un raid.
+  </Step>
+  <Step title="Protezione dall'impersonificazione">
+    Individua i membri che copiano nome, @username o foto di qualcuno del tuo team.
+  </Step>
+  <Step title="Blocklist">
+    Parole, frasi e domini, gestiti all'istante.
+  </Step>
+  <Step title="Regole IA">
+    Tutto ciò che i livelli precedenti non hanno intercettato viene letto dall'IA, con le regole della tua community e le regole predefinite.
+  </Step>
+</Steps>
+
+### Attività
+
+Per il periodo che scegli (24h, 7g, 30g, o **Altro** per opzioni come gli ultimi 14 giorni, questo mese o un intervallo personalizzato):
+
+- Azioni e incidenti, con la variazione rispetto al periodo precedente
+- Totali di eliminati, silenziati e bannati
+- **Azioni al giorno**, con il giorno più intenso e il livello che ha lavorato di più
+- **Per livello**: ondate e flood, impersonificazione, blocklist, regole IA e filtri, ciascuno con eliminazioni, silenziamenti e ban
+
+### Schede
+
+<Columns cols={2}>
+  <Card title="Sanzioni e filtri" href="/it/enforcement">
+    Permessi di ban, durata del silenziamento, recidivi, media e pulizia.
+  </Card>
+  <Card title="Regole IA" href="/it/ai-rules">
+    Le regole della tua community e le regole predefinite.
+  </Card>
+  <Card title="Blocklist" href="/it/blocklists">
+    Domini bloccati e consentiti e le raccolte di blocco.
+  </Card>
+  <Card title="Impersonificazione" href="/it/impersonation">
+    Cosa conta come copia e cosa succede.
+  </Card>
+  <Card title="Surge Guard" href="/it/surge-guard">
+    Attivazione e modalità lenta contro ondate e raid.
+  </Card>
+</Columns>

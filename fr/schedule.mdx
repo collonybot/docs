@@ -1,0 +1,46 @@
+---
+title: "Planning"
+description: "Définissez ce que fait le bot collony.ai et quand : modération seule, modération avec réponses dans le chat ou planning hebdomadaire personnalisé."
+---
+
+La page Planning définit ce que fait le bot, et quand. Utilisez-la pour modérer 24 h/24 tout en limitant les réponses dans le chat aux heures où votre communauté est la plus active.
+
+<Frame>
+  ![Page Planning avec les options de planning, le fuseau horaire et la grille hebdomadaire](/images/app/schedule.png)
+</Frame>
+
+## Bot activé
+
+L'interrupteur principal. Quand il est désactivé, le bot ne fait rien, quel que soit le planning.
+
+## Choisir un planning
+
+| Option | Ce que fait le bot |
+| --- | --- |
+| **Toujours Sécurité** | Modère à toute heure, tous les jours, sans répondre dans le chat |
+| **Toujours Chat + Sécurité** | Modère et répond dans le chat, 24 h/24, 7 j/7 |
+| **Personnalisé** | Vous choisissez les heures et le mode de chacune |
+
+La page affiche le mode en cours et l'heure du prochain changement.
+
+## Fuseau horaire
+
+Les heures s'affichent dans le fuseau horaire du planning. Choisissez-le dans la liste, de UTC-10 (Honolulu) à UTC+12 (Auckland), pour que la grille corresponde à la journée de votre communauté.
+
+## Planning personnalisé
+
+Choisissez un mode à peindre, puis peignez la grille hebdomadaire :
+
+| Mode | Ce que fait le bot |
+| --- | --- |
+| **Sécurité** | Modère, mais ne répond pas et ne participe pas à la conversation |
+| **Chat + Sécurité** | Modère et répond : chat, réponses de FAQ et réactions |
+| **Arrêté** | Ne fait rien sur ce créneau |
+
+1. Faites glisser sur la grille pour peindre des créneaux de 30 minutes.
+2. Cliquez sur le nom d'un jour pour le remplir, ou sur une heure pour la remplir tous les jours.
+3. Cliquez sur **Enregistrer les modifications**, ou sur **Annuler** pour les abandonner.
+
+<Tip>
+  Un réglage courant : Chat + Sécurité aux heures d'affluence et Sécurité le reste du temps. Les arnaques sont toujours supprimées 24 h/24 et le bot ne discute que quand il y a du monde.
+</Tip>

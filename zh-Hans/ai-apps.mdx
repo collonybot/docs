@@ -1,0 +1,226 @@
+---
+title: "AI 应用"
+description: "将 Claude、ChatGPT、Cursor 或 VS Code 连接到 collony.ai，用你自己的 AI 管理社区，分步说明。"
+keywords:
+  - "MCP"
+  - "Model Context Protocol"
+  - "Claude"
+  - "ChatGPT"
+  - "Cursor"
+  - "VS Code"
+---
+
+把你自己的 AI 连接到 collony.ai，用日常语言管理社区。问它“这周聊天里发生了什么？”、“禁言发空投链接的账号”或“周末关闭聊天回复”，你的 AI 就会替你完成。
+
+它通过 collony.ai MCP 服务器运作，只能做你在应用中能做的事。
+
+<Frame>
+  ![AI 应用页面，包括已连接的应用、带有服务器 URL 的连接面板以及可 Undo 的最近调用](/images/app/ai-apps-v2.png)
+</Frame>
+
+## 开始之前
+
+你需要：
+
+- 一个至少可访问一个项目的 collony.ai 账号
+- 以下任一应用：Claude、ChatGPT、Claude Code、Cursor 或 VS Code
+- 服务器 URL：
+
+```text
+https://app.collony.ai/mcp
+```
+
+你也可以在应用的 **设置** > **连接或管理 AI 应用** 中复制它。
+
+## 连接你的 AI 应用
+
+选择你的应用并按步骤操作。
+
+<Tabs>
+  <Tab title="Claude">
+    <Steps>
+      <Step title="打开 Connectors">
+        在 Claude 中前往 **Settings**，然后 **Connectors**，点击 **Add custom connector**。
+      </Step>
+      <Step title="添加 collony.ai">
+        命名为 **Collony** 并粘贴服务器 URL：`https://app.collony.ai/mcp`。点击 **Add**。
+      </Step>
+      <Step title="连接">
+        点击 **Connect**。会打开一个 collony.ai 窗口。如果要求登录，请登录。
+      </Step>
+      <Step title="选择项目和权限">
+        选择 Claude 可以使用的项目以及它可以做什么（参见下方“选择应用可以做什么”）。点击 **保存**，你会被带回 Claude。
+      </Step>
+      <Step title="试一试">
+        开始新对话并问：“用 Collony 看看，这周我的社区发生了什么？”
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="开启开发者模式">
+        在 ChatGPT 中前往 **Settings**，然后 **Apps**，开启 **developer mode**。
+      </Step>
+      <Step title="创建应用">
+        点击 **Create app**。命名为 **Collony** 并粘贴服务器 URL：`https://app.collony.ai/mcp`。
+      </Step>
+      <Step title="连接">
+        点击 **Connect**。会打开一个 collony.ai 窗口。如果要求登录，请登录。
+      </Step>
+      <Step title="选择项目和权限">
+        选择 ChatGPT 可以使用的项目以及它可以做什么（参见下方“选择应用可以做什么”）。点击 **保存**。
+      </Step>
+      <Step title="试一试">
+        开始新对话，选择 Collony 应用并问：“这周我的社区发生了什么？”
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="添加服务器">
+        在终端中运行：
+
+        ```bash
+        claude mcp add --transport http collony https://app.collony.ai/mcp
+        ```
+      </Step>
+      <Step title="连接">
+        启动 Claude Code，输入 `/mcp`，选择 **collony** 并选择认证。浏览器中会打开一个 collony.ai 窗口。如果要求登录，请登录。
+      </Step>
+      <Step title="选择项目和权限">
+        选择 Claude Code 可以使用的项目以及它可以做什么。点击 **保存** 并返回终端。
+      </Step>
+      <Step title="试一试">
+        问：“用 Collony 列出我的项目并显示本周的事件。”
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Cursor">
+    <Steps>
+      <Step title="添加服务器">
+        打开 **Cursor Settings**，然后 **MCP**，添加新服务器。或者把以下内容加入你的 `mcp.json`：
+
+        ```json
+        {
+          "mcpServers": {
+            "collony": {
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="连接">
+        Cursor 会显示 collony 需要登录。点击它。浏览器中会打开一个 collony.ai 窗口。如果要求登录，请登录。
+      </Step>
+      <Step title="选择项目和权限">
+        选择 Cursor 可以使用的项目以及它可以做什么。点击 **保存**。
+      </Step>
+      <Step title="试一试">
+        在聊天中问：“用 Collony 列出我的项目并显示本周的事件。”
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="VS Code">
+    <Steps>
+      <Step title="添加服务器">
+        把以下内容加入工作区的 `.vscode/mcp.json`，或加入你的用户 MCP 设置：
+
+        ```json
+        {
+          "servers": {
+            "collony": {
+              "type": "http",
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="连接">
+        在 `mcp.json` 中点击服务器上方的 **Start**。浏览器中会打开一个 collony.ai 窗口。如果要求登录，请登录。
+      </Step>
+      <Step title="选择项目和权限">
+        选择 VS Code 可以使用的项目以及它可以做什么。点击 **保存**。
+      </Step>
+      <Step title="试一试">
+        在 Copilot Chat 的智能体模式中问：“用 Collony 列出我的项目并显示本周的事件。”
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Tip>
+  任何支持远程 MCP 服务器的应用也都可以。把 `https://app.collony.ai/mcp` 作为 HTTP 服务器添加并连接即可。
+</Tip>
+
+## 选择应用可以做什么
+
+连接时，你为该应用选择权限。从小范围开始，随时可以更改。
+
+| 权限 | 应用可以做什么 |
+| --- | --- |
+| **读取** | 查看设置、机器人文本、成员、聊天记录和统计 |
+| **读取 + 管理** | 另外可禁言和封禁成员、使用 Surge Guard、以机器人身份发布消息 |
+| **读取 + 修改设置** | 另外可修改时间表、功能、防护、频道和机器人文本 |
+| **管理 + 修改设置** | 以上全部 |
+
+你还可以设置：
+
+- **禁言和封禁上限**：应用每小时最多可以执行的禁言和封禁次数，例如 20。可以防止被误导或被欺骗的 AI 清空你的聊天。
+- **有效期**：30 天、90 天、1 年或永不过期。权限到期前 7 天你会收到提醒。
+
+## 可以问什么
+
+<AccordionGroup>
+  <Accordion title="查看社区情况">
+    - “这周我的社区发生了什么？”
+    - “显示今天的事件以及机器人做了什么。”
+    - “过去 7 天哪些问题没人回答？”
+    - “这个月最活跃的成员是谁？”
+  </Accordion>
+
+  <Accordion title="管理">
+    - “找到发空投链接的成员，禁言 24 小时。”
+    - “显示 @username 过去一天的消息。”
+  </Accordion>
+
+  <Accordion title="修改设置">
+    - “周六和周日关闭聊天回复。”
+    - “为主聊天开启 Surge Guard。”
+    - “屏蔽域名 example-scam.xyz。”
+  </Accordion>
+
+  <Accordion title="更新机器人的知识">
+    - “我们的发布日改到了 3 月 14 日，更新知识库。”
+    - “添加一条 FAQ：团队从不主动私信。”
+  </Accordion>
+
+  <Accordion title="以机器人身份发布">
+    - “在主聊天发一条提醒：管理员从不主动私信。”
+    - “安排周五 14:00 UTC 发布 AMA 公告。”
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  让应用在修改前先检查，例如“先显示当前时间表，再关闭周末”。
+</Tip>
+
+## 查看并撤销应用的操作
+
+打开 **设置**，然后 **连接或管理 AI 应用**。在 **最近调用** 中可以看到应用在项目中的每次调用：谁、哪个应用、做了什么，以及是否已生效。
+
+- 在任何更改上点击 **Undo** 即可撤销。
+- 每次更改也会记录在 [审计日志](/zh-Hans/audit-log) 中，并标注应用名称。
+- 应用以机器人身份发布的消息会在 [聊天记录](/zh-Hans/chat-history) 中显示为通过该应用发送。
+
+成员消息被视为不可信。应用绝不会因为某条成员消息的要求而禁言、封禁或发布。
+
+## 管理或断开连接
+
+AI 应用页面列出连接到项目的所有应用，以及连接者、权限、到期时间和最后使用时间。
+
+- **编辑** 可修改其项目、权限、上限或有效期。
+- **断开连接** 会将其移除。
+
+你也可以在 **账号** 页面查看你连接的所有应用。

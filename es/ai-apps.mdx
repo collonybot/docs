@@ -1,0 +1,215 @@
+---
+title: "Apps de IA"
+description: "Conecta Claude, ChatGPT, Cursor o VS Code a collony.ai y gestiona tus comunidades desde tu propia IA, paso a paso."
+---
+
+Conecta tu propia IA a collony.ai y gestiona tus comunidades con lenguaje natural. Pregunta "¿qué pasó en el chat esta semana?", "silencia la cuenta que publica enlaces de airdrops" o "desactiva las respuestas en el chat los fines de semana", y tu IA lo hace por ti.
+
+Funciona con el servidor MCP de collony.ai y solo puede hacer lo que tú puedes hacer en la app.
+
+<Frame>
+  ![Página Apps de IA con las apps conectadas, el panel Conectar con la URL del servidor y las llamadas recientes con Deshacer](/images/app/ai-apps-v2.png)
+</Frame>
+
+## Antes de empezar
+
+Necesitas:
+
+- Una cuenta de collony.ai con acceso a al menos un proyecto
+- Una de estas apps: Claude, ChatGPT, Claude Code, Cursor o VS Code
+- La URL del servidor:
+
+```text
+https://app.collony.ai/mcp
+```
+
+También puedes copiarla en la app, en **Ajustes** y luego **Conectar o gestionar apps de IA**.
+
+## Conecta tu app de IA
+
+Elige tu app y sigue los pasos.
+
+<Tabs>
+  <Tab title="Claude">
+    <Steps>
+      <Step title="Abre Conectores">
+        En Claude, ve a **Settings**, luego **Connectors**, y haz clic en **Add custom connector**.
+      </Step>
+      <Step title="Añade collony.ai">
+        Llámalo **Collony** y pega la URL del servidor: `https://app.collony.ai/mcp`. Haz clic en **Add**.
+      </Step>
+      <Step title="Conecta">
+        Haz clic en **Connect**. Se abre una ventana de collony.ai. Inicia sesión si te lo pide.
+      </Step>
+      <Step title="Elige proyectos y acceso">
+        Elige los proyectos que puede usar Claude y lo que puede hacer (consulta Elige qué puede hacer la app, más abajo). Haz clic en **Guardar**. Vuelves a Claude.
+      </Step>
+      <Step title="Pruébalo">
+        Abre un chat nuevo y pregunta: "Usando Collony, ¿qué pasó en mi comunidad esta semana?"
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="Activa el modo desarrollador">
+        En ChatGPT, ve a **Settings**, luego **Apps**, y activa el **developer mode**.
+      </Step>
+      <Step title="Crea la app">
+        Haz clic en **Create app**. Llámala **Collony** y pega la URL del servidor: `https://app.collony.ai/mcp`.
+      </Step>
+      <Step title="Conecta">
+        Haz clic en **Connect**. Se abre una ventana de collony.ai. Inicia sesión si te lo pide.
+      </Step>
+      <Step title="Elige proyectos y acceso">
+        Elige los proyectos que puede usar ChatGPT y lo que puede hacer. Haz clic en **Guardar**.
+      </Step>
+      <Step title="Pruébalo">
+        Abre un chat nuevo, elige la app Collony y pregunta: "¿Qué pasó en mi comunidad esta semana?"
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="Añade el servidor">
+        Ejecuta esto en tu terminal:
+
+        ```bash
+        claude mcp add --transport http collony https://app.collony.ai/mcp
+        ```
+      </Step>
+      <Step title="Conecta">
+        Abre Claude Code, escribe `/mcp`, elige **collony** y elige autenticarte. Se abre una ventana de collony.ai en tu navegador. Inicia sesión si te lo pide.
+      </Step>
+      <Step title="Elige proyectos y acceso">
+        Elige los proyectos que puede usar Claude Code y lo que puede hacer. Haz clic en **Guardar** y vuelve a la terminal.
+      </Step>
+      <Step title="Pruébalo">
+        Pregunta: "Usando Collony, lista mis proyectos y muéstrame los incidentes de esta semana."
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Cursor">
+    <Steps>
+      <Step title="Añade el servidor">
+        Abre **Cursor Settings**, luego **MCP**, y añade un servidor nuevo. O añade esto a tu `mcp.json`:
+
+        ```json
+        {
+          "mcpServers": {
+            "collony": {
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Conecta">
+        Cursor muestra que collony necesita iniciar sesión. Haz clic. Se abre una ventana de collony.ai en tu navegador. Inicia sesión si te lo pide.
+      </Step>
+      <Step title="Elige proyectos y acceso">
+        Elige los proyectos que puede usar Cursor y lo que puede hacer. Haz clic en **Guardar**.
+      </Step>
+      <Step title="Pruébalo">
+        En el chat, pregunta: "Usando Collony, lista mis proyectos y muéstrame los incidentes de esta semana."
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="VS Code">
+    <Steps>
+      <Step title="Añade el servidor">
+        Añade esto a `.vscode/mcp.json` en tu espacio de trabajo, o a tus ajustes MCP de usuario:
+
+        ```json
+        {
+          "servers": {
+            "collony": {
+              "type": "http",
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Conecta">
+        Haz clic en **Start** encima del servidor en `mcp.json`. Se abre una ventana de collony.ai en tu navegador. Inicia sesión si te lo pide.
+      </Step>
+      <Step title="Elige proyectos y acceso">
+        Elige los proyectos que puede usar VS Code y lo que puede hacer. Haz clic en **Guardar**.
+      </Step>
+      <Step title="Pruébalo">
+        En Copilot Chat, en modo agente, pregunta: "Usando Collony, lista mis proyectos y muéstrame los incidentes de esta semana."
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Tip>
+  Cualquier otra app compatible con servidores MCP remotos también funciona. Añade `https://app.collony.ai/mcp` como servidor HTTP y conéctate.
+</Tip>
+
+## Elige qué puede hacer la app
+
+Al conectar, eliges el acceso de esa app. Empieza con poco. Puedes cambiarlo cuando quieras.
+
+| Acceso | Qué puede hacer la app |
+| --- | --- |
+| **Lectura** | Ver ajustes, textos del bot, miembros, historial del chat y estadísticas |
+| **Lectura + moderación** | Además, silenciar y banear miembros, usar Surge Guard y publicar mensajes como el bot |
+| **Lectura + cambiar ajustes** | Además, cambiar el horario, las funciones, la protección, los canales y los textos del bot |
+| **Moderación + cambiar ajustes** | Todo lo anterior |
+
+También fijas:
+
+- **Limitar silencios y baneos**: el máximo de silencios y baneos que la app puede hacer por hora, por ejemplo 20. Evita que una IA confundida o engañada arrase tu chat.
+- **Caducidad**: 30 días, 90 días, 1 año o nunca. Recibes un aviso 7 días antes de que termine el acceso.
+
+## Qué pedirle
+
+<AccordionGroup>
+  <Accordion title="Revisar tu comunidad">
+    - "¿Qué pasó en mi comunidad esta semana?"
+    - "Muéstrame los incidentes de hoy y lo que hizo el bot."
+    - "¿Qué preguntas quedaron sin respuesta en los últimos 7 días?"
+    - "¿Quiénes son los miembros más activos este mes?"
+  </Accordion>
+  <Accordion title="Moderar">
+    - "Busca al miembro que publica enlaces de airdrops y siléncialo 24 horas."
+    - "Muéstrame los mensajes de @usuario del último día."
+  </Accordion>
+  <Accordion title="Cambiar ajustes">
+    - "Desactiva las respuestas en el chat el sábado y el domingo."
+    - "Activa Surge Guard en el chat principal."
+    - "Bloquea el dominio example-scam.xyz."
+  </Accordion>
+  <Accordion title="Actualizar lo que sabe el bot">
+    - "Nuestro lanzamiento pasó al 14 de marzo. Actualiza la base de conocimiento."
+    - "Añade una respuesta a las FAQ: el equipo nunca escribe primero por privado."
+  </Accordion>
+  <Accordion title="Publicar como el bot">
+    - "Publica un recordatorio en el chat principal de que los administradores nunca escriben primero por privado."
+    - "Programa un anuncio del AMA para el viernes a las 14:00 UTC."
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Pídele a la app que revise antes de cambiar nada, por ejemplo "muéstrame el horario actual y luego desactiva los fines de semana".
+</Tip>
+
+## Ver y deshacer lo que hizo
+
+Abre **Ajustes** y luego **Conectar o gestionar apps de IA**. En **Llamadas recientes** ves cada llamada que hizo una app en el proyecto: quién, qué app, qué hizo y si se aplicó.
+
+- Haz clic en **Deshacer** en cualquier cambio para revertirlo.
+- Cada cambio también está en el [Registro de auditoría](/es/audit-log), marcado con el nombre de la app.
+- Los mensajes que una app publica como el bot aparecen en el [Historial del chat](/es/chat-history) como enviados mediante esa app.
+
+Los mensajes de los miembros se tratan como no fiables. La app nunca silencia, banea ni publica porque el mensaje de un miembro se lo pida.
+
+## Gestionar o desconectar
+
+La página Apps de IA lista cada app conectada al proyecto, con quién la conectó, su acceso, cuándo caduca y cuándo se usó por última vez.
+
+- **Editar** cambia sus proyectos, acceso, límites o caducidad.
+- **Desconectar** la quita.
+
+También puedes ver todas tus apps conectadas en tu página **Cuenta**.

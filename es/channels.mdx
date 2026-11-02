@@ -1,0 +1,47 @@
+---
+title: "Canales"
+description: "Elige en qué canales de Telegram y Discord trabaja collony.ai y qué canal recibe los informes para moderadores."
+mode: "default"
+---
+
+La página Canales muestra todos los canales que el bot puede ver en el proyecto actual, agrupados por plataforma. En cada uno eliges si el bot está activo y qué rol tiene el canal.
+
+El bot no lee, no modera ni responde en los canales desactivados. Sigue en el grupo o servidor, pero no hace nada allí.
+
+<Frame>
+  ![Página Canales con los ajustes de canales nuevos, filtros y la lista de canales](/images/app/channels.png)
+</Frame>
+
+## Roles de canal
+
+| Rol | Protege | Responde |
+| --- | --- | --- |
+| **Chat de la comunidad** (predeterminado): donde hablan los miembros. El bot protege el chat y responde preguntas. | Sí | Sí |
+| **Solo seguridad**: el bot elimina spam y estafas, silencia y banea, y nunca responde. | Sí | No |
+| **Solo chat y soporte**: el bot responde preguntas y conversa. Aquí no modera. | No | Sí |
+| **Notificaciones para moderadores**: un canal privado para tus moderadores. El bot publica informes de lo que eliminó, silenció o baneó. | No | Publica informes |
+
+Haz clic en el rol junto a un canal para cambiarlo. En los canales donde el bot responde, las respuestas también siguen tu [Horario](/es/schedule) y los ajustes de chat en [Ajustes](/es/settings).
+
+<Tip>
+  Pon los canales de anuncios y off-topic en **Solo seguridad** para que el bot los mantenga limpios sin unirse a la conversación. Crea un canal privado para tu equipo y ponlo en **Notificaciones para moderadores** para seguir lo que hace el bot en tiempo real.
+</Tip>
+
+## Activar y desactivar canales
+
+Activa o desactiva un canal desde su fila. Para cambiar varios canales a la vez, selecciónalos y usa **Asignar rol…**, **Activar** o **Desactivar**.
+
+## Canales nuevos
+
+Los ajustes de **Canales nuevos** controlan los canales que el bot detecta más tarde, por ejemplo un canal nuevo de Discord:
+
+- **Activar el bot en canales nuevos**: si está desactivado, los canales nuevos esperan en esta página hasta que los actives.
+- **Rol para canales nuevos**: el rol que reciben los canales nuevos, Chat de la comunidad por defecto.
+
+## Filtros
+
+Filtra la lista por **Rol** y **Acceso del bot** (Acceso completo, Limitado, Sin acceso, Aún sin comprobar). Cada fila muestra también el tipo de canal y su última actividad.
+
+<Warning>
+  Un canal con acceso **Limitado** o **Sin acceso** no tiene permisos que el bot necesita. La moderación puede fallar ahí hasta que corrijas los permisos del bot en la plataforma.
+</Warning>

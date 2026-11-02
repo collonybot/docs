@@ -1,0 +1,87 @@
+---
+title: "Insights"
+description: "Come si sente, parla e cresce la tua community: umore, argomenti, domande senza risposta, persone della settimana, reazioni e ritmo."
+---
+
+Insights mostra come si è sentita e come ha parlato la tua community nel periodo scelto. Ha due viste, **Semplice** e **Avanzata**. Passa dall'una all'altra in alto nella pagina.
+
+Scegli il periodo in alto: 24h, 7g, 30g, o **Altro** per altre opzioni o un intervallo personalizzato.
+
+<Frame>
+  ![Pagina Insights in vista Semplice con umore, messaggi, domande e persone della settimana](/images/app/insights.png)
+</Frame>
+
+## Vista Semplice
+
+Una lettura della community in una sola pagina, a schede:
+
+| Scheda | Cosa mostra |
+| --- | --- |
+| **Umore** | Punteggio da -100 a +100, una frase come "Per lo più positivo", la variazione rispetto al periodo precedente e la ripartizione positivo, neutro e negativo |
+| **Messaggi** | Messaggi dei membri, la variazione rispetto al periodo precedente e una barra al giorno |
+| **Chi parla** | Quanti membri sono intervenuti sul totale della chat, divisi tra abituali, tornati e nuovi |
+| **Domande** | La quota di domande a cui ha risposto collony AI, e in quanto tempo |
+| **Ora migliore per pubblicare** | L'ora più attiva del periodo, in UTC |
+| **Messaggio più amato** | Il messaggio con più reazioni, e chi ha reagito |
+| **Emoji preferita** | L'emoji più usata e le successive |
+| **Serie** | Giorni di fila con messaggi |
+| **Persone della settimana** | Il membro più attivo, la voce più positiva e uno da tenere d'occhio (umore più basso) |
+
+### Di cosa parlano
+
+- **Argomenti**: la quota di messaggi per argomento, come Sociale, Tecnico, Domanda, Volgarità e Sarcastico, e l'argomento che è cambiato di più
+- **Senza risposta**: domande recenti a cui nessuno ha risposto. Fai clic su **Migliora le risposte** per aggiungerle alla knowledge base.
+- **Canali più attivi**: la quota di messaggi per canale
+
+<Tip>
+  Le domande che tornano in **Senza risposta** sono il miglioramento più rapido. Aggiungi le risposte alla tua [knowledge base](/it/bot-setup) e la prossima volta se ne occuperà il bot.
+</Tip>
+
+### Crescita
+
+I nuovi membri entrati e dove si trovano i membri, divisi tra Telegram e Discord con la quota di messaggi di ciascuna piattaforma.
+
+## Vista Avanzata
+
+In alto nella vista Avanzata vedi l'umore al giorno, i messaggi dei membri, le reazioni, le risposte del bot, i messaggi rimossi e quanti membri hanno parlato o solo reagito. Sotto ci sono sei schede.
+
+<Tabs>
+  <Tab title="Panoramica">
+    Quanto è attiva la community.
+
+    - **Linea dell'attività**: i messaggi nel tempo, in diretta, con zoom da 1h a 30g. Trascina sul grafico per ingrandire. Le bande ombreggiate indicano i periodi di modalità lenta di [Surge Guard](/it/surge-guard).
+    - **Membri attivi al giorno**: membri che hanno inviato un messaggio e membri che hanno solo reagito, al giorno
+    - **Domande e assistente**: la quota di domande a cui hanno risposto collony AI o i membri, o rimaste senza risposta, il tempo mediano di risposta e il tempo di risposta al giorno
+  </Tab>
+  <Tab title="Membri">
+    Chi parla di più, quali messaggi ricevono reazioni e chi reagisce.
+
+    - **Coinvolgimento**: un imbuto dai membri della chat a chi ha reagito, parlato, ricevuto reazioni ed è stato amato (5 reazioni o più), confrontato con il periodo precedente
+    - **Mappa dei membri**: ogni membro posizionato per messaggi e umore, con dimensione in base alle reazioni ricevute
+    - Classifiche **Più attivi**, **Con più reazioni** e **Chi reagisce di più**
+
+    Fai clic su un membro per aprire il suo [profilo](/it/member-details).
+  </Tab>
+  <Tab title="Reazioni">
+    I messaggi che la community ha amato di più, con chi ha reagito e quando, e le emoji più usate dai membri.
+  </Tab>
+  <Tab title="Umore">
+    L'umore della chat, valutato messaggio per messaggio.
+
+    - Quota positiva, neutra e negativa con il numero di messaggi, e l'umore netto
+    - **Umore nel tempo**, con l'intervallo dell'umore netto e il giorno più attivo
+    - **Membri più positivi** e **Membri più negativi**, con numero di messaggi e punteggio medio
+
+    <Tip>
+      Una negatività persistente degli stessi account spesso anticipa problemi. Controlla quei membri prima che diventi un incidente.
+    </Tip>
+  </Tab>
+  <Tab title="Ritmo">
+    Quando la community è attiva, in UTC: un calendario delle ultime settimane, il giorno e il giorno della settimana più attivi, la serie più lunga, l'attività per giorno della settimana e per ora, e una mappa di calore giorno per ora.
+
+    Usalo per scegliere il momento di annunci e AMA e per impostare i tuoi [Orari](/it/schedule).
+  </Tab>
+  <Tab title="Messaggi">
+    I messaggi valutati dietro ai numeri, per leggere cosa hanno detto davvero i membri.
+  </Tab>
+</Tabs>

@@ -1,0 +1,46 @@
+---
+title: "Commandes du chat"
+description: "Modérez directement depuis votre groupe Telegram ou votre serveur Discord avec /mute, /ban, /fp et plus."
+---
+
+Modérez depuis le chat de votre communauté sans ouvrir l'app. Les commandes fonctionnent dans tous les groupes Telegram et serveurs Discord connectés au projet. La même liste se trouve sur la page **Guide** de l'app.
+
+## Qui peut les utiliser
+
+Les propriétaires, administrateurs et modérateurs du projet. Les administrateurs du chat sur la plateforme comptent aussi. Toute autre personne reçoit une courte réponse "réservé aux administrateurs" qui s'efface au bout de quelques secondes.
+
+- **Discord** : commandes slash natives. Tapez `/`, choisissez la commande dans le menu de Discord et sélectionnez l'utilisateur avec le sélecteur. Vous seul voyez la réponse. Les taper en texte fonctionne aussi.
+- **Telegram** : les administrateurs du groupe ont les mêmes commandes dans le menu d'autocomplétion `/`.
+
+## Commandes
+
+| Commande | Alias | Effet | Exemple |
+| --- | --- | --- | --- |
+| `/whitelist` | `/wl` | Ajoute l'utilisateur à la liste blanche. Ses messages échappent à la détection de contenu malveillant. | Répondez avec `/whitelist` |
+| `/unwhitelist` | `/unwl` | Retire le rôle liste blanche | `/unwhitelist @identifiant` |
+| `/role` | `/roles` | Affiche les rôles de l'utilisateur dans le projet | `/role @identifiant` |
+| `/mute` | | Met l'utilisateur en sourdine. Ajoutez une durée (`30m`, `2h`, `1d`), ou rien pour une sourdine définitive. | `/mute @identifiant 2h` |
+| `/unmute` | | Lève une sourdine | Répondez avec `/unmute` |
+| `/ban` | | Bannit l'utilisateur. Une durée fonctionne sur Telegram (`1d`). Sur Discord, les bannissements sont toujours définitifs. | `/ban @identifiant` |
+| `/unban` | | Lève un bannissement | `/unban @identifiant` |
+| `/unrestrict` | | Lève toutes les restrictions (sourdine et bannissement) | Répondez avec `/unrestrict` |
+| `/forgive` | | Efface les avertissements de l'utilisateur, clôt ses incidents actifs et lève toute sourdine ou bannissement | Répondez avec `/forgive` |
+| `/falsepositive` | `/fp` | Marque le dernier incident de l'utilisateur comme erreur de collony.ai, annule ses actions et lève toute sourdine ou bannissement | Répondez avec `/fp` |
+| `/userstats` | `/stats` | Résumé rapide : messages envoyés, avertissements, première et dernière apparition, humeur sur 7 jours | `/userstats @identifiant` |
+
+## Choisir l'utilisateur visé
+
+Sur Discord, les commandes slash demandent l'utilisateur avec un sélecteur. Les commandes texte trouvent l'utilisateur dans cet ordre :
+
+1. **Répondre** à l'un de ses messages. C'est le moyen le plus fiable, qui fonctionne même s'il n'a pas d'identifiant.
+2. **Le mentionner** : `@identifiant` sur Telegram, une mention classique sur Discord.
+
+<Tip>
+  Sur Telegram mobile, toucher une commande dans le menu `/` l'envoie aussitôt. Faites d'abord glisser le message de l'utilisateur pour y répondre, puis touchez la commande.
+</Tip>
+
+Le bot doit avoir vu l'utilisateur au moins une fois, c'est-à-dire qu'il ait envoyé un message dans un chat connecté. Sinon, il ne peut pas encore l'identifier.
+
+## Avec d'autres bots
+
+Vous utilisez Rose, Combot ou un bot similaire dans le même groupe ? Les commandes adressées à un autre bot, comme `/stats@combot`, sont ignorées. Si une commande sans destinataire déclenche deux bots à la fois, adressez-la à collony.ai, par exemple `/userstats@CollonyBot`, ou utilisez l'alias qui n'entre pas en conflit.

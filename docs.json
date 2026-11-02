@@ -97,60 +97,546 @@
     }
   },
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "introduction",
-          "login",
-          "projects",
-          "billing"
+        "language": "en",
+        "default": true,
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "login",
+              "projects",
+              "billing"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "bot-setup",
+              "channels",
+              "schedule",
+              "settings"
+            ]
+          },
+          {
+            "group": "Protection",
+            "pages": [
+              "protection",
+              "ai-rules",
+              "enforcement",
+              "blocklists",
+              "impersonation",
+              "surge-guard"
+            ]
+          },
+          {
+            "group": "Moderation",
+            "pages": [
+              "incidents",
+              "chat-history",
+              "message",
+              "members",
+              "member-details",
+              "audit-log",
+              "chat-commands"
+            ]
+          },
+          {
+            "group": "Analytics",
+            "pages": [
+              "overview",
+              "insights"
+            ]
+          },
+          {
+            "group": "AI tools",
+            "pages": [
+              "assistant",
+              "ai-apps"
+            ]
+          }
         ]
       },
       {
-        "group": "Configuration",
-        "pages": [
-          "bot-setup",
-          "channels",
-          "schedule",
-          "settings"
+        "language": "es",
+        "groups": [
+          {
+            "group": "Primeros pasos",
+            "pages": [
+              "es/introduction",
+              "es/login",
+              "es/projects",
+              "es/billing"
+            ]
+          },
+          {
+            "group": "Configuración",
+            "pages": [
+              "es/bot-setup",
+              "es/channels",
+              "es/schedule",
+              "es/settings"
+            ]
+          },
+          {
+            "group": "Protección",
+            "pages": [
+              "es/protection",
+              "es/ai-rules",
+              "es/enforcement",
+              "es/blocklists",
+              "es/impersonation",
+              "es/surge-guard"
+            ]
+          },
+          {
+            "group": "Moderación",
+            "pages": [
+              "es/incidents",
+              "es/chat-history",
+              "es/message",
+              "es/members",
+              "es/member-details",
+              "es/audit-log",
+              "es/chat-commands"
+            ]
+          },
+          {
+            "group": "Analítica",
+            "pages": [
+              "es/overview",
+              "es/insights"
+            ]
+          },
+          {
+            "group": "Herramientas de IA",
+            "pages": [
+              "es/assistant",
+              "es/ai-apps"
+            ]
+          }
         ]
       },
       {
-        "group": "Protection",
-        "pages": [
-          "protection",
-          "ai-rules",
-          "enforcement",
-          "blocklists",
-          "impersonation",
-          "surge-guard"
+        "language": "fr",
+        "groups": [
+          {
+            "group": "Premiers pas",
+            "pages": [
+              "fr/introduction",
+              "fr/login",
+              "fr/projects",
+              "fr/billing"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "fr/bot-setup",
+              "fr/channels",
+              "fr/schedule",
+              "fr/settings"
+            ]
+          },
+          {
+            "group": "Protection",
+            "pages": [
+              "fr/protection",
+              "fr/ai-rules",
+              "fr/enforcement",
+              "fr/blocklists",
+              "fr/impersonation",
+              "fr/surge-guard"
+            ]
+          },
+          {
+            "group": "Modération",
+            "pages": [
+              "fr/incidents",
+              "fr/chat-history",
+              "fr/message",
+              "fr/members",
+              "fr/member-details",
+              "fr/audit-log",
+              "fr/chat-commands"
+            ]
+          },
+          {
+            "group": "Analyses",
+            "pages": [
+              "fr/overview",
+              "fr/insights"
+            ]
+          },
+          {
+            "group": "Outils IA",
+            "pages": [
+              "fr/assistant",
+              "fr/ai-apps"
+            ]
+          }
         ]
       },
       {
-        "group": "Moderation",
-        "pages": [
-          "incidents",
-          "chat-history",
-          "message",
-          "members",
-          "member-details",
-          "audit-log",
-          "chat-commands"
+        "language": "it",
+        "groups": [
+          {
+            "group": "Per iniziare",
+            "pages": [
+              "it/introduction",
+              "it/login",
+              "it/projects",
+              "it/billing"
+            ]
+          },
+          {
+            "group": "Configurazione",
+            "pages": [
+              "it/bot-setup",
+              "it/channels",
+              "it/schedule",
+              "it/settings"
+            ]
+          },
+          {
+            "group": "Protezione",
+            "pages": [
+              "it/protection",
+              "it/ai-rules",
+              "it/enforcement",
+              "it/blocklists",
+              "it/impersonation",
+              "it/surge-guard"
+            ]
+          },
+          {
+            "group": "Moderazione",
+            "pages": [
+              "it/incidents",
+              "it/chat-history",
+              "it/message",
+              "it/members",
+              "it/member-details",
+              "it/audit-log",
+              "it/chat-commands"
+            ]
+          },
+          {
+            "group": "Analisi",
+            "pages": [
+              "it/overview",
+              "it/insights"
+            ]
+          },
+          {
+            "group": "Strumenti IA",
+            "pages": [
+              "it/assistant",
+              "it/ai-apps"
+            ]
+          }
         ]
       },
       {
-        "group": "Analytics",
-        "pages": [
-          "overview",
-          "insights"
+        "language": "hi",
+        "groups": [
+          {
+            "group": "शुरुआत करें",
+            "pages": [
+              "hi/introduction",
+              "hi/login",
+              "hi/projects",
+              "hi/billing"
+            ]
+          },
+          {
+            "group": "कॉन्फ़िगरेशन",
+            "pages": [
+              "hi/bot-setup",
+              "hi/channels",
+              "hi/schedule",
+              "hi/settings"
+            ]
+          },
+          {
+            "group": "सुरक्षा",
+            "pages": [
+              "hi/protection",
+              "hi/ai-rules",
+              "hi/enforcement",
+              "hi/blocklists",
+              "hi/impersonation",
+              "hi/surge-guard"
+            ]
+          },
+          {
+            "group": "मॉडरेशन",
+            "pages": [
+              "hi/incidents",
+              "hi/chat-history",
+              "hi/message",
+              "hi/members",
+              "hi/member-details",
+              "hi/audit-log",
+              "hi/chat-commands"
+            ]
+          },
+          {
+            "group": "एनालिटिक्स",
+            "pages": [
+              "hi/overview",
+              "hi/insights"
+            ]
+          },
+          {
+            "group": "AI टूल्स",
+            "pages": [
+              "hi/assistant",
+              "hi/ai-apps"
+            ]
+          }
         ]
       },
       {
-        "group": "AI tools",
-        "pages": [
-          "assistant",
-          "ai-apps"
+        "language": "uk",
+        "groups": [
+          {
+            "group": "Початок роботи",
+            "pages": [
+              "uk/introduction",
+              "uk/login",
+              "uk/projects",
+              "uk/billing"
+            ]
+          },
+          {
+            "group": "Налаштування",
+            "pages": [
+              "uk/bot-setup",
+              "uk/channels",
+              "uk/schedule",
+              "uk/settings"
+            ]
+          },
+          {
+            "group": "Захист",
+            "pages": [
+              "uk/protection",
+              "uk/ai-rules",
+              "uk/enforcement",
+              "uk/blocklists",
+              "uk/impersonation",
+              "uk/surge-guard"
+            ]
+          },
+          {
+            "group": "Модерація",
+            "pages": [
+              "uk/incidents",
+              "uk/chat-history",
+              "uk/message",
+              "uk/members",
+              "uk/member-details",
+              "uk/audit-log",
+              "uk/chat-commands"
+            ]
+          },
+          {
+            "group": "Аналітика",
+            "pages": [
+              "uk/overview",
+              "uk/insights"
+            ]
+          },
+          {
+            "group": "Інструменти ШІ",
+            "pages": [
+              "uk/assistant",
+              "uk/ai-apps"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hans",
+        "groups": [
+          {
+            "group": "快速开始",
+            "pages": [
+              "zh-Hans/introduction",
+              "zh-Hans/login",
+              "zh-Hans/projects",
+              "zh-Hans/billing"
+            ]
+          },
+          {
+            "group": "配置",
+            "pages": [
+              "zh-Hans/bot-setup",
+              "zh-Hans/channels",
+              "zh-Hans/schedule",
+              "zh-Hans/settings"
+            ]
+          },
+          {
+            "group": "防护",
+            "pages": [
+              "zh-Hans/protection",
+              "zh-Hans/ai-rules",
+              "zh-Hans/enforcement",
+              "zh-Hans/blocklists",
+              "zh-Hans/impersonation",
+              "zh-Hans/surge-guard"
+            ]
+          },
+          {
+            "group": "管理",
+            "pages": [
+              "zh-Hans/incidents",
+              "zh-Hans/chat-history",
+              "zh-Hans/message",
+              "zh-Hans/members",
+              "zh-Hans/member-details",
+              "zh-Hans/audit-log",
+              "zh-Hans/chat-commands"
+            ]
+          },
+          {
+            "group": "分析",
+            "pages": [
+              "zh-Hans/overview",
+              "zh-Hans/insights"
+            ]
+          },
+          {
+            "group": "AI 工具",
+            "pages": [
+              "zh-Hans/assistant",
+              "zh-Hans/ai-apps"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hant",
+        "groups": [
+          {
+            "group": "快速開始",
+            "pages": [
+              "zh-Hant/introduction",
+              "zh-Hant/login",
+              "zh-Hant/projects",
+              "zh-Hant/billing"
+            ]
+          },
+          {
+            "group": "設定",
+            "pages": [
+              "zh-Hant/bot-setup",
+              "zh-Hant/channels",
+              "zh-Hant/schedule",
+              "zh-Hant/settings"
+            ]
+          },
+          {
+            "group": "防護",
+            "pages": [
+              "zh-Hant/protection",
+              "zh-Hant/ai-rules",
+              "zh-Hant/enforcement",
+              "zh-Hant/blocklists",
+              "zh-Hant/impersonation",
+              "zh-Hant/surge-guard"
+            ]
+          },
+          {
+            "group": "管理",
+            "pages": [
+              "zh-Hant/incidents",
+              "zh-Hant/chat-history",
+              "zh-Hant/message",
+              "zh-Hant/members",
+              "zh-Hant/member-details",
+              "zh-Hant/audit-log",
+              "zh-Hant/chat-commands"
+            ]
+          },
+          {
+            "group": "分析",
+            "pages": [
+              "zh-Hant/overview",
+              "zh-Hant/insights"
+            ]
+          },
+          {
+            "group": "AI 工具",
+            "pages": [
+              "zh-Hant/assistant",
+              "zh-Hant/ai-apps"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "ru",
+        "groups": [
+          {
+            "group": "Начало работы",
+            "pages": [
+              "ru/introduction",
+              "ru/login",
+              "ru/projects",
+              "ru/billing"
+            ]
+          },
+          {
+            "group": "Настройка",
+            "pages": [
+              "ru/bot-setup",
+              "ru/channels",
+              "ru/schedule",
+              "ru/settings"
+            ]
+          },
+          {
+            "group": "Защита",
+            "pages": [
+              "ru/protection",
+              "ru/ai-rules",
+              "ru/enforcement",
+              "ru/blocklists",
+              "ru/impersonation",
+              "ru/surge-guard"
+            ]
+          },
+          {
+            "group": "Модерация",
+            "pages": [
+              "ru/incidents",
+              "ru/chat-history",
+              "ru/message",
+              "ru/members",
+              "ru/member-details",
+              "ru/audit-log",
+              "ru/chat-commands"
+            ]
+          },
+          {
+            "group": "Аналитика",
+            "pages": [
+              "ru/overview",
+              "ru/insights"
+            ]
+          },
+          {
+            "group": "Инструменты ИИ",
+            "pages": [
+              "ru/assistant",
+              "ru/ai-apps"
+            ]
+          }
         ]
       }
     ]

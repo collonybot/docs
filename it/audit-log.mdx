@@ -1,0 +1,40 @@
+---
+title: "Registro attività"
+description: "Ogni modifica e azione di moderazione del tuo progetto, da parte del team, del bot e delle app di IA, con l'annullamento delle modifiche delle app."
+---
+
+Il registro attività tiene traccia di ogni modifica nel progetto: del tuo team, del bot e delle [app di IA](/it/ai-apps). Usalo per sapere chi ha cambiato cosa e quando.
+
+<Frame>
+  ![Registro attività con filtri e voci del team, del bot e delle app di IA](/images/app/audit-log.png)
+</Frame>
+
+## Filtri
+
+| Filtro | Opzioni |
+| --- | --- |
+| **Includi azioni del bot** | Mostra cosa ha fatto il bot da solo, come attivare Surge Guard |
+| **Includi letture delle app di IA** | Mostra cosa hanno letto le app di IA, non solo cosa hanno cambiato |
+| **Categoria** | Tutte, Fatturazione, Contenuti, Moderazione, Lettura, Ruoli, Orari, Impostazioni |
+| **Autore** | Tutte le persone che hanno fatto una modifica, compreso il team di collony.ai |
+| **Tramite** | Qualsiasi, o solo app di IA |
+| **Quando** | Sempre, 24h, 7g, 30g, o **Altro** per altre opzioni o un intervallo personalizzato |
+| **Ordine** | Prima i più recenti o prima i più vecchi |
+
+## Voci
+
+Ogni voce mostra l'orario, chi l'ha fatta, l'azione, l'obiettivo (un utente, un canale, un'impostazione o un contenuto), i dettagli e se è riuscita. Fai clic su una voce per vedere tutto ciò che ha fatto, compreso l'errore se è fallita.
+
+Le modifiche fatte tramite un'app di IA sono segnate con l'app, per esempio "via Claude (AI app)". Fai clic su **Annulla questa modifica** per ripristinare.
+
+Esempi di ciò che viene registrato:
+
+- Ruoli aggiunti o rimossi
+- Modifiche a orari, impostazioni e protezione
+- Contenuti salvati nella [Configurazione del bot](/it/bot-setup)
+- Silenziamenti, ban e altre azioni di moderazione
+- Surge Guard che si attiva o cambia, da parte del bot
+
+<Tip>
+  Se il bot inizia a comportarsi diversamente, filtra prima per **Contenuti** o **Impostazioni**. Una modifica recente alla personalità dell'agente o alla knowledge base è spesso la causa.
+</Tip>

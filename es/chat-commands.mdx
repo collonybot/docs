@@ -1,0 +1,46 @@
+---
+title: "Comandos del chat"
+description: "Modera directamente desde tu grupo de Telegram o tu servidor de Discord con /mute, /ban, /fp y más."
+---
+
+Modera desde el chat de tu comunidad sin abrir la app. Los comandos funcionan en todos los grupos de Telegram y servidores de Discord conectados al proyecto. La misma lista está en la página **Guía** de la app.
+
+## Quién puede usarlos
+
+Los propietarios, administradores y moderadores del proyecto. Los administradores del chat en la plataforma también cuentan. Cualquier otra persona recibe una respuesta breve de "solo administradores" que se borra a los pocos segundos.
+
+- **Discord**: comandos de barra nativos. Escribe `/`, elige el comando en el menú de Discord y selecciona al usuario con el selector. Solo tú ves la respuesta. Escribirlos como texto también funciona.
+- **Telegram**: los administradores del grupo tienen los mismos comandos en el menú de autocompletado de `/`.
+
+## Comandos
+
+| Comando | Alias | Qué hace | Ejemplo |
+| --- | --- | --- | --- |
+| `/whitelist` | `/wl` | Añade al usuario a la lista blanca. Sus mensajes se saltan la detección de contenido malicioso. | Responde con `/whitelist` |
+| `/unwhitelist` | `/unwl` | Quita el rol de lista blanca | `/unwhitelist @usuario` |
+| `/role` | `/roles` | Muestra los roles del usuario en el proyecto | `/role @usuario` |
+| `/mute` | | Silencia al usuario. Añade una duración (`30m`, `2h`, `1d`), o déjala vacía para un silencio permanente. | `/mute @usuario 2h` |
+| `/unmute` | | Quita un silencio | Responde con `/unmute` |
+| `/ban` | | Banea al usuario. En Telegram admite duración (`1d`). En Discord los baneos son siempre permanentes. | `/ban @usuario` |
+| `/unban` | | Quita un baneo | `/unban @usuario` |
+| `/unrestrict` | | Quita todas las restricciones (silencio y baneo) | Responde con `/unrestrict` |
+| `/forgive` | | Borra las advertencias del usuario, cierra sus incidentes activos y quita cualquier silencio o baneo | Responde con `/forgive` |
+| `/falsepositive` | `/fp` | Marca el último incidente del usuario como error de collony.ai, revierte sus acciones y quita cualquier silencio o baneo | Responde con `/fp` |
+| `/userstats` | `/stats` | Resumen rápido: mensajes enviados, advertencias, primera y última vez visto, ánimo de 7 días | `/userstats @usuario` |
+
+## Elegir al usuario
+
+En Discord, los comandos de barra piden al usuario con un selector. Los comandos de texto buscan al usuario en este orden:
+
+1. **Responder** a uno de sus mensajes. Es la forma más fiable y funciona aunque no tenga nombre de usuario.
+2. **Mencionarlo**: `@usuario` en Telegram, una mención normal en Discord.
+
+<Tip>
+  En Telegram para móvil, tocar un comando en el menú `/` lo envía al instante. Desliza para responder al mensaje del usuario primero y luego toca el comando.
+</Tip>
+
+El bot debe haber visto al usuario al menos una vez, es decir, que haya enviado un mensaje en un chat conectado. Si no, todavía no puede identificarlo.
+
+## Junto a otros bots
+
+¿Usas Rose, Combot u otro bot similar en el mismo grupo? Los comandos dirigidos a otro bot, como `/stats@combot`, se ignoran. Si un comando sin destinatario activa dos bots a la vez, dirígelo a collony.ai, por ejemplo `/userstats@CollonyBot`, o usa el alias que no choca.

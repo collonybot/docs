@@ -1,0 +1,60 @@
+---
+title: "Sanctions et filtres"
+description: "Droits de bannissement, durée de mise en sourdine, règles pour les récidivistes, vérification des médias, nettoyage et limites de liens pour les nouveaux membres."
+---
+
+L'onglet **Sanctions et filtres** de la page [Protection](/fr/protection), en vue Avancée, définit jusqu'où le bot peut agir seul et quels médias il vérifie. Les changements sont enregistrés immédiatement.
+
+Les principaux réglages se trouvent aussi dans la vue Simple de la page Protection, et le **niveau de rigueur** les règle pour vous.
+
+<Frame>
+  ![Page Protection en vue Avancée, sur l'onglet Sanctions et filtres](/images/app/enforcement.png)
+</Frame>
+
+## Sanctions
+
+### Autoriser le bot à bannir
+
+- **Activé** : les bannissements par liste de blocage, par l'IA et pour récidive retirent le membre immédiatement. Vous pouvez annuler n'importe quel bannissement depuis [Incidents](/fr/incidents).
+- **Désactivé** : chaque bannissement devient **Suggérer un bannissement**. Le bot supprime le message, met le membre en sourdine et place le cas dans **À vérifier** pour que vous décidiez.
+
+<Tip>
+  Commencez avec ce réglage désactivé. Après quelques semaines à vérifier les suggestions, activez-le quand vous faites confiance à la façon dont le bot gère votre communauté.
+</Tip>
+
+### Durée de mise en sourdine
+
+Combien de temps le bot met les membres en sourdine pour les listes de blocage, l'IA et les suggestions de bannissement (le membre reste en sourdine pendant que vous décidez). Choisissez de 5 minutes à 28 jours, ou une durée personnalisée. Les menus de mise en sourdine manuelle proposent cette durée en premier.
+
+Les freins anti-flood pour ceux qui écrivent trop vite restent courts (5 minutes ou 1 heure), quel que soit ce réglage.
+
+### Bannir les récidivistes
+
+Bannit un membre à sa nième mise en sourdine sur une période donnée, par exemple la 3e en 30 jours. Choisissez de la 2e à la 10e mise en sourdine et une période de 7 à 365 jours.
+
+Le décompte inclut les mises en sourdine du bot et de vos administrateurs sur tout le projet. Les incidents pardonnés ou marqués comme erreur de collony.ai ne comptent pas.
+
+## Filtres
+
+### Vérification des médias
+
+| Réglage | Effet | Par défaut |
+| --- | --- | --- |
+| **Modération des images** | Vérifie les photos par vision IA pour repérer les contenus inappropriés | Activé |
+| **Modération des animations** | Vérifie les GIF, animations et vidéos par vision IA | Désactivé |
+| **Modération des stickers** | Vérifie les stickers par vision IA | Désactivé |
+
+### Nettoyage
+
+| Réglage | Effet | Par défaut |
+| --- | --- | --- |
+| **Supprimer les stories** | Supprime les stories Telegram partagées dans le chat, un vecteur d'arnaque courant | Désactivé |
+| **Supprimer les messages d'arrivée** | Supprime les messages Telegram "a rejoint le groupe" une minute après leur apparition | Désactivé |
+
+### Nouveaux membres
+
+**Liens des nouveaux membres** supprime les messages contenant des liens envoyés par des membres arrivés depuis moins d'un certain temps. Choisissez Désactivé, 1 heure, 24 heures, 7 jours ou une valeur personnalisée. Les liens vers vos [domaines autorisés](/fr/blocklists) passent toujours.
+
+<Tip>
+  La plupart des comptes d'arnaque publient un lien quelques minutes après leur arrivée. Une fenêtre de 24 heures les arrête sans gêner les membres habituels.
+</Tip>

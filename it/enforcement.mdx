@@ -1,0 +1,60 @@
+---
+title: "Sanzioni e filtri"
+description: "Permessi di ban, durata del silenziamento, regole per i recidivi, controllo dei media, pulizia e limiti ai link dei nuovi membri."
+---
+
+La scheda **Sanzioni e filtri** della pagina [Protezione](/it/protection), in vista Avanzata, stabilisce fin dove può arrivare il bot da solo e quali media controlla. Le modifiche si salvano subito.
+
+Le impostazioni principali si trovano anche nella vista Semplice della pagina Protezione, e il **livello di severità** le imposta per te.
+
+<Frame>
+  ![Pagina Protezione in vista Avanzata, sulla scheda Sanzioni e filtri](/images/app/enforcement.png)
+</Frame>
+
+## Sanzioni
+
+### Consenti al bot di bannare
+
+- **Attivo**: i ban da blocklist, da IA e per recidiva rimuovono subito il membro. Puoi annullare qualsiasi ban da [Incidenti](/it/incidents).
+- **Spento**: ogni ban diventa **Suggerisci ban**. Il bot elimina il messaggio, silenzia il membro e mette il caso in **Da revisionare** perché decida tu.
+
+<Tip>
+  Inizia con questa opzione spenta. Dopo qualche settimana di revisione dei suggerimenti, attivala quando ti fidi di come il bot gestisce la tua community.
+</Tip>
+
+### Durata del silenziamento
+
+Per quanto tempo il bot silenzia i membri nei silenziamenti da blocklist, da IA e nei suggerimenti di ban (il membro resta silenziato mentre decidi). Scegli da 5 minuti a 28 giorni, o una durata personalizzata. I menu di silenziamento manuale propongono prima questa durata.
+
+I freni anti-flood per chi scrive troppo in fretta restano brevi (5 minuti o 1 ora) qualunque cosa imposti qui.
+
+### Banna i recidivi
+
+Banna un membro all'ennesimo silenziamento in un certo periodo, per esempio il 3° in 30 giorni. Scegli dal 2° al 10° silenziamento e un periodo da 7 a 365 giorni.
+
+Il conteggio include i silenziamenti del bot e dei tuoi amministratori in tutto il progetto. Non contano gli incidenti che hai perdonato o segnato come errore di collony.ai.
+
+## Filtri
+
+### Controllo dei media
+
+| Impostazione | Cosa fa | Predefinito |
+| --- | --- | --- |
+| **Moderazione immagini** | Controlla le foto con la visione artificiale per trovare contenuti inappropriati | Attivo |
+| **Moderazione animazioni** | Controlla GIF, animazioni e video con la visione artificiale | Spento |
+| **Moderazione sticker** | Controlla gli sticker con la visione artificiale | Spento |
+
+### Pulizia
+
+| Impostazione | Cosa fa | Predefinito |
+| --- | --- | --- |
+| **Elimina le storie** | Elimina le storie di Telegram condivise in chat, un vettore comune di truffe | Spento |
+| **Elimina i messaggi di ingresso** | Elimina gli avvisi di Telegram "utente entrato" un minuto dopo che compaiono | Spento |
+
+### Nuovi membri
+
+**Link dai nuovi membri** elimina i messaggi con link dei membri entrati da meno di un certo tempo. Scegli Spento, 1 ora, 24 ore, 7 giorni o un valore personalizzato. I link ai tuoi [domini consentiti](/it/blocklists) vanno sempre bene.
+
+<Tip>
+  La maggior parte degli account truffaldini pubblica un link pochi minuti dopo essere entrata. Una finestra di 24 ore li ferma senza disturbare i membri abituali.
+</Tip>

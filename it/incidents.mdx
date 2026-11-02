@@ -1,0 +1,66 @@
+---
+title: "Incidenti"
+description: "Controlla ogni azione di moderazione della tua community, gestisci la coda da revisionare, intervieni sui recidivi e correggi gli errori di collony.ai."
+---
+
+La pagina Incidenti elenca ogni caso di moderazione del progetto attuale, del bot o del tuo team. Usala per controllare le decisioni del bot, gestire i casi che ti ha segnalato e occuparti dei recidivi.
+
+Scegli il periodo in alto: 24h, 7g, 30g, o **Altro** per altre opzioni o un intervallo personalizzato. Passa da un **Feed** di schede a una **Tabella**.
+
+<Frame>
+  ![Pagina Incidenti con incidenti al giorno, la suddivisione per tipo e la coda da revisionare](/images/app/incidents.png)
+</Frame>
+
+## Riepilogo
+
+- Incidenti e azioni intraprese, con la variazione rispetto al periodo precedente
+- Totali di eliminati, silenziati e bannati
+- **Incidenti al giorno**, colorati in base a cosa è stato fatto: ban, silenziamento, eliminazione o nulla
+- **Per tipo**: cosa ha individuato ogni caso, come l'IA, l'Instant guard, una blocklist o Surge Guard, con eliminazioni, silenziamenti e ban
+
+## Scheda Incidenti
+
+### Filtri
+
+| Filtro | Opzioni |
+| --- | --- |
+| **Mostra** | Tutti gli incidenti, Da revisionare, Attivi, Perdonati, Errore di collony.ai |
+| **Tipo** | IA, Instant guard, Blocklist, Surge Guard e gli altri livelli che hanno agito nel periodo |
+| **Gravità** | Critica, Alta, Media, Bassa |
+
+### Da revisionare
+
+I casi che il bot vuole farti confermare, in cima all'elenco. Per esempio un **ban suggerito** quando il bot non può bannare da solo (vedi [Sanzioni e filtri](/it/enforcement)), o un messaggio segnalato da una blocklist o dal controllo di impersonificazione.
+
+Ogni scheda mostra il membro, il canale, cosa lo ha individuato, la regola violata, il motivo del bot, il messaggio e cosa è stato fatto. Usa **Segna come revisionato** quando il bot ha fatto bene, oppure apri il menu per agire. Seleziona più schede per segnarle come revisionate insieme.
+
+### Azioni su un incidente
+
+| Azione | Cosa fa |
+| --- | --- |
+| **Banna, come suggerisce il bot** | Rimuove il membro, come suggerito dal bot |
+| **Segna come revisionato** | Il bot ha fatto bene. Non cambia nulla. |
+| **Perdona** | Annulla quanto fatto e toglie il silenziamento o il ban. L'incidente non conta più per i [ban dei recidivi](/it/enforcement). |
+| **Segna come errore** | Annulla tutto e insegna a collony.ai a non ripeterlo. Puoi descrivere cosa è andato storto. |
+
+Il menu permette anche di silenziare, eliminare il messaggio e aprire l'incidente, il messaggio o il membro.
+
+Puoi anche perdonare e segnalare errori dalla chat con `/forgive` e `/fp`. Vedi [Comandi chat](/it/chat-commands).
+
+## Scheda Recidivi
+
+I membri raggruppati per incidenti nel periodo, con il numero di incidenti, l'ultimo incidente, lo stato attuale e cosa suggerisce il bot, per esempio **Banna (richiesto dal bot)**. Agisci dalla riga: apri il membro, silenzia, banna o aggiungi alla whitelist. I membri bannati sono nascosti a meno che tu non scelga di mostrarli.
+
+## Pagina dell'incidente
+
+Fai clic su **Apri incidente** per vedere il caso completo:
+
+- **Il messaggio** e il suo punteggio di umore, con traduci e apri su Telegram o Discord
+- **Cosa è successo**: ogni controllo scattato, con il suo punteggio
+- **Contesto della chat**: i messaggi prima e dopo
+- **Cronologia**: quando è stato inviato il messaggio e ogni azione del bot, con i tempi
+- **Incidente**: stato, gravità, cosa lo ha individuato, la regola e il motivo del bot
+- **Analisi di collony AI**: punteggi di violazione delle regole e di malevolenza
+- **Utente**: lo storico del membro, il suo stato e i suoi ruoli, con pulsanti rapidi per i ruoli
+
+Il menu **Azioni** silenzia, banna, elimina i messaggi recenti o apre il profilo del membro.

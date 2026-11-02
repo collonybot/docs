@@ -1,0 +1,59 @@
+---
+title: "Usurpation"
+description: "Repérez les membres qui copient les noms, @identifiants ou photos de votre équipe, même avec des lettres sosies ou des photos recadrées."
+---
+
+La protection contre l'usurpation repère les membres qui copient une personne de votre équipe : son nom, son @identifiant ou sa photo de profil. Elle repère aussi les copies déguisées, comme des lettres sosies, une ou deux lettres différentes, ou une photo recadrée ou retournée. Aucune IA n'intervient et les changements sont enregistrés immédiatement.
+
+Les membres sont vérifiés à leur arrivée, quand ils changent de profil et à chaque message. Ouvrez-la depuis l'onglet **Usurpation** de la page [Protection](/fr/protection), en vue Avancée.
+
+<Frame>
+  ![Onglet Usurpation avec les niveaux de correspondance et leurs actions](/images/app/impersonation.png)
+</Frame>
+
+## Qui est protégé
+
+- Les propriétaires, administrateurs, modérateurs et membres de l'équipe du projet
+- Les administrateurs de chaque chat Telegram (le bot les retrouve lui-même)
+- Le staff du serveur Discord : le propriétaire et les membres ayant des droits de modération
+
+Donnez le rôle **Membre de l'équipe** à toute autre personne de votre équipe dans [Membres](/fr/members). Il ne donne aucun droit, mais protège contre les copies. Les photos sont comparées une fois que le bot les a vues.
+
+## Ce qui se passe
+
+Chaque correspondance est classée selon le degré de certitude du bot. Vous choisissez l'action pour chaque niveau.
+
+| Niveau | Quand |
+| --- | --- |
+| **Certain** | Deux éléments copiés ensemble (nom et photo, ou nom et @identifiant), ou un nom copié accompagné de mots comme "Support" ou "Admin" |
+| **Probable** | Un seul élément copié : un nom ou un @identifiant qui se lit pareil, ou la même photo |
+| **Possible** | Seulement un nom court (4 lettres ou moins) qui se lit de façon proche. Beaucoup de membres en partagent un. |
+
+Actions pour chaque niveau : **Ne rien faire**, **Signaler pour vérification**, **Supprimer le message + signaler**, **Sourdine + signaler pour vérification** ou **Bannir**.
+
+Signaler envoie le membre dans **À vérifier** sur la page [Incidents](/fr/incidents). Supprimer, mettre en sourdine et bannir retirent aussi le message qui l'a trahi. Chaque copie n'est signalée qu'une fois.
+
+## Comparer
+
+Choisissez ce qui compte comme copie : **Noms**, **@identifiants** et **Photos**.
+
+- Les **noms** sont ceux qu'affiche le chat : prénom et nom sur Telegram, pseudo du serveur et nom d'affichage sur Discord.
+- Les **photos** sont comparées selon leur apparence, pas selon le fichier. Une copie zoomée ou retournée compte toujours. La réenregistrer, la redimensionner, en changer les couleurs ou lui ajouter un cadre ne la cache pas.
+
+## Exemples
+
+La page montre comment le bot juge les copies d'un de vos administrateurs. Avec un administrateur nommé Taylor Quinn (@taylor_quinn) :
+
+| Le membre apparaît comme | Correspondance |
+| --- | --- |
+| Taylor Quinn, même photo, @tayIor_quinn | Certain |
+| Taylor Quinn \| Support, sa propre photo | Certain |
+| Talyor Quinn (une lettre différente), photo retournée | Certain |
+| Autre nom, même photo zoomée | Probable |
+| TayIor Quinn (lettres sosies) | Probable |
+| Quinn Taylor (mots inversés) | Probable |
+| Taylor (prénom seul) | Aucune correspondance |
+
+<Tip>
+  Si votre propre équipe est signalée, vérifiez que chacun a le bon rôle dans [Membres](/fr/members).
+</Tip>

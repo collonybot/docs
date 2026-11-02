@@ -1,0 +1,63 @@
+---
+title: "Listas de bloqueo"
+description: "Bloquea al instante palabras, frases y dominios sin IA, usa las colecciones que mantiene collony.ai y permite tus propios dominios."
+---
+
+Las listas de bloqueo gestionan palabras, frases y enlaces al instante, antes de que la IA lea el mensaje. Ábrelas desde la pestaña **Listas de bloqueo** de la página [Protección](/es/protection), en la vista Avanzada. La vista Simple muestra las mismas listas de forma resumida.
+
+Arriba de la pestaña ves lo que detectaron las listas en los últimos 7 días y qué listas coincidieron.
+
+<Frame>
+  ![Pestaña Listas de bloqueo con dominios bloqueados, dominios permitidos y colecciones](/images/app/blocklists.png)
+</Frame>
+
+## Qué pasa con una coincidencia
+
+Para cada dominio, colección o entrada eliges la acción:
+
+| Acción | Resultado |
+| --- | --- |
+| **Predeterminada** | Usa la acción predeterminada de la lista |
+| **Solo marcar** | Deja el mensaje, lo añade a **Pendiente de revisión** y deja que la IA también lo revise |
+| **Eliminar** | Elimina el mensaje |
+| **Eliminar + marcar** | Elimina el mensaje y lo añade a Pendiente de revisión |
+| **Eliminar + silenciar** | Elimina el mensaje y silencia al miembro |
+| **Eliminar + silenciar + marcar** | Todo lo anterior |
+| **Banear** | Expulsa al miembro |
+
+## Mantener actualizadas las listas de collony.ai
+
+Con esto activado, las palabras y dominios que collony.ai añade o retira se aplican a tu proyecto automáticamente. Si está desactivado, cada actualización espera en esta página hasta que la revises.
+
+## Dominios bloqueados
+
+Los enlaces a estos dominios y a todos sus subdominios se gestionan al instante. Escribe un dominio y haz clic en **Bloquear**. Los dominios que añadió collony.ai aparecen marcados como tales.
+
+## Dominios permitidos
+
+Los dominios de esta lista nunca se bloquean: tu web, tu documentación, tus socios. Un dominio permitido tiene prioridad sobre cualquier dominio bloqueado y sobre el [límite de enlaces para miembros nuevos](/es/enforcement). Escribe un dominio y haz clic en **Permitir**.
+
+<Tip>
+  Añade tus enlaces oficiales a Dominios permitidos antes de endurecer las reglas de enlaces. Así el bot no eliminará tus propios anuncios.
+</Tip>
+
+## Colecciones
+
+Listas que collony.ai mantiene por ti. Activa una, elige qué pasa con una coincidencia y añade tus propias entradas.
+
+| Colección | Qué detecta | Acción por defecto |
+| --- | --- | --- |
+| **Fuentes de estafas conocidas** | Usuarios y canales cuyos mensajes reenviados e historias fueron estafas en otras comunidades | Eliminar + silenciar |
+| **Estafas cripto** | Airdrops falsos, drenadores de wallets, rentabilidad garantizada y estafas de recuperación | Eliminar + silenciar |
+| **Estafas de contacto / DM** | Soporte falso, "escríbeme por privado", señales de pago | Eliminar |
+| **Spam para adultos** | Promoción de contenido para adultos y enlaces de webcams o citas | Eliminar + silenciar |
+| **Acortadores de enlaces** | Enlaces acortados que ocultan su destino, una forma habitual de colar enlaces de estafa | Eliminar |
+| **Insultos** | Insultos racistas, étnicos, homofóbicos, tránsfobos y capacitistas, incluidas las grafías disfrazadas | Eliminar |
+
+Cada colección muestra sus entradas activas, cuántas son tuyas, sus coincidencias en los últimos 7 días y sus entradas más detectadas.
+
+### Tus entradas
+
+Añade tu propia **palabra**, **frase** o **dominio** a cualquier colección, con su propia acción, o haz clic en **Importar archivo** para añadir muchas a la vez. Quita una entrada con **Quitar**.
+
+La lista **Entradas de collony.ai** muestra lo que collony.ai mantiene en esa colección. Exporta cualquier colección como JSON, CSV o TXT.

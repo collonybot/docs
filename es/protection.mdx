@@ -1,0 +1,97 @@
+---
+title: "Protección"
+description: "Elige con un solo ajuste lo estricto que es collony.ai y luego afina las reglas contra estafas, las listas de bloqueo, la suplantación y Surge Guard."
+---
+
+La página Protección controla lo que el bot detiene por su cuenta. Ábrela desde **Protección** en la barra lateral. Tiene dos vistas, **Simple** y **Avanzada**. Cambia entre ellas arriba de la página.
+
+<Frame>
+  ![Página Protección en vista Simple con los niveles de rigor, los últimos 7 días y las capas de protección](/images/app/protection.png)
+</Frame>
+
+## Vista Simple
+
+### Nivel de rigor
+
+Una sola elección ajusta a la vez la aplicación de sanciones, la suplantación, Surge Guard, la revisión de medios y la limpieza. Tus reglas de IA y listas de bloqueo se quedan como las tengas.
+
+| Nivel | Qué hace |
+| --- | --- |
+| **Relajado** | Te pregunta antes de cualquier baneo. Silencios cortos, menos revisiones. |
+| **Equilibrado** (recomendado) | Elimina, silencia y banea a los reincidentes por su cuenta. Adecuado para la mayoría de comunidades. |
+| **Estricto** | Banea al 2.º silencio, todas las revisiones activas y Surge Guard activado. Para chats grandes o que sufren raids a menudo. |
+
+### Últimos 7 días
+
+Cuántos mensajes eliminó el bot por ti, cuántos envió a **Pendiente de revisión** y cuántos marcaste como error. La barra los divide en baneados, silenciados, eliminados y en revisión.
+
+### Ajustes rápidos
+
+- **Dejar que el bot banee solo**: si está activado, los baneos se aplican al momento y puedes deshacer cualquiera desde [Incidentes](/es/incidents). Si está desactivado, el bot sugiere el baneo y te espera.
+- **Duración del silencio**: se usa en cada silencio y mientras espera una sugerencia de baneo. 1 hora, 24 horas, 3 días o 7 días.
+- **Reincidentes**: cuándo banear, por ejemplo al 3.º silencio en 30 días, o nunca. Los incidentes perdonados no cuentan.
+
+### Capas
+
+Debajo de los ajustes rápidos, cada capa de protección es una fila que puedes abrir. Cada una muestra cuántos mensajes detectó en los últimos 7 días.
+
+| Capa | Qué cubre |
+| --- | --- |
+| **Reglas contra estafas y spam** | La IA lee cada mensaje buscando estos patrones, además de tus reglas de la comunidad. Consulta [Reglas de IA](/es/ai-rules). |
+| **Listas de bloqueo** | Palabras y enlaces que se gestionan al instante, sin IA. Consulta [Listas de bloqueo](/es/blocklists). |
+| **Suplantación** | Detecta cuentas que copian los nombres o fotos de tu equipo. Consulta [Suplantación](/es/impersonation). |
+| **Surge Guard** | Modo lento automático durante avalanchas y raids. Consulta [Surge Guard](/es/surge-guard). |
+
+Abre una fila para cambiar sus ajustes principales. **Más en Avanzada** te lleva a todos los ajustes.
+
+## Vista Avanzada
+
+La vista Avanzada muestra todos los ajustes y todas las cifras.
+
+### Cómo se revisa un mensaje
+
+Cada mensaje pasa por las capas en este orden. La primera capa que actúa sobre un mensaje decide qué le pasa.
+
+<Steps>
+  <Step title="Surge Guard">
+    Vigila el ritmo de mensajes en cada canal y activa el modo lento durante una avalancha o un raid.
+  </Step>
+  <Step title="Protección contra suplantación">
+    Detecta miembros que copian el nombre, el @usuario o la foto de alguien de tu equipo.
+  </Step>
+  <Step title="Listas de bloqueo">
+    Palabras, frases y dominios, gestionados al instante.
+  </Step>
+  <Step title="Reglas de IA">
+    Todo lo que las capas anteriores no detectaron lo lee la IA, con tus reglas de la comunidad y las reglas predefinidas.
+  </Step>
+</Steps>
+
+### Actividad
+
+Para el periodo que elijas (24h, 7d, 30d, o **Más** para opciones como los últimos 14 días, este mes o un rango personalizado):
+
+- Acciones e incidentes, con el cambio respecto al periodo anterior
+- Totales de eliminados, silenciados y baneados
+- **Acciones por día**, con el día de más actividad y la capa que más trabajó
+- **Por capa**: avalanchas y flood, suplantación, listas de bloqueo, reglas de IA y filtros, cada una con sus eliminaciones, silencios y baneos
+
+### Pestañas
+
+<Columns cols={2}>
+  <Card title="Aplicación y filtros" href="/es/enforcement">
+    Permisos de baneo, duración del silencio, reincidentes, revisión de medios y limpieza.
+  </Card>
+  <Card title="Reglas de IA" href="/es/ai-rules">
+    Tus reglas de la comunidad y las reglas predefinidas.
+  </Card>
+  <Card title="Listas de bloqueo" href="/es/blocklists">
+    Dominios bloqueados y permitidos y las colecciones de bloqueo.
+  </Card>
+  <Card title="Suplantación" href="/es/impersonation">
+    Qué cuenta como copia y qué pasa con ella.
+  </Card>
+  <Card title="Surge Guard" href="/es/surge-guard">
+    Disparadores y modo lento para avalanchas y raids.
+  </Card>
+</Columns>

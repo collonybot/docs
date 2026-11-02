@@ -1,0 +1,170 @@
+---
+title: "Règles IA"
+description: "Rédigez les règles de votre communauté et ajustez les règles prédéfinies appliquées par l'IA de collony.ai."
+---
+
+Tout ce que les listes de blocage n'ont pas intercepté est lu par l'IA, avec vos règles de communauté et ses règles prédéfinies. Ouvrez cette page depuis l'onglet **Règles IA** de la page [Protection](/fr/protection), en vue Avancée. En vue Simple, les mêmes règles se trouvent sous **Règles anti-arnaques et spam**, avec **Personnaliser** sur chacune et **Modifier les règles de la communauté** pour les vôtres.
+
+<Note>
+  Les règles IA font partie des offres Protect, Grow et Scale. Voir [Facturation](/fr/billing).
+</Note>
+
+Le haut de l'onglet montre ce qu'a fait l'IA ces 7 derniers jours : actions, suppressions, mises en sourdine, bannissements et cas envoyés en vérification, avec un lien vers les incidents correspondants.
+
+<Frame>
+  ![Onglet Règles IA avec les règles de la communauté et les règles prédéfinies](/images/app/ai-rules.png)
+</Frame>
+
+## Règles de la communauté
+
+Des règles en langage courant qui disent ce qui est autorisé et ce qui est supprimé. Cliquez sur **Modifier**, collez vos règles et enregistrez. L'IA les applique aussitôt. Chaque modification est versionnée et la page indique qui a modifié les règles en dernier.
+
+Le bot connaît déjà votre projet grâce à la [Configuration du bot](/fr/bot-setup), donc ces règles peuvent parler de "l'équipe" et des "canaux officiels" et s'appliquer correctement. Choisissez le modèle le plus proche, collez-le et n'ajustez que ce qui est propre à votre communauté.
+
+<Note>
+  Les modèles sont en anglais. L'IA les comprend tout aussi bien et modère les messages dans toutes les langues.
+</Note>
+
+<Tabs>
+  <Tab title="Général">
+    ```txt
+    INSTANT BAN:
+    - Phishing, scam links, or any link promising free money, prizes, or giveaways
+    - Impersonating the team, moderators, or support, including lookalike names and avatars
+    - Anyone offering to DM, "help," "verify," or "sync" anything on the team's behalf
+    - Posting other members' personal information without consent
+    - Unsolicited promotion of other projects, products, services, or invite links
+    - Mass-tagging, raid behavior, or coordinated spam
+
+    WARN, THEN MUTE, THEN BAN:
+    - Repeated off-topic posting after being asked to stop
+    - Self-promotion outside designated channels
+    - Emoji, sticker, or copy-paste flooding
+    - Persistent bad-faith arguing or thread derailment
+
+    ALLOWED, DO NOT ACT ON:
+    - Honest criticism, complaints, or negative sentiment about the project
+    - Comparisons to competitors and general market or industry talk
+    - Heated but good-faith debate between members
+    - Questions that have been asked before
+
+    ENFORCEMENT:
+    - Severe violations (scams, phishing, impersonation) skip straight to ban
+    - Standard violations follow warn to mute to ban
+    - When unsure, remove the message and flag an admin rather than banning
+    ```
+  </Tab>
+  <Tab title="Crypto">
+    ```txt
+    INSTANT BAN:
+    - Airdrop, claim, mint, presale, or "check eligibility" links from anyone but a verified admin
+    - "Send your wallet," "first X wallets," "claim your tokens here," or any giveaway hook
+    - DM-first contact offering to help, verify, sync, validate, or recover a wallet
+    - Seed phrase, private key, or "connect wallet" prompts in any form
+    - Posting contract addresses or claim links that don't match official, pinned sources
+    - Impersonating the team, mods, or support, including lookalike handles and avatars
+    - Unsolicited promotion of other tokens, projects, or P2P/OTC trades
+
+    WARN, THEN MUTE, THEN BAN:
+    - Spam, flooding, or repeated off-topic posting
+    - Coordinated or baseless FUD after it's been addressed once with facts
+    - Self-promotion outside designated channels
+
+    ALLOWED, DO NOT ACT ON:
+    - Price discussion, criticism, and negative sentiment
+    - Tokenomics, unlock, and allocation complaints
+    - Competitor and broader market talk
+    - Technical debate and good-faith questions
+
+    ENFORCEMENT:
+    - Scams, phishing, and wallet-drain attempts are immediate bans, no warning
+    - The team NEVER DMs first. Treat anyone who does as a scammer
+    - When unsure about a link or address, remove it and flag an admin
+    ```
+  </Tab>
+  <Tab title="Gaming">
+    ```txt
+    INSTANT BAN:
+    - Cheats, hacks, exploits, or links to them
+    - Threats, doxxing, or sharing another player's personal information
+    - Phishing, scam links, fake giveaways, or free-skin/free-currency bait
+    - Impersonating developers, mods, or official support
+    - Slurs, hate speech, or targeted harassment campaigns
+
+    WARN, THEN MUTE, THEN BAN:
+    - Trash talk that tips into personal, targeted harassment
+    - Untagged spoilers
+    - Spamming server invites or self-promo outside designated channels
+    - Flooding, emoji/sticker spam, or off-topic derailment
+
+    ALLOWED, DO NOT ACT ON:
+    - Game criticism, negative reviews, and balance complaints
+    - Competitor game discussion
+    - Memes, banter, and competitive smack talk between willing players
+    - Content creators sharing their own work once per post
+
+    ENFORCEMENT:
+    - Cheating, doxxing, and hate speech skip to immediate ban
+    - Keep the competitive culture intact, don't over-moderate normal banter
+    - When unsure, mute and flag an admin rather than banning
+    ```
+  </Tab>
+  <Tab title="Paris sportifs">
+    ```txt
+    INSTANT BAN:
+    - Paid tipster services, "guaranteed win" claims, or signal-selling
+    - Phishing, scam links, or impersonating the platform, team, or support
+    - Affiliate or referral links dropped without permission
+    - Anyone offering to DM "locks," "fixed games," or insider picks
+    - Threats, doxxing, or targeted harassment
+
+    WARN, THEN MUTE, THEN BAN:
+    - Spam, flooding, or repeated off-topic posting
+    - Promoting rival betting platforms or books
+    - Tilt-venting that turns into abuse of other members
+    - Self-promotion outside designated channels
+
+    ALLOWED, DO NOT ACT ON:
+    - Picks, predictions, analysis, and bet discussion
+    - Criticism of odds, lines, results, or platform decisions
+    - General sports talk, banter, and rivalries
+    - Responsible-gambling conversation and support
+
+    ENFORCEMENT:
+    - Scams, fixed-game claims, and tipster spam are immediate bans
+    - Don't moderate normal losing-streak frustration, only act when it targets people
+    - When unsure, remove the message and flag an admin
+    ```
+  </Tab>
+</Tabs>
+
+## Règles prédéfinies
+
+Des vérifications prêtes à l'emploi que l'IA applique à chaque message, en plus de vos règles de communauté. collony.ai règle chacune pour une attaque courante. Activez-en une, dites à l'IA quoi faire et enregistrez.
+
+| Règle | Ce qu'elle détecte |
+| --- | --- |
+| **No external Telegram group links** | Liens vers d'autres groupes ou canaux Telegram |
+| **Remove random bot tags** | La technique qui consiste à mentionner des bots au hasard sur Telegram |
+| **No random crypto addresses** | Adresses de wallet non sollicitées |
+| **Bypass prevention** | Tentatives de piéger le bot ou de contourner la modération, y compris des arnaques citées ou transférées |
+| **Sexual & thirst-trap bots** | Messages à cœurs, messages romantiques transférés, bots sexuels qui lancent la conversation |
+| **DM solicitation & off-platform promotion** | Sollicitations en message privé, promotion de canaux et de bios, annonces de signaux, promotion de ROI et de pourcentages. Action plus douce par défaut. |
+| **Recruitment & get-rich-quick spam** | Offres d'emploi, plans pour gagner de l'argent en ligne, vantardises de copy trading |
+| **Impersonation Check** | Utilisateurs qui se font passer pour des modérateurs ou des administrateurs |
+| **Scams, phishing & impersonation** | Phishing, arnaques "envoyez X, recevez 2X", usurpation de l'équipe, sollicitations P2P en USDT |
+| **Enforce allowed language(s)** | Limite le chat aux langues choisies (anglais, espagnol ou personnalisé) |
+
+### Options de chaque règle
+
+Chaque règle a trois réglages :
+
+- **Demander à l'IA de** : supprimer, mettre en sourdine, bannir ou décider seule. Avec **décider seule**, l'IA choisit l'action selon la gravité. Si le bot n'a pas le droit de bannir, le bannissement devient une suggestion. Voir [Sanctions et filtres](/fr/enforcement).
+- **S'applique sur** : Discord, Telegram ou les deux.
+- **Instruction personnalisée** (facultatif) : une ligne de plus pour les cas particuliers, par exemple `Ban if the user also swears`.
+
+Cliquez sur **Enregistrer toutes les règles** après vos modifications. Les modifications non enregistrées sont signalées sur la page.
+
+<Tip>
+  Si Impersonation Check signale votre propre équipe, vérifiez que ses membres ont le rôle Modérateur ou Administrateur dans [Membres](/fr/members). La vérification utilise les rôles pour distinguer les vrais administrateurs des imposteurs.
+</Tip>

@@ -1,0 +1,57 @@
+---
+title: "Regole IA"
+description: "Scrivi le regole della tua community e regola le regole predefinite che l'IA di collony.ai applica."
+---
+
+Tutto ciò che le blocklist non hanno intercettato viene letto dall'IA, con le regole della tua community e le sue regole predefinite. Aprile dalla scheda **Regole IA** della pagina [Protezione](/it/protection), in vista Avanzata. In vista Semplice, le stesse regole sono in **Regole anti-truffa e spam**, con **Personalizza** su ciascuna e **Modifica le regole della community** per le tue.
+
+<Note>
+  Le regole IA fanno parte dei piani Protect, Grow e Scale. Vedi [Fatturazione](/it/billing).
+</Note>
+
+In alto nella scheda vedi cosa ha fatto l'IA negli ultimi 7 giorni: azioni, eliminazioni, silenziamenti, ban e casi inviati in revisione, con un link agli incidenti corrispondenti.
+
+<Frame>
+  ![Scheda Regole IA con le regole della community e le regole predefinite](/images/app/ai-rules.png)
+</Frame>
+
+## Regole della community
+
+Regole in linguaggio semplice che dicono cosa è permesso e cosa viene rimosso. Fai clic su **Modifica**, incolla le tue regole e salva. L'IA le applica subito. Ogni modifica viene versionata e la pagina mostra chi ha modificato le regole per ultimo.
+
+Il bot conosce già il tuo progetto dalla [Configurazione del bot](/it/bot-setup), quindi queste regole possono dire "il team" e "canali ufficiali" ed essere applicate correttamente.
+
+<Note>
+  Trovi quattro modelli pronti (Generale, Crypto, Gaming, Scommesse sportive) nella [pagina in inglese](/ai-rules). Sono in inglese: l'IA li capisce lo stesso e modera i messaggi in qualsiasi lingua. Scegli il più vicino, incollalo e adatta solo ciò che è specifico della tua community.
+</Note>
+
+## Regole predefinite
+
+Controlli pronti che l'IA applica a ogni messaggio, accanto alle regole della tua community. collony.ai regola ciascuno per un attacco comune. Attivane uno, di' all'IA cosa fare e salva.
+
+| Regola | Cosa individua |
+| --- | --- |
+| **No external Telegram group links** | Link ad altri gruppi o canali Telegram |
+| **Remove random bot tags** | La tattica di menzionare bot a caso su Telegram |
+| **No random crypto addresses** | Indirizzi di wallet non richiesti |
+| **Bypass prevention** | Tentativi di ingannare il bot o aggirare la moderazione, compresi contenuti truffaldini citati o inoltrati |
+| **Sexual & thirst-trap bots** | Messaggi con cuori, messaggi romantici inoltrati, bot sessuali che avviano conversazioni |
+| **DM solicitation & off-platform promotion** | Richieste di messaggi privati, promozione di canali e bio, pubblicità di segnali, promozione di ROI e percentuali. Azione più leggera per impostazione predefinita. |
+| **Recruitment & get-rich-quick spam** | Offerte di lavoro, schemi per guadagnare online, vanterie di copy trading |
+| **Impersonation Check** | Utenti che fingono di essere moderatori o amministratori |
+| **Scams, phishing & impersonation** | Phishing, truffe "invia X e ricevi 2X", impersonificazione dello staff, richieste P2P in USDT |
+| **Enforce allowed language(s)** | Limita la chat alle lingue che scegli (inglese, spagnolo o personalizzate) |
+
+### Opzioni di ogni regola
+
+Ogni regola ha tre impostazioni:
+
+- **Di' all'IA di**: eliminare, silenziare, bannare o decidere da sola. Con **decidere da sola**, l'IA sceglie l'azione in base alla gravità. Se il bot non può bannare, il ban diventa un suggerimento. Vedi [Sanzioni e filtri](/it/enforcement).
+- **Si applica su**: Discord, Telegram o entrambi.
+- **Istruzione personalizzata** (facoltativa): una riga in più per i casi particolari, per esempio `Ban if the user also swears`.
+
+Fai clic su **Salva tutte le regole** dopo le modifiche. Le modifiche non salvate sono segnalate nella pagina.
+
+<Tip>
+  Se Impersonation Check segnala il tuo team, verifica che abbiano il ruolo di Moderatore o Amministratore in [Membri](/it/members). Il controllo usa i ruoli per distinguere i veri amministratori dagli impostori.
+</Tip>

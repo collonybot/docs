@@ -1,0 +1,63 @@
+---
+title: "Listes de blocage"
+description: "Bloquez instantanément des mots, expressions et domaines sans IA, utilisez les collections tenues par collony.ai et autorisez vos propres domaines."
+---
+
+Les listes de blocage traitent les mots, les expressions et les liens instantanément, avant que l'IA ne lise le message. Ouvrez-les depuis l'onglet **Listes de blocage** de la page [Protection](/fr/protection), en vue Avancée. La vue Simple affiche les mêmes listes en version courte.
+
+Le haut de l'onglet montre ce que les listes ont intercepté ces 7 derniers jours et quelles listes ont réagi.
+
+<Frame>
+  ![Onglet Listes de blocage avec les domaines bloqués, les domaines autorisés et les collections](/images/app/blocklists.png)
+</Frame>
+
+## Ce que déclenche une correspondance
+
+Pour chaque domaine, collection ou entrée, vous choisissez l'action :
+
+| Action | Résultat |
+| --- | --- |
+| **Par défaut** | Utilise l'action par défaut de la liste |
+| **Signaler uniquement** | Laisse le message, l'ajoute à **À vérifier** et laisse l'IA le vérifier aussi |
+| **Supprimer** | Supprime le message |
+| **Supprimer + signaler** | Supprime le message et l'ajoute à À vérifier |
+| **Supprimer + sourdine** | Supprime le message et met le membre en sourdine |
+| **Supprimer + sourdine + signaler** | Tout ce qui précède |
+| **Bannir** | Retire le membre |
+
+## Garder à jour les listes de collony.ai
+
+Activé, les mots et domaines que collony.ai ajoute ou retire s'appliquent automatiquement à votre projet. Désactivé, chaque mise à jour attend sur cette page que vous la vérifiiez.
+
+## Domaines bloqués
+
+Les liens vers ces domaines et tous leurs sous-domaines sont traités instantanément. Saisissez un domaine et cliquez sur **Bloquer**. Les domaines ajoutés par collony.ai sont indiqués comme tels.
+
+## Domaines autorisés
+
+Les domaines de cette liste ne sont jamais bloqués : votre site, votre documentation, vos partenaires. Un domaine autorisé l'emporte sur tout domaine bloqué et sur la [limite de liens des nouveaux membres](/fr/enforcement). Saisissez un domaine et cliquez sur **Autoriser**.
+
+<Tip>
+  Ajoutez vos liens officiels aux Domaines autorisés avant de durcir les règles sur les liens. Le bot ne supprimera pas vos propres annonces.
+</Tip>
+
+## Collections
+
+Des listes tenues par collony.ai pour vous. Activez-en une, choisissez l'action en cas de correspondance et ajoutez vos propres entrées.
+
+| Collection | Ce qu'elle détecte | Action par défaut |
+| --- | --- | --- |
+| **Sources d'arnaques connues** | Utilisateurs et canaux dont les messages transférés et les stories étaient des arnaques dans d'autres communautés | Supprimer + sourdine |
+| **Arnaques crypto** | Faux airdrops, vide-wallets, rendements garantis et arnaques à la récupération | Supprimer + sourdine |
+| **Arnaques par contact / MP** | Faux support, "écrivez-moi en privé", signaux payants | Supprimer |
+| **Spam pour adultes** | Promotion de contenus pour adultes et liens de webcam ou de rencontre | Supprimer + sourdine |
+| **Raccourcisseurs de liens** | Liens raccourcis qui cachent leur destination, un moyen courant de faire passer des arnaques | Supprimer |
+| **Insultes** | Insultes racistes, ethniques, homophobes, transphobes et validistes, y compris les orthographes déguisées | Supprimer |
+
+Chaque collection affiche ses entrées actives, combien sont à vous, ses correspondances des 7 derniers jours et ses entrées les plus fréquentes.
+
+### Vos ajouts
+
+Ajoutez votre propre **mot**, **expression** ou **domaine** à n'importe quelle collection, avec sa propre action, ou cliquez sur **Importer un fichier** pour en ajouter beaucoup à la fois. Retirez une entrée avec **Retirer**.
+
+La liste **Entrées collony.ai** montre ce que collony.ai tient dans cette collection. Exportez n'importe quelle collection en JSON, CSV ou TXT.

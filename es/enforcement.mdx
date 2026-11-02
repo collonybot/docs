@@ -1,0 +1,60 @@
+---
+title: "Aplicación y filtros"
+description: "Permisos de baneo, duración del silencio, reglas para reincidentes, revisión de medios, limpieza y límites de enlaces para miembros nuevos."
+---
+
+La pestaña **Aplicación y filtros** de la página [Protección](/es/protection), en la vista Avanzada, define hasta dónde puede actuar el bot por su cuenta y qué medios revisa. Los cambios se guardan al instante.
+
+Los ajustes principales también están en la vista Simple de la página Protección, y el **nivel de rigor** los ajusta por ti.
+
+<Frame>
+  ![Página Protección en vista Avanzada, en la pestaña Aplicación y filtros](/images/app/enforcement.png)
+</Frame>
+
+## Aplicación
+
+### Permitir que el bot banee
+
+- **Activado**: los baneos por listas de bloqueo, por la IA y por reincidencia expulsan al miembro al momento. Puedes deshacer cualquier baneo desde [Incidentes](/es/incidents).
+- **Desactivado**: cada baneo se convierte en **Sugerir baneo**. El bot elimina el mensaje, silencia al miembro y deja el caso en **Pendiente de revisión** para que decidas.
+
+<Tip>
+  Empieza con esto desactivado. Tras unas semanas revisando sugerencias, actívalo cuando confíes en cómo el bot gestiona tu comunidad.
+</Tip>
+
+### Duración del silencio
+
+Cuánto tiempo silencia el bot a los miembros en los silencios por listas de bloqueo, por la IA y en las sugerencias de baneo (el miembro sigue silenciado mientras decides). Elige de 5 minutos a 28 días, o una duración personalizada. Los menús de silencio manual ofrecen primero esta duración.
+
+Los frenos anti-flood por escribir demasiado rápido siguen siendo cortos (5 minutos o 1 hora) pongas lo que pongas aquí.
+
+### Banear a reincidentes
+
+Banea a un miembro en su enésimo silencio dentro de un periodo, por ejemplo el 3.º silencio en 30 días. Elige del 2.º al 10.º silencio y un periodo de 7 a 365 días.
+
+El recuento incluye los silencios del bot y de tus administradores en todo el proyecto. No cuentan los incidentes que perdonaste o marcaste como error de collony.ai.
+
+## Filtros
+
+### Revisión de medios
+
+| Ajuste | Qué hace | Por defecto |
+| --- | --- | --- |
+| **Moderación de imágenes** | Revisa las fotos con visión artificial para detectar contenido inapropiado | Activado |
+| **Moderación de animaciones** | Revisa GIF, animaciones y vídeos con visión artificial | Desactivado |
+| **Moderación de stickers** | Revisa stickers con visión artificial | Desactivado |
+
+### Limpieza
+
+| Ajuste | Qué hace | Por defecto |
+| --- | --- | --- |
+| **Eliminar historias** | Elimina las historias de Telegram compartidas en el chat, una vía habitual de estafas | Desactivado |
+| **Eliminar mensajes de entrada** | Elimina los avisos de Telegram de "usuario se unió" un minuto después de aparecer | Desactivado |
+
+### Miembros nuevos
+
+**Enlaces de miembros nuevos** elimina los mensajes con enlaces de miembros que se unieron hace menos de un tiempo dado. Elige Desactivado, 1 hora, 24 horas, 7 días o un valor personalizado. Los enlaces a tus [dominios permitidos](/es/blocklists) siempre están bien.
+
+<Tip>
+  La mayoría de cuentas de estafa publican un enlace a los pocos minutos de unirse. Un margen de 24 horas las frena sin molestar a los miembros habituales.
+</Tip>

@@ -1,0 +1,226 @@
+---
+title: "AI 應用程式"
+description: "將 Claude、ChatGPT、Cursor 或 VS Code 連接到 collony.ai，用你自己的 AI 管理社群，分步說明。"
+keywords:
+  - "MCP"
+  - "Model Context Protocol"
+  - "Claude"
+  - "ChatGPT"
+  - "Cursor"
+  - "VS Code"
+---
+
+把你自己的 AI 連接到 collony.ai，用日常語言管理社群。問它「這週聊天裡發生了什麼？」、「禁言發空投連結的帳號」或「週末關閉聊天回覆」，你的 AI 就會替你完成。
+
+它透過 collony.ai MCP 伺服器運作，只能做你在應用程式中能做的事。
+
+<Frame>
+  ![AI 應用程式頁面，包括已連接的應用程式、帶有伺服器 URL 的連接面板以及可 Undo 的最近呼叫](/images/app/ai-apps-v2.png)
+</Frame>
+
+## 開始之前
+
+你需要：
+
+- 一個至少可存取一個專案的 collony.ai 帳號
+- 以下任一應用程式：Claude、ChatGPT、Claude Code、Cursor 或 VS Code
+- 伺服器 URL：
+
+```text
+https://app.collony.ai/mcp
+```
+
+你也可以在應用程式的 **偏好設定** > **連接或管理 AI 應用程式** 中複製它。
+
+## 連接你的 AI 應用程式
+
+選擇你的應用程式並依步驟操作。
+
+<Tabs>
+  <Tab title="Claude">
+    <Steps>
+      <Step title="開啟 Connectors">
+        在 Claude 中前往 **Settings**，然後 **Connectors**，點擊 **Add custom connector**。
+      </Step>
+      <Step title="新增 collony.ai">
+        命名為 **Collony** 並貼上伺服器 URL：`https://app.collony.ai/mcp`。點擊 **Add**。
+      </Step>
+      <Step title="連接">
+        點擊 **Connect**。會開啟一個 collony.ai 視窗。如果要求登入，請登入。
+      </Step>
+      <Step title="選擇專案和權限">
+        選擇 Claude 可以使用的專案以及它可以做什麼（請參閱下方「選擇應用程式可以做什麼」）。點擊 **儲存**，你會被帶回 Claude。
+      </Step>
+      <Step title="試試看">
+        開始新對話並問：「用 Collony 看看，這週我的社群發生了什麼？」
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="開啟開發者模式">
+        在 ChatGPT 中前往 **Settings**，然後 **Apps**，開啟 **developer mode**。
+      </Step>
+      <Step title="建立應用程式">
+        點擊 **Create app**。命名為 **Collony** 並貼上伺服器 URL：`https://app.collony.ai/mcp`。
+      </Step>
+      <Step title="連接">
+        點擊 **Connect**。會開啟一個 collony.ai 視窗。如果要求登入，請登入。
+      </Step>
+      <Step title="選擇專案和權限">
+        選擇 ChatGPT 可以使用的專案以及它可以做什麼（請參閱下方「選擇應用程式可以做什麼」）。點擊 **儲存**。
+      </Step>
+      <Step title="試試看">
+        開始新對話，選擇 Collony 應用程式並問：「這週我的社群發生了什麼？」
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="新增伺服器">
+        在終端機中執行：
+
+        ```bash
+        claude mcp add --transport http collony https://app.collony.ai/mcp
+        ```
+      </Step>
+      <Step title="連接">
+        啟動 Claude Code，輸入 `/mcp`，選擇 **collony** 並選擇驗證。瀏覽器中會開啟一個 collony.ai 視窗。如果要求登入，請登入。
+      </Step>
+      <Step title="選擇專案和權限">
+        選擇 Claude Code 可以使用的專案以及它可以做什麼。點擊 **儲存** 並返回終端機。
+      </Step>
+      <Step title="試試看">
+        問：「用 Collony 列出我的專案並顯示本週的事件。」
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Cursor">
+    <Steps>
+      <Step title="新增伺服器">
+        開啟 **Cursor Settings**，然後 **MCP**，新增伺服器。或者把以下內容加入你的 `mcp.json`：
+
+        ```json
+        {
+          "mcpServers": {
+            "collony": {
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="連接">
+        Cursor 會顯示 collony 需要登入。點擊它。瀏覽器中會開啟一個 collony.ai 視窗。如果要求登入，請登入。
+      </Step>
+      <Step title="選擇專案和權限">
+        選擇 Cursor 可以使用的專案以及它可以做什麼。點擊 **儲存**。
+      </Step>
+      <Step title="試試看">
+        在聊天中問：「用 Collony 列出我的專案並顯示本週的事件。」
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="VS Code">
+    <Steps>
+      <Step title="新增伺服器">
+        把以下內容加入工作區的 `.vscode/mcp.json`，或加入你的使用者 MCP 設定：
+
+        ```json
+        {
+          "servers": {
+            "collony": {
+              "type": "http",
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="連接">
+        在 `mcp.json` 中點擊伺服器上方的 **Start**。瀏覽器中會開啟一個 collony.ai 視窗。如果要求登入，請登入。
+      </Step>
+      <Step title="選擇專案和權限">
+        選擇 VS Code 可以使用的專案以及它可以做什麼。點擊 **儲存**。
+      </Step>
+      <Step title="試試看">
+        在 Copilot Chat 的代理模式中問：「用 Collony 列出我的專案並顯示本週的事件。」
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Tip>
+  任何支援遠端 MCP 伺服器的應用程式也都可以。把 `https://app.collony.ai/mcp` 作為 HTTP 伺服器新增並連接即可。
+</Tip>
+
+## 選擇應用程式可以做什麼
+
+連接時，你為該應用程式選擇權限。從小範圍開始，隨時可以變更。
+
+| 權限 | 應用程式可以做什麼 |
+| --- | --- |
+| **讀取** | 查看設定、機器人文字、成員、聊天紀錄和統計 |
+| **讀取 + 管理** | 另外可禁言和封鎖成員、使用 Surge Guard、以機器人身分發布訊息 |
+| **讀取 + 修改設定** | 另外可修改排程、功能、防護、頻道和機器人文字 |
+| **管理 + 修改設定** | 以上全部 |
+
+你還可以設定：
+
+- **禁言和封鎖上限**：應用程式每小時最多可以執行的禁言和封鎖次數，例如 20。可以防止被誤導或被欺騙的 AI 清空你的聊天。
+- **有效期**：30 天、90 天、1 年或永不到期。權限到期前 7 天你會收到提醒。
+
+## 可以問什麼
+
+<AccordionGroup>
+  <Accordion title="查看社群情況">
+    - 「這週我的社群發生了什麼？」
+    - 「顯示今天的事件以及機器人做了什麼。」
+    - 「過去 7 天哪些問題沒人回答？」
+    - 「這個月最活躍的成員是誰？」
+  </Accordion>
+
+  <Accordion title="管理">
+    - 「找到發空投連結的成員，禁言 24 小時。」
+    - 「顯示 @username 過去一天的訊息。」
+  </Accordion>
+
+  <Accordion title="修改設定">
+    - 「週六和週日關閉聊天回覆。」
+    - 「為主聊天開啟 Surge Guard。」
+    - 「封鎖網域 example-scam.xyz。」
+  </Accordion>
+
+  <Accordion title="更新機器人的知識">
+    - 「我們的發布日改到了 3 月 14 日，更新知識庫。」
+    - 「新增一條 FAQ：團隊從不主動私訊。」
+  </Accordion>
+
+  <Accordion title="以機器人身分發布">
+    - 「在主聊天發一則提醒：管理員從不主動私訊。」
+    - 「排程週五 14:00 UTC 發布 AMA 公告。」
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  讓應用程式在修改前先檢查，例如「先顯示目前排程，再關閉週末」。
+</Tip>
+
+## 查看並撤銷應用程式的操作
+
+開啟 **偏好設定**，然後 **連接或管理 AI 應用程式**。在 **最近呼叫** 中可以看到應用程式在專案中的每次呼叫：誰、哪個應用程式、做了什麼，以及是否已生效。
+
+- 在任何變更上點擊 **Undo** 即可撤銷。
+- 每次變更也會記錄在 [稽核紀錄](/zh-Hant/audit-log) 中，並標註應用程式名稱。
+- 應用程式以機器人身分發布的訊息會在 [聊天紀錄](/zh-Hant/chat-history) 中顯示為透過該應用程式傳送。
+
+成員訊息被視為不可信。應用程式絕不會因為某則成員訊息的要求而禁言、封鎖或發布。
+
+## 管理或中斷連接
+
+AI 應用程式頁面列出連接到專案的所有應用程式，以及連接者、權限、到期時間和最後使用時間。
+
+- **編輯** 可修改其專案、權限、上限或有效期。
+- **中斷連接** 會將其移除。
+
+你也可以在 **帳號** 頁面查看你連接的所有應用程式。

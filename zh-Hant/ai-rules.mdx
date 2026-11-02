@@ -1,0 +1,57 @@
+---
+title: "AI 規則"
+description: "撰寫你的社群規則，並調整 collony.ai AI 所執行的規則預設。"
+---
+
+封鎖清單未攔截的內容都會由 AI 讀取，並依據你的社群規則和規則預設進行判斷。在進階檢視中，從 [防護](/zh-Hant/protection) 頁面的 **AI 規則** 分頁開啟。在簡單檢視中，同樣的規則位於 **詐騙和垃圾訊息規則**，每條規則都有 **自訂**，你自己的規則則透過 **編輯社群規則** 修改。
+
+<Note>
+  AI 規則包含在 Protect、Grow 和 Scale 方案中。請參閱 [帳單](/zh-Hant/billing)。
+</Note>
+
+分頁頂部顯示 AI 最近 7 天的處理情況：操作、刪除、禁言、封鎖和送審案例，並附有對應事件的連結。
+
+<Frame>
+  ![AI 規則分頁，包括社群規則和規則預設](/images/app/ai-rules.png)
+</Frame>
+
+## 社群規則
+
+用淺白語言寫下的規則，說明什麼允許、什麼會被刪除。點擊 **編輯**，貼上你的規則並儲存。AI 會立即執行。每次修改都會儲存為一個版本，頁面會顯示最後修改規則的人。
+
+機器人已從 [機器人設定](/zh-Hant/bot-setup) 了解你的專案，因此規則中可以寫「團隊」和「官方頻道」，並會被正確執行。
+
+<Note>
+  四個現成範本（General、Crypto、Gaming、Sports betting）在 [英文頁面](/ai-rules) 中。它們是英文的：AI 仍然能理解，並能管理任何語言的訊息。選擇最接近的一個，貼上後只修改與你社群相關的部分。
+</Note>
+
+## 規則預設
+
+AI 會在你的社群規則之外，對每則訊息執行這些現成檢查。collony.ai 針對常見攻擊調校了每一項。開啟一項，告訴 AI 怎麼處理，然後儲存。
+
+| 規則 | 偵測內容 |
+| --- | --- |
+| **No external Telegram group links** | 指向其他 Telegram 群組或頻道的連結 |
+| **Remove random bot tags** | 在 Telegram 中隨意提及機器人的手法 |
+| **No random crypto addresses** | 不請自來的錢包地址 |
+| **Bypass prevention** | 試圖欺騙機器人或繞過管理的行為，包括引用或轉發的詐騙內容 |
+| **Sexual & thirst-trap bots** | 愛心訊息、轉發的曖昧訊息、主動搭訕的色情機器人 |
+| **DM solicitation & off-platform promotion** | 索取私訊、推廣頻道和簡介、訊號廣告、炫耀 ROI 和收益率。預設處理較輕。 |
+| **Recruitment & get-rich-quick spam** | 徵才訊息、網路賺錢計畫、跟單交易炫耀 |
+| **Impersonation Check** | 假裝是版主或管理員的使用者 |
+| **Scams, phishing & impersonation** | 網路釣魚、「傳送 X 返還 2X」騙局、冒充工作人員、USDT P2P 請求 |
+| **Enforce allowed language(s)** | 將聊天限制為你選擇的語言（英文、西班牙文或自訂） |
+
+### 每條規則的選項
+
+每條規則有三項設定：
+
+- **讓 AI**：刪除、禁言、封鎖或自行決定。選擇 **自行決定** 時，AI 會依嚴重程度選擇操作。如果機器人無法封鎖，封鎖會變成建議。請參閱 [處罰與過濾](/zh-Hant/enforcement)。
+- **適用於**：Discord、Telegram 或兩者。
+- **自訂指令**（選填）：針對特殊情況多加一行說明，例如 `Ban if the user also swears`。
+
+修改後點擊 **儲存所有規則**。未儲存的變更會在頁面上標出。
+
+<Tip>
+  如果 Impersonation Check 標記了你的團隊成員，請確認他們在 [成員](/zh-Hant/members) 中擁有版主或管理員角色。該檢查依靠角色來區分真正的管理員和冒充者。
+</Tip>
