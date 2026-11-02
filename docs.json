@@ -12,7 +12,10 @@
     "dark": "/logo/collony-wordmark-white.svg",
     "href": "https://www.collony.ai"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/favicon-ink.svg",
+    "dark": "/favicon-white.svg"
+  },
   "appearance": {
     "strict": false
   },
