@@ -1,76 +1,228 @@
 ---
 title: "AI apps"
-description: "Connect Claude, ChatGPT, Cursor or any MCP app to collony.ai and manage your communities from your own AI."
+description: "Connect Claude, ChatGPT, Cursor or VS Code to collony.ai and run your communities from your own AI, step by step."
 keywords:
   - "MCP"
   - "Model Context Protocol"
   - "Claude"
   - "ChatGPT"
   - "Cursor"
+  - "VS Code"
   - "AI apps"
   - "integration"
 ---
 
-AI apps let you use your own AI, such as Claude, ChatGPT or Cursor, to read and manage your projects through the collony.ai MCP server. Ask about the community, change settings, moderate, and send or schedule messages as the bot, in plain language.
+Connect your own AI to collony.ai and manage your communities in plain language. Ask "what happened in the chat this week?", "mute the account posting airdrop links" or "turn off chat replies on weekends", and your AI does it for you.
 
-An AI app can do what you can do in the app, nothing more. Open **AI apps** from [Settings](/settings#ai-apps) or from your account page.
+It works through the collony.ai MCP server, and it can only do what you can do in the app.
 
 <Frame>
   ![AI apps page listing the apps connected to the project](/images/app/ai-apps.png)
 </Frame>
 
-## Connect
+## Before you start
 
-Add the collony.ai MCP server to your AI app. You sign in with collony.ai and pick the projects it may use.
+You need:
+
+- A collony.ai account with access to at least one project
+- One of these: Claude, ChatGPT, Claude Code, Cursor or VS Code
+- The server URL:
+
+```text
+https://app.collony.ai/mcp
+```
+
+You can also copy it from **Settings**, then **Connect or manage AI apps**, in the app.
+
+## Connect your AI app
+
+Pick your app and follow the steps.
 
 <Tabs>
-  <Tab title="Claude or ChatGPT">
-    1. **Claude**: Settings, then Connectors, then **Add custom connector**. **ChatGPT**: Settings, then Apps, then **Create app** (developer mode).
-    2. Name it Collony and paste the server URL from the AI apps page.
-    3. Connect. You come back to collony.ai to pick the projects and what the app may do.
+  <Tab title="Claude">
+    <Steps>
+      <Step title="Open Connectors">
+        In Claude, go to **Settings**, then **Connectors**, and click **Add custom connector**.
+      </Step>
+      <Step title="Add collony.ai">
+        Name it **Collony** and paste the server URL: `https://app.collony.ai/mcp`. Click **Add**.
+      </Step>
+      <Step title="Connect">
+        Click **Connect**. A collony.ai window opens. Sign in if you are asked to.
+      </Step>
+      <Step title="Choose projects and access">
+        Pick the projects Claude may use and what it may do (see [Choose what the app may do](#choose-what-the-app-may-do)). Click **Save**. You are sent back to Claude.
+      </Step>
+      <Step title="Try it">
+        Start a new chat and ask: "Using Collony, what happened in my community this week?"
+      </Step>
+    </Steps>
   </Tab>
-  <Tab title="Claude Code, Cursor, VS Code">
-    Add the server from the command line:
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="Turn on developer mode">
+        In ChatGPT, go to **Settings**, then **Apps**, and turn on **developer mode**.
+      </Step>
+      <Step title="Create the app">
+        Click **Create app**. Name it **Collony** and paste the server URL: `https://app.collony.ai/mcp`.
+      </Step>
+      <Step title="Connect">
+        Click **Connect**. A collony.ai window opens. Sign in if you are asked to.
+      </Step>
+      <Step title="Choose projects and access">
+        Pick the projects ChatGPT may use and what it may do (see [Choose what the app may do](#choose-what-the-app-may-do)). Click **Save**.
+      </Step>
+      <Step title="Try it">
+        Start a new chat, select the Collony app and ask: "What happened in my community this week?"
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="Add the server">
+        Run this in your terminal:
 
-    ```bash
-    claude mcp add --transport http collony https://app.collony.ai/mcp
-    ```
+        ```bash
+        claude mcp add --transport http collony https://app.collony.ai/mcp
+        ```
+      </Step>
+      <Step title="Connect">
+        Start Claude Code, type `/mcp`, pick **collony** and choose to authenticate. A collony.ai window opens in your browser. Sign in if you are asked to.
+      </Step>
+      <Step title="Choose projects and access">
+        Pick the projects Claude Code may use and what it may do. Click **Save** and go back to the terminal.
+      </Step>
+      <Step title="Try it">
+        Ask: "Using Collony, list my projects and show this week's incidents."
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Cursor">
+    <Steps>
+      <Step title="Add the server">
+        Open **Cursor Settings**, then **MCP**, and add a new server. Or add this to your `mcp.json`:
 
-    Or add it to your app's MCP config:
+        ```json
+        {
+          "mcpServers": {
+            "collony": {
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Connect">
+        Cursor shows collony as needing login. Click it. A collony.ai window opens in your browser. Sign in if you are asked to.
+      </Step>
+      <Step title="Choose projects and access">
+        Pick the projects Cursor may use and what it may do. Click **Save**.
+      </Step>
+      <Step title="Try it">
+        In the chat, ask: "Using Collony, list my projects and show this week's incidents."
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="VS Code">
+    <Steps>
+      <Step title="Add the server">
+        Add this to `.vscode/mcp.json` in your workspace, or to your user MCP settings:
 
-    ```json
-    {"mcpServers": {"collony": {"url": "https://app.collony.ai/mcp"}}}
-    ```
-
-    Then connect and pick the projects and access level.
+        ```json
+        {
+          "servers": {
+            "collony": {
+              "type": "http",
+              "url": "https://app.collony.ai/mcp"
+            }
+          }
+        }
+        ```
+      </Step>
+      <Step title="Connect">
+        Click **Start** above the server in `mcp.json`. A collony.ai window opens in your browser. Sign in if you are asked to.
+      </Step>
+      <Step title="Choose projects and access">
+        Pick the projects VS Code may use and what it may do. Click **Save**.
+      </Step>
+      <Step title="Try it">
+        In Copilot Chat, in agent mode, ask: "Using Collony, list my projects and show this week's incidents."
+      </Step>
+    </Steps>
   </Tab>
 </Tabs>
 
-## What an app may do
+<Tip>
+  Any other app that supports remote MCP servers works too. Add `https://app.collony.ai/mcp` as an HTTP server and connect.
+</Tip>
 
-You choose the access for each connected app:
+## Choose what the app may do
+
+When you connect, you choose the access for that app. Start small. You can change it any time.
 
 | Access | What the app can do |
 | --- | --- |
-| **Read** | Settings, bot texts, members, chat history and stats |
+| **Read** | See settings, bot texts, members, chat history and stats |
 | **Read + moderate** | Also mute and ban members, use Surge Guard and post messages as the bot |
 | **Read + change settings** | Also change the schedule, features, protection, channels and bot texts |
 | **Moderate + change settings** | Everything above |
 
-### Safety limits
+You also set:
 
-- **Limit mutes and bans**: caps how many mutes and bans the app can make per hour, for example 20. It stops a confused or tricked AI from sweeping your chat.
+- **Limit mutes and bans**: the most mutes and bans the app can make per hour, for example 20. It stops a confused or tricked AI from sweeping your chat.
 - **Expires**: 30 days, 90 days, 1 year or never. You get a warning 7 days before access ends.
-- Member messages are treated as untrusted input. The app never mutes, bans or posts because a member's message asks it to.
 
-## Manage connections
+## Things to ask
 
-The AI apps page lists every app connected to the project: who connected it, the app, its access, when it expires and when it was last used. Click **Edit** to change its projects, access, limits or expiry, or **Disconnect** to remove it. You can take the project out of anyone's connection.
+<AccordionGroup>
+  <Accordion title="Check on your community">
+    - "What happened in my community this week?"
+    - "Show me today's incidents and what the bot did."
+    - "Which questions went unanswered in the last 7 days?"
+    - "Who are the most active members this month?"
+  </Accordion>
 
-## Recent calls
+  <Accordion title="Moderate">
+    - "Find the member posting airdrop links and mute them for 24 hours."
+    - "Show the messages from @username in the last day."
+  </Accordion>
 
-Every call an app made in the project shows under **Recent calls**: who, which app, what it did and whether it applied. Click **Undo** on any change to revert it. All AI app changes are also in the [Audit Log](/audit-log), marked with the app's name.
+  <Accordion title="Change settings">
+    - "Turn off chat replies on Saturday and Sunday."
+    - "Turn on Surge Guard for the main chat."
+    - "Block the domain example-scam.xyz."
+  </Accordion>
+
+  <Accordion title="Update what the bot knows">
+    - "Our launch moved to March 14. Update the knowledge base."
+    - "Add a FAQ answer: the team never DMs first."
+  </Accordion>
+
+  <Accordion title="Post as the bot">
+    - "Post a reminder in the main chat that admins never DM first."
+    - "Schedule an AMA announcement for Friday at 14:00 UTC."
+  </Accordion>
+</AccordionGroup>
 
 <Tip>
-  Ask your AI to read before it changes anything, for example to check the current schedule before editing it.
+  Ask the app to check before it changes anything, for example "show me the current schedule, then turn off weekends".
 </Tip>
+
+## See and undo what it did
+
+Open **Settings**, then **Connect or manage AI apps**. Under **Recent calls** you see every call an app made in the project: who, which app, what it did, and whether it was applied.
+
+- Click **Undo** on any change to revert it.
+- Every change is also in the [Audit Log](/audit-log), marked with the app's name.
+- Messages an app posts as the bot show in [Chat History](/chat-history) as sent via that app.
+
+Member messages are treated as untrusted. The app never mutes, bans or posts because a member's message tells it to.
+
+## Manage or disconnect
+
+The AI apps page lists every app connected to the project, with who connected it, its access, when it expires and when it was last used.
+
+- **Edit** changes its projects, access, limits or expiry.
+- **Disconnect** removes it.
+
+You can also see all your connected apps on your **Account** page.
