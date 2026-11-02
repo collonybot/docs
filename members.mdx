@@ -1,33 +1,59 @@
 ---
 title: "Members"
-description: "Find every member collony.ai has seen in your community and manage their roles: owner, admin, moderator, team member and whitelist."
+description: "Everyone collony.ai has seen in your community: your team and their roles, activity, filters and bulk actions."
 ---
 
-The Members page lists every user collony.ai has seen in the current project, with their roles, message counts and reactions. Use it to assign roles, find a member and open their profile.
+The Members page lists every user collony.ai has seen in the current project. Use it to manage your team's roles, find members and act on several at once.
+
+Pick the range at the top: 24h, 7d, 30d, or **More** for presets or a custom From and To.
 
 <Frame>
-  ![Members page](/images/members-1.png)
+  ![Members page with activity summary, the Your team panel and the member list](/images/app/members.png)
 </Frame>
 
-## Roles
+## Summary
 
-| Role | What it means |
+- Members, how many were active and the change against the previous period
+- Active, muted and banned counts
+- **Active members per day**, with the peak day
+- **How much members post**: silent, 1 to 10, 11 to 50, and 51 or more messages
+- **By role**: how many members hold each role
+
+## Your team
+
+The people who run the project, grouped by role, and what the bot lets them do.
+
+| Role | What they can do |
 | --- | --- |
-| **Owner** | Full control of the project, its settings, roles and moderation |
-| **Admin** | Manages settings, channels, content and moderation |
-| **Moderator** | Deletes messages, mutes and bans members |
-| **Team member** | Part of your team, with no moderation permissions. Never slowed down by [Surge Guard](/surge-guard). |
-| **Whitelist** | Skips malicious content detection. No moderation permissions. |
+| **Owner** | Full control: manage the project, roles, settings and all moderation |
+| **Admin** | Manage settings, channels, content and moderators, and moderate users |
+| **Moderator** | Manage content, mute and ban users, delete messages, whitelist members and mark team members |
+| **Billing** | Manage the plan, payment and linked projects. No moderation powers. |
+| **Team member** | No permissions. Protected from [impersonation](/impersonation) like the staff. |
+| **Whitelist** | Skips malicious content detection only |
 
 A member can hold several roles, and the permissions add up.
 
 <Warning>
-  Give your real admins and moderators their roles here. The impersonation checks use these roles to tell your team from accounts copying them. Without them, your own team can get flagged.
+  Give your real admins, moderators and other team members their roles here. [Impersonation protection](/impersonation) uses these roles to tell your team from accounts copying them.
 </Warning>
 
-## Assigning roles
+## Member list
 
-Click **\+ Role** next to a member and pick the role. To assign a role to several members at once, select them and add the role in one step. Remove a role from the member's [profile](/member-details).
+Each row shows the member, their roles, status (Active, Quiet, Muted, Banned), messages in the range, the share deleted, incidents and when they were last seen.
+
+### Filters
+
+- Tabs: **All**, **Active**, **Staff**, **Whitelisted**, **Muted**, **Banned**, **Needs review**
+- **Role**: any role, or one role. **Sort: staff first** puts your team at the top.
+- **Platform**: all platforms, Telegram or Discord
+- Search by @username or display name
+
+### Actions
+
+Open the **Actions** menu on a row to open the profile, set or remove a role, mute, ban or unban.
+
+To act on several members at once, select them and use **Add role**, **Remove role**, **Mute**, **Unmute**, **Ban** or **Unban**.
 
 You can also manage the whitelist from the chat with `/whitelist` and `/unwhitelist`. See [Chat commands](/chat-commands).
 
@@ -35,8 +61,4 @@ You can also manage the whitelist from the chat with `/whitelist` and `/unwhitel
   Whitelist verified partners and long-standing contributors who keep getting caught by checks. They can post freely while everyone else stays fully protected.
 </Tip>
 
-## Searching and sorting
-
-Search by @username or display name. **Active only** narrows the list to members who sent at least one message in the selected range. Click a column header to sort by it.
-
-Click a row to open the member's [profile](/member-details).
+Click a member to open their [profile](/member-details).

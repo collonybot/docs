@@ -1,33 +1,31 @@
 ---
 title: "Member Details"
-description: "A full profile for each community member: roles, moderation record, actions per platform, sentiment and connections."
+description: "A full profile for each community member: roles, moderation record, actions, sentiment and messages."
 ---
 
-Member Details is the full profile of one community member. Open it by clicking a member on the Members page, or any name in Incidents, Chat History or Insights. Click **Back to Members** to return.
+Member Details is the full profile of one community member. Open it by clicking a member anywhere in the app. Click **Back to Members** to return. Pick the range at the top: 24h, 7d, 30d or **More**.
 
 <Frame>
-  ![Member Details page](/images/member-detail-1.png)
+  ![Member profile with record, roles, sentiment stats and recent messages](/images/app/member-details.png)
 </Frame>
 
-## Identity
+## Identity and record
 
-The member's name and handles on each platform, whether they have a collony.ai web account, when they joined and when they were last active. **Open in Telegram** and **Open in Discord** take you to them on the platform.
+The member's name and handles, when they joined and when they were last active. **Open in** takes you to them on Telegram or Discord.
 
-The record below shows messages sent, the share deleted, incidents, warnings, forgiven incidents, mutes and bans.
+The record shows messages sent, the share deleted, incidents, warnings, forgiven incidents, mutes, bans and their current status, for example **Unrestricted**.
 
 ## Roles
 
-Current roles show as badges. Add roles with **\+ Admin**, **\+ Moderator**, **\+ Team member** and **\+ Whitelist**, or remove one with its **×**.
+Current roles show as badges. Add roles with **\+ Moderator**, **\+ Team member** and **\+ Whitelist**, or remove one with its **×**. See [Members](/members#your-team) for what each role does.
 
 ## Moderation actions
-
-Actions are shown separately for each platform the member uses, with their current status there, for example **Unrestricted**.
 
 | Action | Options |
 | --- | --- |
 | **Mute** | 24 hours (default), 1 hour or 7 days |
 | **Ban** | Permanent on Discord. Telegram bans can have a duration from the chat. |
-| **Delete recent messages** | Removes the member's latest messages on that platform |
+| **Delete recent messages** | Removes the member's latest messages |
 | **Whitelist user** | Marks the member as trusted. They skip automatic security checks in this project until you revoke it. |
 
 <Warning>
@@ -36,19 +34,13 @@ Actions are shown separately for each platform the member uses, with their curre
 
 ## Sentiment and engagement
 
-- **Avg Sentiment**: average positivity across their scored messages
-- **Impact Score**: how much the member shapes the community
+- **Avg sentiment**: average mood across their analyzed messages
+- **Impact score**: how much the member lifts or drags the community, with a label such as Good Vibes
 - **Reactions**: reactions received, with the average per message
 - **Analyzed**: messages scored out of all messages sent
 
-**Sentiment over time** charts the last 30 days. Filter it by message type: Questions, Technical, Helpful, Social, Memes, Sarcastic or Swearing.
+**Sentiment over time** charts mood and messages for the last 30 days. Filter it by message type: Questions, Technical, Helpful, Social, Memes, Sarcastic or Swearing.
 
-**Message profile** breaks their messages down by topic. **Community love** shows the reactions they received, and **Most loved messages** lists their most reacted-to posts.
+## Messages
 
-## Top connections
-
-The members this person reacted to and replied to most. Click **See User Network** for the full graph, useful for spotting coordinated accounts.
-
-## Recent messages
-
-Their latest messages by day, with the channel, labels, reactions and **Delete**, **Mute** and **Ban** on each one. Click a message to open its [details](/message).
+Two tabs: **Recent** with their latest messages, and **Most loved** with their most reacted-to posts. Each message shows the channel, mood score, reactions and what happened to it. Open the menu on a message to open it, copy it, mute, ban or delete. Click a message to open its [details](/message).

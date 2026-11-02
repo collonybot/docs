@@ -1,30 +1,69 @@
 ---
 title: "Blocklists"
-description: "Block words, phrases and domains instantly with no AI involved, and allow your own domains."
-keywords: ["blocklist", "blocked domains", "allowed domains", "link filter"]
+description: "Block words, phrases and domains instantly with no AI involved, use collony.ai's maintained collections, and allow your own domains."
+keywords:
+  - "blocklist"
+  - "blocked domains"
+  - "allowed domains"
+  - "link filter"
+  - "scam words"
 ---
 
-Blocklists handle words, phrases and links instantly, before the AI reads a message. They run on every plan, including Free. Open them from the **Blocklists** tab on the [Protection](/protection) page.
+Blocklists handle words, phrases and links instantly, before the AI reads a message. Open them from the **Blocklists** tab on the [Protection](/protection) page, in the Advanced view. The Simple view shows the same lists in a shorter form.
+
+The top of the tab shows what the blocklists caught in the last 7 days and which lists matched.
+
+<Frame>
+  ![Blocklists tab with blocked domains, allowed domains and collections](/images/app/blocklists.png)
+</Frame>
 
 ## What a match does
 
-For each list you pick what happens when a message matches: delete, mute, ban or flag.
+For each domain, collection or entry you pick the action on a match:
 
-- **Flag** adds the message to **Needs review** on the [Incidents](/incidents) page.
-- **Flag only** leaves the message up and lets the AI check it as well.
+| Action | Result |
+| --- | --- |
+| **Default** | Uses the list's default action |
+| **Flag only** | Leaves the message up, adds it to **Needs review** and lets the AI check it as well |
+| **Delete** | Removes the message |
+| **Delete + flag** | Removes the message and adds it to Needs review |
+| **Delete + mute** | Removes the message and mutes the member |
+| **Delete + mute + flag** | All of the above |
+| **Ban** | Removes the member |
 
 ## Keep collony.ai's lists up to date
 
-collony.ai maintains shared lists of scam words and domains. With this switch on, words and domains collony.ai adds or retires apply to your project automatically. With it off, each update waits on this page until you review it.
+With this on, words and domains collony.ai adds or retires apply to your project automatically. With it off, each update waits on this page until you review it.
 
 ## Blocked domains
 
-Links to these domains and all their subdomains are handled instantly. Add the domains you see scammers post most often.
+Links to these domains and all their subdomains are handled instantly. Type a domain and click **Block**. Domains collony.ai added are marked as such.
 
 ## Allowed domains
 
-Domains on this list are never blocked: your own site, your docs, your partners. An allowed domain wins over every blocked domain and over the [new member link limit](/enforcement#new-members).
+Domains here are never blocked: your own site, your docs, your partners. An allowed domain wins over every blocked domain and over the [new member link limit](/enforcement#new-members). Type a domain and click **Allow**.
 
 <Tip>
   Add your official links to Allowed domains before you tighten link rules. It keeps the bot from removing your own announcements.
 </Tip>
+
+## Collections
+
+Lists collony.ai keeps for you. Switch one on, pick what a match does, and add your own entries.
+
+| Collection | What it catches | Default action |
+| --- | --- | --- |
+| **Known scam sources** | Users and channels whose forwarded posts and stories were scams in other communities | Delete + mute |
+| **Crypto scams** | Fake airdrops, wallet drainers, guaranteed returns and recovery scams | Delete + mute |
+| **Contact-me / DM scams** | Fake support, "DM me for help", paid signals | Delete |
+| **Adult spam** | Adult-content promotion and cam or dating spam links | Delete + mute |
+| **Link shorteners** | Shortened links that hide where they go, a common way to slip scam links past review | Delete |
+| **Slurs** | Racial, ethnic, homophobic, transphobic and ableist slurs, including disguised spellings | Delete |
+
+Each collection shows its active entries, how many are yours, its hits in the last 7 days and its most matched entries.
+
+### Your additions
+
+Add your own **Word**, **Phrase** or **Domain** to any collection, with its own action, or click **Import file** to add many at once. Remove an entry with **Remove**.
+
+The **collony.ai entries** list shows what collony.ai maintains in that collection. Export any collection as JSON, CSV or TXT.

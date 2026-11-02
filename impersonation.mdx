@@ -1,0 +1,60 @@
+---
+title: "Impersonation"
+description: "Catch members who copy your team's names, @handles or profile pictures, even with look-alike letters or cropped pictures."
+keywords: ["impersonation", "fake admin", "copycat", "look-alike names"]
+---
+
+Impersonation protection catches members who copy someone on your team: their name, @handle or profile picture. It also catches disguised copies, such as look-alike letters, a letter or two off, or a cropped or mirrored picture. No AI is involved, and changes save instantly.
+
+Members are checked when they join, when they change their profile and on every message. Open it from the **Impersonation** tab on the [Protection](/protection) page, in the Advanced view.
+
+<Frame>
+  ![Impersonation tab with match levels and actions](/images/app/impersonation.png)
+</Frame>
+
+## Who is protected
+
+- Owners, admins, moderators and team members of the project
+- Each Telegram chat's admins (the bot looks them up itself)
+- Discord server staff: the owner and members with moderation permissions
+
+Give anyone else on your team the **Team member** role in [Members](/members). It grants no permissions but protects them from copycats. Pictures are compared once the bot has seen them.
+
+## What happens
+
+Each match is rated by how sure the bot is. You pick the action for each level.
+
+| Level | When | 
+| --- | --- |
+| **Certain** | Two things copied together (name and picture, or name and @handle), or a copied name dressed up with words like "Support" or "Admin" |
+| **Likely** | One thing copied: a name or @handle that reads the same, or the same picture |
+| **Possible** | Only a short name (4 letters or fewer) that reads alike. Plenty of members share one. |
+
+Actions for each level: **Do nothing**, **Flag for review**, **Delete message + flag**, **Mute + flag for review** or **Ban**.
+
+A flag sends the member to **Needs review** on the [Incidents](/incidents) page. Delete, mute and ban also remove the message that gave them away. Each look-alike is reported once.
+
+## Compare
+
+Choose what counts as a copy: **Names**, **@handles** and **Pictures**.
+
+- **Names** are what the chat shows: first and last name on Telegram, server nickname and display name on Discord.
+- **Pictures** are compared by how they look, not by the file. A zoomed-in or mirrored copy still counts. Re-saving, resizing, recoloring or adding a border does not hide it.
+
+## Examples
+
+The page shows how the bot judges copies of one of your admins. With an admin named Taylor Quinn (@taylor_quinn):
+
+| Member shows up as | Match |
+| --- | --- |
+| Taylor Quinn, same picture, @tayIor_quinn | Certain |
+| Taylor Quinn \| Support, own picture | Certain |
+| Talyor Quinn (one letter off), mirrored picture | Certain |
+| Different name, same picture zoomed in | Likely |
+| TayIor Quinn (look-alike letters) | Likely |
+| Quinn Taylor (words swapped) | Likely |
+| Taylor (first name only) | No match |
+
+<Tip>
+  If your own team gets flagged, check that everyone has the right role in [Members](/members).
+</Tip>

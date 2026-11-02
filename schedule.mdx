@@ -1,45 +1,46 @@
 ---
 title: "Schedule"
-description: "Set when and how the collony.ai bot is active in your community, with full timezone support and 30-minute slot precision for quiet hours."
+description: "Set what the collony.ai bot does and when: moderation only, moderation with chat replies, or a custom weekly schedule."
 ---
 
-The Schedule page controls when the bot is active and what it does during each time block. Use it to run full moderation 24/7, limit AI chat responses to peak hours, or go security-only overnight.
+The Schedule page sets what the bot does, and when. Use it to moderate around the clock while limiting chat replies to the hours your community is most active.
 
 <Frame>
-  ![Schedule 1](/images/schedule-1.png)
+  ![Schedule page with the schedule options, timezone and weekly grid](/images/app/schedule.png)
 </Frame>
 
-## Bot Enabled
+## Bot enabled
 
-The master toggle. When off, the bot is completely inactive regardless of the schedule. When on, it follows the schedule you've painted.
+The master switch. When it is off, the bot does nothing, whatever the schedule says.
+
+## Choose a schedule
+
+| Option | What the bot does |
+| --- | --- |
+| **Always Security** | Moderates every hour of every day, with no chat replies |
+| **Always Chat + Security** | Moderates and replies in chat, 24/7 |
+| **Custom** | You pick the hours and the mode for each |
+
+The page shows the mode right now and when the next change happens.
 
 ## Timezone
 
-Set this first. Choose the timezone that matches your community's primary location. The schedule grid displays in that timezone. The current UTC time is shown next to the selector for reference. All blocks are stored in UTC internally and converted for display.
+Times are shown in the schedule timezone. Pick it from the list, from UTC-10 (Honolulu) to UTC+12 (Auckland), so the grid matches your community's day.
 
-## Modes
+## Custom schedule
 
-Each time block on the schedule can be set to one of three modes:
+Pick a mode to paint with, then paint the weekly grid:
 
 | Mode | What the bot does |
 | --- | --- |
-| **Chat + Security** | Full operation: moderation, AI chat responses, FAQ answers, emoji reactions |
-| **Security only** | Moderation runs, but the bot does not respond to messages or engage in chat |
-| **Inactive** | Bot is off for that block |
+| **Security** | Moderates, but does not reply or join the conversation |
+| **Chat + Security** | Moderates and replies: chat, FAQ answers and reactions |
+| **Off** | Does nothing in that slot |
 
-## Setting a schedule
-
-1. Set your **Timezone** first.
-2. Select a mode from the legend (Security only, Chat + Security or Inactive).
-3. Click and drag on the weekly grid to paint time blocks. Slots are 30 minutes each.
-4. Click a day label to fill the entire day with the selected mode.
-5. Click an hour label to fill that hour across all days.
-6. Click **Save changes**. Unsaved changes are flagged. Clicking away without saving discards them.
+1. Drag across the grid to paint 30-minute slots.
+2. Click a day name to fill that day, or an hour label to fill that hour on every day.
+3. Click **Save changes**, or **Discard** to drop them.
 
 <Tip>
-  A common setup: Chat \+ Security during peak hours, Security only overnight, Inactive during planned maintenance windows. This keeps scam protection running 24/7 while reducing unnecessary bot activity when no one's around to engage.
+  A common setup: Chat \+ Security during your community's busy hours and Security the rest of the time. Scams are still removed 24/7, and the bot only chats when people are around.
 </Tip>
-
-## Weekly summary
-
-Below the grid, a weekly summary shows the total hours allocated to each mode for the current schedule.

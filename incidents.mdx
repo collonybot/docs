@@ -1,56 +1,66 @@
 ---
 title: "Incidents"
-description: "Review every moderation action in your community, work through the Needs review queue, and correct collony.ai mistakes."
+description: "Review every moderation action in your community, work through Needs review, act on repeat offenders and correct collony.ai mistakes."
 ---
 
-The Incidents page lists every moderation action in the current project, by the bot or by your team. Use it to check the bot's decisions, handle cases it flagged for you, and spot repeat offenders.
+The Incidents page lists every moderation case in the current project, by the bot or by your team. Use it to check the bot's decisions, handle the cases it flagged for you and deal with repeat offenders.
+
+Pick the range at the top: 24h, 7d, 30d, or **More** for presets or a custom From and To. Switch between a **Feed** of cards and a **Table**.
 
 <Frame>
-  ![Incidents page](/images/incidents.png)
+  ![Incidents page with incidents per day, the By type breakdown and the Needs review queue](/images/app/incidents.png)
 </Frame>
-
-## Needs review
-
-Cases the bot wants you to look at, for example a **Ban suggested** when the bot is not allowed to ban on its own (see [Enforcement and filters](/enforcement#allow-bot-to-ban)) or a message a blocklist flagged.
-
-For each case, click **Open** to see it in full, or **Mark reviewed** when the bot got it right.
 
 ## Summary
 
-For the selected range (24h, 7d or 30d):
-
-- Incidents and actions, with the change against the previous period
+- Incidents and actions taken, with the change against the previous period
 - Deleted, muted and banned counts
-- A chart of incidents and actions per day
+- **Incidents per day**, colored by what was done: banned, muted, deleted or nothing done
+- **By type**: what caught each case, such as AI, Instant guard, Blocklist or Surge Guard, with its deletions, mutes and bans
 
-### By type
+## Incidents tab
 
-Shows who or what acted: **AI**, **Instant guard**, **Moderator** and the other layers, each with its deletions, mutes and bans.
-
-### Top offenders
-
-The members with the most incidents in the range. Click **All offenders** or a member to see more.
-
-## Incident list
-
-Two tabs: **Incidents** for single cases and **Offenders** for members grouped by their incidents.
-
-Filter the list by:
+### Filters
 
 | Filter | Options |
 | --- | --- |
-| **Type** | AI, Instant guard, Story filter, Moderator, Blocklist, Surge Guard, Impersonation |
+| **Show** | All incidents, Needs review, Active, Forgiven, collony.ai mistake |
+| **Type** | AI, Instant guard, Blocklist, Surge Guard, and the other layers that acted in the range |
 | **Severity** | Critical, High, Medium, Low |
-| **State** | Active, Forgiven, collony.ai mistake |
 
-Use the search box to find a member or message.
+### Needs review
 
-## Incident states
+Cases the bot wants you to confirm, at the top of the list. For example a **Ban suggested** when the bot is not allowed to ban on its own (see [Enforcement and filters](/enforcement#allow-bot-to-ban)), or a message a blocklist or impersonation check flagged.
 
-| State | Meaning |
+Each card shows the member, channel, what caught it, the rule it broke, the bot's reason, the message and what was done. Use **Mark reviewed** when the bot got it right, or open the menu to act. Select several cards to mark them reviewed together.
+
+### Actions on an incident
+
+| Action | What it does |
 | --- | --- |
-| **Active** | The incident stands. The restriction is in place or the deletion was correct. |
-| **Forgiven** | You cleared the incident and lifted any restriction. It no longer counts toward [repeat offender bans](/enforcement#ban-repeat-offenders). |
-| **collony.ai mistake** | Marked as a false positive. The action was reverted. |
+| **Ban, as the bot suggests** | Removes the member, as the bot suggested |
+| **Mark reviewed** | The bot got it right. Nothing changes. |
+| **Forgive** | Undoes what was done and lifts the mute or ban. The incident no longer counts toward [repeat offender bans](/enforcement#ban-repeat-offenders). |
+| **Mark as mistake** | Undoes everything and teaches collony.ai not to do it again. You can describe what went wrong. |
 
-Click **Forgive** or **Mistake** on any incident to change its state. Marking mistakes helps collony.ai improve detection for your community. You can do the same from the chat with `/forgive` and `/fp`. See [Chat commands](/chat-commands).
+The menu also has mute, delete message, and links to open the incident, message or member.
+
+You can forgive and mark mistakes from the chat too, with `/forgive` and `/fp`. See [Chat commands](/chat-commands).
+
+## Offenders tab
+
+Members grouped by their incidents in the range, with their incident count, last incident, current status and what the bot suggests, for example **Ban (bot asked)**. Act from the row: open the member, mute, ban or whitelist. Banned members are hidden unless you show them.
+
+## Incident page
+
+Click **Open incident** for the full case:
+
+- **The message** and its mood score, with translate and open on Telegram or Discord
+- **What happened**: each check that fired, with its score
+- **Chat context**: the messages before and after
+- **Timeline**: when the message was sent and each action the bot took, with timing
+- **Incident**: state, severity, what caught it, the rule and the bot's reason
+- **collony AI analysis**: rule breaking and maliciousness scores
+- **User**: the member's record, status and roles, with quick role buttons
+
+The **Actions** menu mutes, bans, deletes recent messages or opens the member's profile.

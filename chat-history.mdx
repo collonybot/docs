@@ -1,51 +1,50 @@
 ---
 title: "Chat History"
-description: "Browse, search, and moderate messages across all connected Telegram and Discord channels from one unified chat history view."
+description: "Browse, search, filter and moderate every message across your Telegram and Discord channels, and send or schedule messages as the bot."
 ---
 
-Chat History gives you a searchable, annotated feed of every message collony.ai has processed in the current project. Each message is tagged with sentiment and topic classifications, and inline moderation actions are available without leaving the page.
+Chat History is a live, searchable feed of every message collony.ai has seen in the current project. Each message carries its mood score and topic labels, and you can act on it without leaving the page.
 
 <Frame>
-  ![Chat History 1](/images/chat-history-1.png)
+  ![Chat History with filters, scheduled messages and the live message feed](/images/app/chat-history.png)
 </Frame>
 
-## Searching messages
+## Live feed
 
-Use the search bar at the top to filter by username or message text. Results update as you type.
+The feed refreshes on its own. It pauses while the tab is hidden and shows when it is retrying. **Translate all to English** translates the whole feed.
 
-## Message tags
+## Filters
 
-Each message is labeled with topic and sentiment tags:
-
-- **Topic tags:** Question, Technical, Social, Meme, Sarcastic, Shilling, FUD.
-- **Sentiment tags:** Positive, Neutral, Negative.
-
-A spike in FUD or Shilling tags often precedes a coordinated attack.
-
-## Inline moderation actions
-
-Every message has an action row with four options:
-
-| Action | What it does |
+| Filter | Options |
 | --- | --- |
-| **Delete** | Removes the message from the community chat |
-| **Mute** | Mutes the sender for 24 hours (default), 1 hour or 7 days |
-| **Ban** | Bans the sender permanently (or for a set duration on Telegram) |
-| **▾ (expand)** | Opens the full sentiment breakdown for that message |
+| **Channels** | All channels, or one channel, grouped by Discord and Telegram, with message counts |
+| **Show** | Everything, Moderated, Questions, Bot replies, Negative mood, With media |
+| **Range** | All time, 24h, 7d, 30d, or **More** for presets or a custom From and To |
+| **Topic** | Question, Technical, Social, Meme, Shilling, FUD, Sarcastic, Swearing |
+| **Media** | Photo, Video, GIF, Document, Voice, Audio, Sticker, Forward, Contact, Poll, Location, Story |
+
+Use the search box to find a member or message text. Click **Export CSV** to download what you filtered.
+
+## Message actions
+
+Open the menu on any message to:
+
+- **Open message** for its [detail page](/message)
+- **Open on Telegram** or Discord
+- **Copy link** or **Copy text**
+- **View member** to open their [profile](/member-details)
+- **Mute** for 24 hours (default), 1 hour or 7 days
+- **Ban** the sender
+- **Delete message**
+
+Expand a message to see its labels and reactions.
 
 <Warning>
-  Moderation actions from the app take effect immediately in the community. There is no confirmation step.
+  Actions from the app take effect in the community right away.
 </Warning>
 
-## Message details
+## Send as collony
 
-Click any message to open its [detail page](/message), which includes:
+Click **Send as collony** to post a message as the bot in a channel, now or at a set time.
 
-- Complete sentiment scores (positivity, maliciousness, sarcasm, shilling, FUD)
-- Topic classification flags
-- Reaction count
-- Chat context: the surrounding messages before and after
-
-## Auto-update
-
-Enable **Auto-update** at the top of the page to keep the feed live. New messages appear as they arrive without needing to refresh.
+Scheduled and recent sent messages show above the feed: the channel, the time, who sent it and how (from the app, the [Assistant](/assistant) or an [AI app](/mcp)). Edit or cancel a scheduled message. If a message failed, for example because the bot was removed from the chat, the error shows and you can click **Send again**.

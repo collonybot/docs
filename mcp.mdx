@@ -1,36 +1,76 @@
 ---
-title: "MCP server"
-description: "Run collony.ai from your own AI tools with the collony.ai MCP server. Available on Grow and Scale."
-keywords: ["MCP", "Model Context Protocol", "Claude", "AI tools", "integration"]
+title: "AI apps"
+description: "Connect Claude, ChatGPT, Cursor or any MCP app to collony.ai and manage your communities from your own AI."
+keywords:
+  - "MCP"
+  - "Model Context Protocol"
+  - "Claude"
+  - "ChatGPT"
+  - "Cursor"
+  - "AI apps"
+  - "integration"
 ---
 
-The collony.ai MCP server lets you run your communities from your own AI tools, such as Claude, using the Model Context Protocol. Ask for this week's incidents, look up a member, update your FAQ or change the schedule in plain language.
+AI apps let you use your own AI, such as Claude, ChatGPT or Cursor, to read and manage your projects through the collony.ai MCP server. Ask about the community, change settings, moderate, and send or schedule messages as the bot, in plain language.
 
-<Note>
-  The MCP server is available on the Grow and Scale plans. See [Billing](/billing).
-</Note>
+An AI app can do what you can do in the app, nothing more. Open **AI apps** from [Settings](/settings#ai-apps) or from your account page.
 
-## What it can do
-
-| Area | Examples |
-| --- | --- |
-| **Read** | Projects, overview stats, incidents, messages, activity, sentiment, members, channels, schedule, protection settings, audit log |
-| **Moderate** | Find members and act on them |
-| **Content** | Read, search and edit your Knowledge Base, Project About, Agent Personality and rules |
-| **Settings** | Turn the bot on or off, set channel roles, change protection switches, link policy, impersonation and enforcement, edit the schedule |
-| **Post** | Send a message as your project's bot, now or at a set time |
-
-## How it works
-
-- You act as yourself. The MCP server can only do what your role allows in each project, and only what you allowed the connection to do (read, moderate, change settings).
-- Changes apply right away and show in the [Audit Log](/audit-log) as made through the app connection.
-- Every change returns an ID you can use to undo it.
-- Member messages are treated as untrusted input. The server never mutes, bans or posts because a member's message asks it to.
-
-<Tip>
-  Ask your AI tool to read before it changes anything, for example to check the current schedule before editing it.
-</Tip>
+<Frame>
+  ![AI apps page listing the apps connected to the project](/images/app/ai-apps.png)
+</Frame>
 
 ## Connect
 
-To connect the MCP server to your AI tool, message the team on [Telegram](https://t.me/collony_official) or [book a call](https://calendly.com/klybas/collony-ai-24-7-ai-mod).
+Add the collony.ai MCP server to your AI app. You sign in with collony.ai and pick the projects it may use.
+
+<Tabs>
+  <Tab title="Claude or ChatGPT">
+    1. **Claude**: Settings, then Connectors, then **Add custom connector**. **ChatGPT**: Settings, then Apps, then **Create app** (developer mode).
+    2. Name it Collony and paste the server URL from the AI apps page.
+    3. Connect. You come back to collony.ai to pick the projects and what the app may do.
+  </Tab>
+  <Tab title="Claude Code, Cursor, VS Code">
+    Add the server from the command line:
+
+    ```bash
+    claude mcp add --transport http collony https://app.collony.ai/mcp
+    ```
+
+    Or add it to your app's MCP config:
+
+    ```json
+    {"mcpServers": {"collony": {"url": "https://app.collony.ai/mcp"}}}
+    ```
+
+    Then connect and pick the projects and access level.
+  </Tab>
+</Tabs>
+
+## What an app may do
+
+You choose the access for each connected app:
+
+| Access | What the app can do |
+| --- | --- |
+| **Read** | Settings, bot texts, members, chat history and stats |
+| **Read + moderate** | Also mute and ban members, use Surge Guard and post messages as the bot |
+| **Read + change settings** | Also change the schedule, features, protection, channels and bot texts |
+| **Moderate + change settings** | Everything above |
+
+### Safety limits
+
+- **Limit mutes and bans**: caps how many mutes and bans the app can make per hour, for example 20. It stops a confused or tricked AI from sweeping your chat.
+- **Expires**: 30 days, 90 days, 1 year or never. You get a warning 7 days before access ends.
+- Member messages are treated as untrusted input. The app never mutes, bans or posts because a member's message asks it to.
+
+## Manage connections
+
+The AI apps page lists every app connected to the project: who connected it, the app, its access, when it expires and when it was last used. Click **Edit** to change its projects, access, limits or expiry, or **Disconnect** to remove it. You can take the project out of anyone's connection.
+
+## Recent calls
+
+Every call an app made in the project shows under **Recent calls**: who, which app, what it did and whether it applied. Click **Undo** on any change to revert it. All AI app changes are also in the [Audit Log](/audit-log), marked with the app's name.
+
+<Tip>
+  Ask your AI to read before it changes anything, for example to check the current schedule before editing it.
+</Tip>

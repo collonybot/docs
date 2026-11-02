@@ -1,23 +1,38 @@
 ---
 title: "Message details"
-description: "The full view of one message: sentiment scores, linked incident, labels and the chat around it."
-keywords: ["message", "sentiment scores", "chat context"]
+description: "The full view of one message: actions, sender, collony AI analysis, labels and the chat around it."
+keywords:
+  - "message"
+  - "sentiment scores"
+  - "chat context"
 ---
 
-Click any message in [Chat History](/chat-history), [Incidents](/incidents) or a member profile to open its detail page. Click **Back to Chat History** to return.
+Click **Open message** on any message in [Chat History](/chat-history), [Incidents](/incidents), the Overview or a member profile to open its detail page. Click **Back to Chat History** to return.
 
-## Message header
+<Frame>
+  ![Message detail page with the message, actions, author and collony AI analysis](/images/app/message.png)
+</Frame>
 
-Shows the sender, the time, the message itself and its status, for example **Message deleted**. Two buttons sit above it:
+## Message
+
+The sender, the time and the message itself, including what it replied to. If a person on your team posted it as the bot, it shows who and how, for example **Sent via the assistant**.
 
 - **Translate** shows the message in your language.
 - **Open in Telegram** (or Discord) jumps to the message on the platform.
 
-## Incident
+Below it: the platform, message ID, reactions and, for bot messages, who sent it and when it was scheduled.
 
-If the message led to a moderation action, the page shows the incident: its severity, the actions taken (deleted, muted, ban suggested, unmuted) and who took them, the bot or a moderator. Click **Open incident** for the full case.
+## Actions
 
-## Sentiment analysis
+The **Actions** menu deletes the message, mutes the sender for 24 hours (default), 1 hour or 7 days, bans them or opens their profile.
+
+If the message led to a moderation case, the incident shows here too. Click **Open incident** for the full case.
+
+## Author
+
+The sender's join date, last activity, status, message count, mood, share of deleted messages, incidents and latest messages. Click **Open profile** for their [full profile](/member-details).
+
+## collony AI analysis
 
 The scores collony.ai gave the message:
 
@@ -25,11 +40,10 @@ The scores collony.ai gave the message:
 | --- | --- |
 | **Positivity** | How positive or negative the message is |
 | **Maliciousness** | How likely the message is a scam or attack |
-| **Sarcasm**, **Shilling**, **FUD**, **Inside Joke** | Signals the AI picked up |
-| **Reactions** | Reactions the message received |
+| **Sarcasm**, **Shilling**, **FUD**, **Inside joke** | Signals the AI picked up |
 
-Labels such as Question, Explanation, Technical, Social, Has Meme and Contains Swearing show the topic of the message.
+Labels such as Question, Explanation, Technical, Social, Has meme and Contains swearing show the topic of the message.
 
 ## Chat context
 
-The messages before and after this one, including bot replies and forwarded posts, each with its own labels and positivity score. Expand any message to see its details. Use it to judge a message in the context of the conversation before you act.
+The messages before and after this one, including bot replies, each with its mood score. Click **View full chat history** to see more. Use it to judge a message in context before you act.

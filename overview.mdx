@@ -1,61 +1,53 @@
 ---
 title: "Overview"
-description: "A real-time snapshot of your community's health: sentiment, incidents, activity and quick settings."
+description: "The first page of every project: headline numbers, what needs you, recent incidents, topics, people of the week and the live chat."
 ---
 
-Overview is the first page you land on when you open a project. It gives you a snapshot of community health for the selected time range without having to dig into individual sections.
+Overview is the first page you see when you open a project. It shows the project's health at a glance and what needs your attention.
 
 <Frame>
-  ![Overview 1](/images/overview-1.png)
+  ![Overview page with headline numbers, Needs you, recent incidents and topics](/images/app/overview.png)
 </Frame>
 
-## Sentiment breakdown
+The header shows the project name and status, its platforms, channel count, current bot mode and your role. Pick the range at the top right: 24h, 7d, 30d, or **More** for presets like last 14 days, this month, or a custom From and To. Click **Customize** to choose which sections you see.
 
-The sentiment panel shows the split of Positive, Neutral, and Negative messages for the selected period, with message counts for each. The 24h sentiment delta shows movement since the previous day.
+## Headline numbers
 
-Click **View** to go to [Insights](/insights).
-
-## Key metrics
-
-Six stats across the top:
-
-| Metric | What it shows |
+| Card | What it shows |
 | --- | --- |
-| **Members** | Unique members active in this period, with net change |
-| **Messages** | Total messages analyzed by the bot |
-| **Bot Replies** | How many times the bot responded in chat |
-| **Incidents** | Total moderation events, as a percentage of total messages |
-| **Actions** | Breakdown of deletions, mutes and bans |
-| **Avg Response** | Bot response latency |
+| **Members** | Members in the community, how many joined and how many are talking |
+| **Incidents handled** | Moderation cases, and how fast the bot took its first action on average |
+| **Bot replies** | Replies the bot sent, as a share of all messages |
+| **Mood** | Net mood from -100 to +100, with the positive, neutral and negative split |
 
-## Quick Settings
+## Needs you
 
-Four toggles available directly from Overview without opening Settings:
+The things waiting on you, for example an incident to review, a ban the bot suggested, Surge Guard turning on or the Instant guard muting a flooder. Each has a **Review** or **Open** button.
 
-- Basic chat
-- FAQ responses
-- Emoji reactions
-- Allow bot to ban (see [Enforcement and filters](/enforcement#allow-bot-to-ban))
+**Everything else** confirms what is working, such as connected platforms, protected channels and credit usage.
 
-Changes here apply immediately and sync with the Settings and Protection pages.
+## Recent incidents
 
-## Schedule status
+The latest moderation cases, with the member, channel, severity, what caught it (collony AI, Surge Guard, Instant guard, Blocklist) and what was done. Open the menu on any incident to open the incident, message or member, mute, ban, delete, mark reviewed, forgive or mark it as a mistake. Click **View all** to go to [Incidents](/incidents).
 
-Shows the current bot mode (Chat \+ Security, Security only or Inactive) and the active time window. Click **View** to open the Schedule page.
+## The bot
 
-## Recent Incidents
+Whether the bot is on, its current mode (for example Security only), the active hours and the next mode change. Click **Schedule** to change it.
 
-The last few moderation events with links to the full incident. Click **See All** to go to the Incidents page.
+**Quick settings** has the switches you change most: Basic chat, FAQ answers, Emoji reactions and **Let the bot ban on its own**.
 
-## Community Highlights
+## What they talk about
 
-A summary of the last 7 days:
+The share of messages by topic, such as Social, Technical, Question, Swearing and Sarcastic, and which topic moved most. Click **Insights** for more.
 
-- **Community Loved**: most reacted-on messages
-- **Most Active**: members with the highest message count
-- **Most Positive Users**: highest average sentiment score
-- **Most Negative Users**: lowest average sentiment score
+## People of the week
 
-## Recent Chat
+The most loved message, the most active member, the most positive member and the most negative member. Click **Members** for the full list.
 
-A live feed of the most recent messages in the project. Click **View All** to go to Chat History. Inline moderation actions (Delete, Mute, Ban) are available directly from the feed.
+## Recent chat
+
+A live feed of the latest messages with their mood score. Open the menu on a message to open it, open it on Telegram or Discord, copy its link or text, view the member, mute, ban or delete. Click **View all** to go to [Chat History](/chat-history).
+
+## Top offenders
+
+The members with the most incidents, with quick actions: open profile, mute, ban or whitelist.

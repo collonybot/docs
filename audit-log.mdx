@@ -1,33 +1,43 @@
 ---
 title: "Audit Log"
-description: "Every change and moderation action in your project: who did it, when, and what changed."
-keywords: ["audit log", "change history", "who changed what"]
+description: "Every change and moderation action in your project, by your team, the bot and AI apps, with undo for AI app changes."
+keywords:
+  - "audit log"
+  - "change history"
+  - "who changed what"
 ---
 
-The Audit Log records every change made in the project and every manual moderation action, with the person who made it. Changes made by the [Assistant](/assistant) and the [MCP server](/mcp) show here too.
+The Audit Log records every change in the project: by your team, by the bot and by [AI apps](/mcp). Use it to see who changed what and when.
+
+<Frame>
+  ![Audit Log with filters and entries from the team, the bot and AI apps](/images/app/audit-log.png)
+</Frame>
 
 ## Filters
 
 | Filter | Options |
 | --- | --- |
-| **Category** | All, Billing, Channels, Content, Moderation, Roles, Settings |
-| **Actor** | Everyone who made a change in the project |
-| **From** and **To** | A date range |
-| **Bot actions** | Include actions the bot took on its own |
-
-Click **Apply** to run the filters.
+| **Include bot actions** | Show what the bot did on its own, such as Surge Guard turning on |
+| **Include AI app reads** | Show what AI apps read, not only what they changed |
+| **Category** | All, Billing, Content, Moderation, Read, Roles, Schedule, Settings |
+| **Actor** | Everyone who made a change, including the collony.ai team |
+| **Via** | Any, or AI apps only |
+| **When** | All, 24h, 7d, 30d, or **More** for presets or a custom From and To |
+| **Sort** | Newest first or oldest first |
 
 ## Entries
 
-Each row shows the time, the actor, the category, the action, the target (a user, channel or content item), the details and whether it succeeded. Click a row to expand it.
+Each entry shows the time, who did it, the action, the target (a user, channel, setting or content item), the details and whether it succeeded. Click an entry to see everything it did, including the error if it failed.
+
+Changes made through an AI app are marked **via** the app, for example "via Claude (AI app)". Click **Undo this change** to revert one.
 
 Examples of what is logged:
 
-- Roles added or removed, including batch changes from the Members page
-- Channels turned on or off and channel role changes
-- Content saved in [Bot Setup](/bot-setup), with the version number and a diff of what changed
-- Bans, mutes and other actions taken from the app
-- Settings changes, such as dismissing or restoring the setup guide
+- Roles added or removed
+- Schedule, settings and protection changes
+- Content saved in [Bot Setup](/bot-setup)
+- Mutes, bans and other moderation actions
+- Surge Guard turning on or changing, by the bot
 
 <Tip>
   If the bot starts behaving differently, filter by **Content** or **Settings** first. A recent edit to the Agent Personality or Knowledge Base is the usual cause.

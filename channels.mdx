@@ -1,21 +1,27 @@
 ---
 title: "Channels"
-description: "Choose what collony.ai does in each Telegram and Discord channel: protect and reply, protect only, reply only, or post moderator reports."
+description: "Choose which Telegram and Discord channels collony.ai works in, and which channel gets moderator reports."
 mode: "default"
 ---
 
-The Channels page lists every channel the bot can see in the current project, grouped by platform. For each channel you choose whether the bot is on and what role it plays there.
+The Channels page lists every channel the bot can see in the current project, grouped by platform. For each one you choose whether the bot is on and what role the channel plays.
+
+The bot does not read, moderate or reply in channels that are off. It stays in the group or server but does nothing there.
+
+<Frame>
+  ![Channels page with new channel settings, filters and the channel list](/images/app/channels.png)
+</Frame>
 
 ## Channel roles
 
-| Role | What the bot does |
-| --- | --- |
-| **Community chat** (default) | Where members talk. The bot protects the chat and answers questions. |
-| **Security only** | The bot removes spam and scams, mutes and bans, and never replies. |
-| **Chat & support only** | The bot answers questions and chats. It does not moderate here. |
-| **Moderator notifications** | A private channel for your mods. The bot posts reports of what it deleted, muted or banned. |
+| Role | Protects | Replies |
+| --- | --- | --- |
+| **Community chat** (default): where members talk. The bot protects the chat and answers questions. | Yes | Yes |
+| **Security only**: the bot removes spam and scams, mutes and bans, and never replies. | Yes | No |
+| **Chat & support only**: the bot answers questions and chats. It does not moderate here. | No | Yes |
+| **Moderator notifications**: a private channel for your mods. The bot posts reports of what it deleted, muted or banned. | No | Posts reports |
 
-Click the role next to a channel to change it.
+Click the role next to a channel to change it. In channels where the bot replies, replies also follow your [Schedule](/schedule) and the chat switches in [Settings](/settings#assistant).
 
 <Tip>
   Set announcement and off-topic channels to **Security only** so the bot keeps them clean without joining the conversation. Create a private channel for your team and set it to **Moderator notifications** to follow what the bot does in real time.
@@ -23,20 +29,18 @@ Click the role next to a channel to change it.
 
 ## Turning channels on and off
 
-Switch a channel off and the bot stops reading, moderating and replying there. It stays in the group or server but does nothing. The bot does not announce when a channel is switched on or off.
-
-To change several channels at once, select them and use **Set role…**, **Turn on** or **Turn off**.
+Switch a channel on or off from its row. To change several channels at once, select them and use **Set role…**, **Turn on** or **Turn off**.
 
 ## New channels
 
-Two settings at the top of the page control channels the bot picks up later, for example a new Discord channel:
+The **New channels** settings control channels the bot picks up later, for example a new Discord channel:
 
 - **Turn on the bot in new channels**: with this off, new channels wait on this page until you switch them on.
 - **Role for new channels**: the role new channels get, Community chat by default.
 
 ## Filters
 
-Filter the list by **Last active**, **Bot access** (Full access, Limited, No access, Not checked yet) and **Role**.
+Filter the list by **Role** and **Bot access** (Full access, Limited, No access, Not checked yet). Each row also shows the channel type and when it was last active.
 
 <Warning>
   A channel with **Limited** or **No access** is missing permissions the bot needs. Moderation can fail there until you fix the bot's permissions on the platform.

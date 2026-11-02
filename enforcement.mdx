@@ -1,48 +1,28 @@
 ---
 title: "Enforcement and filters"
-description: "Media checks, cleanup, link limits for new members, ban permissions, mute length and repeat offender rules."
+description: "Ban permissions, mute length, repeat offender rules, media checks, cleanup and link limits for new members."
 keywords:
   - "enforcement"
   - "image moderation"
   - "mute length"
   - "ban"
   - "repeat offenders"
-sidebarTitle: "Enforcement and filters"
 ---
 
-The **Enforcement & Filters** tab on the Protection page sets which media the bot checks, what it cleans up, and how far it can go on its own. Changes save instantly.
+The **Enforcement & Filters** tab on the [Protection](/protection) page, in the Advanced view, sets how far the bot can act on its own and which media it checks. Changes save instantly.
 
-## Media filtering
+The main enforcement settings are also on the Simple view of the Protection page, and the **How strict** level sets them for you.
 
-| Setting | What it does | Default |
-| --- | --- | --- |
-| **Image Moderation** | Checks photo messages with AI vision for inappropriate content | On |
-| **Animation Moderation** | Checks GIFs, animations and videos with AI vision | Off |
-| **Sticker Moderation** | Checks stickers with AI vision | Off |
-
-Image, GIF and sticker checks are part of the Protect, Grow and Scale plans.
-
-## Cleanup
-
-| Setting | What it does | Default |
-| --- | --- | --- |
-| **Delete Stories** | Deletes Telegram stories shared into the chat, a common scam vector | Off |
-| **Delete Join Messages** | Deletes Telegram "user joined" service messages a minute after they appear | Off |
-
-## New members
-
-**Links from new members** deletes messages with links from members who joined less than a set time ago. Choose Off, 1 hour, 24 hours, 7 days or a custom value. Links to your [allowed domains](/blocklists#allowed-domains) are always fine.
-
-<Tip>
-  Most scam accounts post a link within minutes of joining. A 24 hour window stops them without bothering regular members.
-</Tip>
+<Frame>
+  ![Protection page in Advanced view on the Enforcement and Filters tab](/images/app/enforcement.png)
+</Frame>
 
 ## Enforcement
 
 ### Allow bot to ban
 
-- **On**: blocklist bans, AI bans and repeat offender bans remove the member right away.
-- **Off**: every ban becomes **Suggest ban**. The bot deletes the message, mutes the member and puts the case in **Needs review** on the [Incidents](/incidents) page for you to decide.
+- **On**: blocklist bans, AI bans and repeat offender bans remove the member right away. You can undo any ban from [Incidents](/incidents).
+- **Off**: every ban becomes **Suggest ban**. The bot deletes the message, mutes the member and puts the case in **Needs review** for you to decide.
 
 <Tip>
   Start with this off. After a few weeks of reviewing suggestions, turn it on once you trust how the bot handles your community.
@@ -58,4 +38,29 @@ Flood brakes for posting too fast stay short (5 minutes or 1 hour) whatever you 
 
 Bans a member on their Nth mute within a set window, for example the 3rd mute within 30 days. Choose from the 2nd to the 10th mute and a window from 7 to 365 days.
 
-The count includes mutes from the bot and from your admins across the whole project. Incidents you forgave or marked as a collony.ai mistake do not count. If the bot is not allowed to ban, it suggests the ban instead.
+The count includes mutes from the bot and from your admins across the whole project. Incidents you forgave or marked as a collony.ai mistake do not count.
+
+## Filters
+
+### Media filtering
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Image Moderation** | Checks photo messages with AI vision for inappropriate content | On |
+| **Animation Moderation** | Checks GIFs, animations and videos with AI vision | Off |
+| **Sticker Moderation** | Checks stickers with AI vision | Off |
+
+### Cleanup
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Delete Stories** | Deletes Telegram stories shared into the chat, a common scam vector | Off |
+| **Delete Join Messages** | Deletes Telegram "user joined" service messages a minute after they appear | Off |
+
+### New members
+
+**Links from new members** deletes messages with links from members who joined less than a set time ago. Choose Off, 1 hour, 24 hours, 7 days or a custom value. Links to your [allowed domains](/blocklists#allowed-domains) are always fine.
+
+<Tip>
+  Most scam accounts post a link within minutes of joining. A 24 hour window stops them without bothering regular members.
+</Tip>

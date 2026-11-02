@@ -4,13 +4,17 @@ description: "Write your community rules and tune the rule presets the collony.a
 keywords: ["AI rules", "community rules", "rule presets", "AI moderation"]
 ---
 
-Everything the blocklists did not catch is read by the AI, with your community rules and its rule presets. Open this from the **AI rules** tab on the [Protection](/protection) page.
+Everything the blocklists did not catch is read by the AI, with your community rules and its rule presets. Open this from the **AI rules** tab on the [Protection](/protection) page, in the Advanced view. In the Simple view, the same presets sit under **Scam and spam rules**, with **Customize** on each one and **Edit community rules** for your own rules.
 
 <Note>
   AI rules are part of the Protect, Grow and Scale plans. See [Billing](/billing).
 </Note>
 
-The top of the tab shows what the AI did in the last 7 days: actions, deletions, mutes and bans, with a link to the matching incidents.
+The top of the tab shows what the AI did in the last 7 days: actions, deletions, mutes, bans and cases sent to review, with a link to the matching incidents.
+
+<Frame>
+  ![AI rules tab with community rules and rule presets](/images/app/ai-rules.png)
+</Frame>
 
 ## Community rules
 
@@ -133,14 +137,14 @@ The bot already knows your project from [Bot Setup](/bot-setup), so these rules 
 
 ## Rule presets
 
-Rule presets run next to your community rules. Each one is tuned by collony.ai for a common attack.
+Ready-made checks the AI runs on every message, next to your community rules. Each one is tuned by collony.ai for a common attack. Switch one on, tell the AI what to do, and save.
 
 | Preset | What it catches |
 | --- | --- |
 | **No external Telegram group links** | Links to other Telegram groups or channels |
 | **Remove random bot tags** | The random bot-tagging tactic on Telegram |
 | **No random crypto addresses** | Unsolicited wallet addresses |
-| **Bypass prevention** | Quoted, forwarded or external scam content, treated as malicious |
+| **Bypass prevention** | Attempts to bait the bot or dodge moderation, including quoted or forwarded scam content |
 | **Sexual & thirst-trap bots** | Heart-emoji openers, forwarded romantic messages, sex-bot conversation starters |
 | **DM solicitation & off-platform promotion** | DM begging, channel and bio promotion, signal-service ads, ROI and percent promotion. Softer action by default. |
 | **Recruitment & get-rich-quick spam** | Job pitches, earn-online schemes, copy-trading brags |
@@ -152,7 +156,7 @@ Rule presets run next to your community rules. Each one is tuned by collony.ai f
 
 Each preset has three settings:
 
-- **Tell the AI to**: delete, mute, ban (suggest only) or decide by itself. With **decide by itself**, the AI picks the action based on severity.
+- **Tell the AI to**: delete, mute, ban or decide by itself. With **decide by itself**, the AI picks the action based on severity. If the bot is not allowed to ban, a ban becomes a ban suggestion. See [Enforcement and filters](/enforcement#allow-bot-to-ban).
 - **Applies on**: Discord, Telegram or both.
 - **Custom instruction** (optional): an extra line for edge cases, for example `Ban if the user also swears`.
 

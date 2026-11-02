@@ -114,6 +114,7 @@
           "ai-rules",
           "enforcement",
           "blocklists",
+          "impersonation",
           "surge-guard"
         ]
       },

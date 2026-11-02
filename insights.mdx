@@ -1,43 +1,72 @@
 ---
 title: "Insights"
-description: "How your community talks, reacts and feels: activity, members, reactions, sentiment, rhythm and messages."
-keywords: ["insights", "analytics", "sentiment", "activity", "community health"]
+description: "How your community feels, talks and grows: mood, topics, unanswered questions, people of the week, reactions and rhythm."
+keywords:
+  - "insights"
+  - "analytics"
+  - "sentiment"
+  - "activity"
+  - "community health"
 ---
 
-Insights shows how your community talks, reacts and feels over the range you pick. It replaces the old Sentiment and Activity pages.
+Insights shows how your community felt and talked over the range you pick. It has two views, **Simple** and **Advanced**. Switch between them at the top of the page.
 
-<Note>
-  Insights is part of the Grow and Scale plans. See [Billing](/billing).
-</Note>
+Pick the range at the top: 24h, 7d, 30d, or **More** for presets like last 14 days, this month, or a custom From and To.
 
-## Summary strip
+<Frame>
+  ![Insights page in Simple view with mood, messages, questions and people of the week](/images/app/insights.png)
+</Frame>
 
-The top of the page shows the headline numbers for the selected range, each with the change against the previous period:
+## Simple view
 
-- **Member messages**
-- **Net mood**, positive share minus negative share
-- **Reactions**
-- **Talking**, the number of members who posted
-- **Removed**, messages the bot or your team took down
+A one-page read of the community, in cards:
 
-Next to it: the positive, neutral and negative split and how many answers the bot gave.
+| Card | What it shows |
+| --- | --- |
+| **Mood** | Mood score from -100 to +100, a one-line read such as "Mostly positive", the change against the previous period and the positive, neutral and negative split |
+| **Messages** | Member messages, the change against the previous period and a bar per day |
+| **Talking** | How many members spoke up out of everyone in the chat, split into regulars, members who came back and first-timers |
+| **Questions** | The share of questions collony AI answered and how fast |
+| **Best time to post** | The busiest hour of the period, in UTC |
+| **Most loved message** | The message with the most reactions, and who reacted |
+| **Favorite emoji** | The most used emoji and the runners-up |
+| **Streak** | Days in a row with messages |
+| **People of the week** | The most active member, the brightest voice and one to watch (lowest mood) |
 
-## Time range
+### What they talk about
 
-Every tab uses the same range: 24h, 7d, 30d, 90d, or **Custom** with your own From and To dates.
+- **Topics**: the share of messages by topic, such as Social, Technical, Question, Swearing and Sarcastic, and which topic moved most
+- **Left unanswered**: recent questions nobody answered. Click **Improve answers** to add them to your knowledge base.
+- **Busiest channels**: the share of messages per channel
 
-## Tabs
+<Tip>
+  Questions that keep showing up under **Left unanswered** are the fastest win. Add the answers to your [Knowledge Base](/bot-setup#knowledge-base) and the bot handles them next time.
+</Tip>
+
+### Growth
+
+New members who joined, and where members are, split by Telegram and Discord with each platform's share of messages.
+
+## Advanced view
+
+The top of the Advanced view shows mood per day, member messages, reactions, bot answers, removed messages and how many members talked or only reacted. Below it are six tabs.
 
 <Tabs>
   <Tab title="Overview">
     How busy the community is.
 
-    - **Activity timeline**: messages over time in 5-minute buckets, with zoom levels from 1h to 30d. Drag across the chart to zoom in. Shaded bands mark [Surge Guard](/surge-guard) slow-mode periods.
-    - **Daily active members**: members who sent a message and members who only reacted, per day.
-    - **Questions and the assistant**: how many questions were asked, the share answered by the bot, by members or left unanswered, and the median time to an answer.
+    - **Activity timeline**: messages over time, live, with zoom levels from 1h to 30d. Drag across the chart to zoom in. Shaded bands mark [Surge Guard](/surge-guard) slow-mode periods.
+    - **Daily active members**: members who sent a message and members who only reacted, per day
+    - **Questions and the assistant**: the share of questions answered by collony AI, by members or left unanswered, the median answer time and answer time per day
   </Tab>
   <Tab title="Members">
-    Who drives the conversation: the most active members and the members whose messages get the most reactions. Click a member to open their [profile](/member-details).
+    Who talks the most, whose messages get reactions and who reacts.
+
+    - **Engagement**: a funnel from members in the chat to those who reacted, talked, got reactions and were loved (5 or more reactions), against the previous period
+    - **Member map**: each member placed by messages and mood, sized by reactions received
+    - **Most active**, **Most reacted-on** and **Top reacters** rankings
+
+    Click a member to open their [profile](/member-details).
   </Tab>
   <Tab title="Reactions">
     The messages the community loved most, with who reacted and when, and the emojis members use most.
@@ -46,20 +75,15 @@ Every tab uses the same range: 24h, 7d, 30d, 90d, or **Custom** with your own Fr
     The mood of the chat, scored message by message.
 
     - Positive, neutral and negative share with message counts, and the net mood
-    - **Mood over time**
-    - **Most positive members** and **Most negative members**, with average score and message count
+    - **Mood over time**, with the range of net mood and the busiest day
+    - **Most positive members** and **Most negative members**, with message count and average score
 
     <Tip>
       Persistent negativity from the same accounts often comes before trouble. Check those members before it turns into an incident.
     </Tip>
   </Tab>
   <Tab title="Rhythm">
-    When the community is active, in UTC.
-
-    - **Last 13 weeks**: one square per day. Brighter means busier, red marks a rough day.
-    - Highlights: busiest day, longest streak of days with messages, roughest day and busiest weekday
-    - **By weekday** and **By hour**: messages and reactions
-    - A weekday by hour heatmap
+    When the community is active, in UTC: a calendar of recent weeks, the busiest day and weekday, the longest streak, activity by weekday and by hour, and a weekday by hour heatmap.
 
     Use it to time announcements and AMAs, and to set your [Schedule](/schedule).
   </Tab>

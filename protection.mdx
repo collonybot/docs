@@ -1,63 +1,107 @@
 ---
 title: "Protection"
-description: "How collony.ai checks every message: Surge Guard, impersonation protection, blocklists, then AI rules."
-keywords: ["protection", "moderation layers", "anti-spam", "scam protection"]
+description: "Choose how strict collony.ai is with one setting, then fine-tune scam rules, blocklists, impersonation and Surge Guard."
+keywords:
+  - "protection"
+  - "moderation layers"
+  - "anti-spam"
+  - "scam protection"
+  - "how strict"
 ---
 
-The Protection page controls what collony.ai removes or restricts in your community. Open it from **Protection** in the sidebar.
+The Protection page controls what the bot stops on its own. Open it from **Protection** in the sidebar. It has two views, **Simple** and **Advanced**. Switch between them at the top of the page.
 
-## How a message is checked
+<Frame>
+  ![Protection page in Simple view with the How strict levels, last 7 days and the protection layers](/images/app/protection.png)
+</Frame>
 
-Every message passes through the layers in this order. The first layer that acts on a message decides what happens to it.
+## Simple view
+
+### How strict
+
+One choice sets enforcement, impersonation, Surge Guard, media checks and cleanup together. Your AI rules and blocklists stay as you set them.
+
+| Level | What it does |
+| --- | --- |
+| **Relaxed** | Asks you before any ban. Short mutes, fewer checks. |
+| **Balanced** (recommended) | Deletes, mutes and bans repeat offenders on its own. Right for most communities. |
+| **Strict** | Bans on the 2nd mute, every check on, Surge Guard on. For big or often-raided chats. |
+
+### Last 7 days
+
+How many messages the bot removed for you, how many it sent to **Needs review**, and how many you marked as a mistake. The bar below splits them into banned, muted, deleted and review.
+
+### Quick settings
+
+- **Let the bot ban on its own**: on, bans happen right away and you can undo any of them from [Incidents](/incidents). Off, the bot suggests the ban and waits for you.
+- **Mute length**: used for every mute, and while a ban suggestion waits. 1 hour, 24 hours, 3 days or 7 days.
+- **Repeat offenders**: when to ban, for example the 3rd mute in 30 days, or never. Forgiven incidents do not count.
+
+### Layers
+
+Below the quick settings, each protection layer is a row you can open. Each shows how many messages it caught in the last 7 days.
+
+| Layer | What it covers |
+| --- | --- |
+| **Scam and spam rules** | The AI reads every message for these patterns, plus your own community rules. See [AI rules](/ai-rules). |
+| **Blocklists** | Words and links handled instantly, no AI involved. See [Blocklists](/blocklists). |
+| **Impersonation** | Catches accounts copying your team's names or pictures. See [Impersonation](/impersonation). |
+| **Surge Guard** | Automatic slow mode during floods and raids. See [Surge Guard](/surge-guard). |
+
+Open a row to change its main settings. **More in Advanced** takes you to the full settings.
+
+## Advanced view
+
+The Advanced view shows every setting and the full numbers.
+
+### How a message is checked
+
+Every message passes the layers in this order. The first layer that acts on a message decides what happens to it.
 
 <Steps>
   <Step title="Surge Guard">
-    Watches the message rate in each channel and turns on slow mode during a flood or raid. See [Surge Guard](/surge-guard).
+    Watches the message rate in each channel and turns on slow mode during a flood or raid.
   </Step>
   <Step title="Impersonation protection">
-    Catches accounts that copy the name or look of your admins and moderators. It relies on your team having the right roles in [Members](/members).
+    Catches members copying the name, @handle or picture of someone on your team.
   </Step>
   <Step title="Blocklists">
-    Words, phrases and domains you or collony.ai have blocked. Handled instantly, with no AI involved. See [Blocklists](/blocklists).
+    Words, phrases and domains, handled instantly.
   </Step>
   <Step title="AI rules">
-    Everything the earlier layers did not catch is read by the AI, using your community rules and the rule presets. See [AI rules](/ai-rules).
+    Everything the earlier layers did not catch is read by the AI, using your community rules and the rule presets.
   </Step>
 </Steps>
 
-<Note>
-  The AI layer is part of the Protect, Grow and Scale plans. On the Free plan, Surge Guard, blocklists and the link and scam source checks still run. See [Billing](/billing).
-</Note>
+### Activity
 
-## Activity summary
+For the range you pick (24h, 7d, 30d, or **More** for presets like last 14 days, this month, or a custom From and To):
 
-The top of the page shows what Protection did in the selected range (24h, 7d or 30d):
+- Actions and incidents, with the change against the previous period
+- Deleted, muted and banned counts
+- **Actions per day**, with the busiest day and which layer did most of the work
+- **By layer**: Surge and flood, Impersonation, Blocklists, AI rules and Filters, each with its deletions, mutes and bans
 
-- **Actions and incidents**, with the change against the previous period
-- **Deleted, muted and banned** counts
-- A chart of incidents and actions per day
-
-## By layer
-
-The **By layer** panel splits the same numbers by the layer that acted: Surge and flood, Impersonation, Blocklists, AI rules and Filters. Each row shows how many messages were deleted and how many members were muted or banned. Click **Incidents** to see the individual cases.
-
-Use it to spot which layer is doing the work. If AI rules carry almost everything, adding the most common scam domains to a blocklist makes those removals instant.
-
-## Protection tabs
+### Tabs
 
 <Columns cols={2}>
   <Card title="Enforcement and filters" href="/enforcement">
-    Media checks, cleanup, new member links and how far the bot can go on its own.
+    Ban permissions, mute length, repeat offenders, media checks and cleanup.
   </Card>
+
   <Card title="AI rules" href="/ai-rules">
-    Your community rules and the rule presets the AI enforces.
+    Your community rules and the rule presets.
   </Card>
+
   <Card title="Blocklists" href="/blocklists">
-    Blocked and allowed words, phrases and domains.
+    Blocked and allowed domains and the blocklist collections.
   </Card>
+
+  <Card title="Impersonation" href="/impersonation">
+    What counts as a copy and what happens to it.
+  </Card>
+
   <Card title="Surge Guard" href="/surge-guard">
-    Automatic slow mode for floods and raids.
+    Triggers and slow mode for floods and raids.
   </Card>
 </Columns>
-
-The **Impersonation** tab turns impersonation protection on or off for the project.
