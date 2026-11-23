@@ -250,7 +250,8 @@
               "fr/enforcement",
               "fr/blocklists",
               "fr/impersonation",
-              "fr/surge-guard"
+              "fr/surge-guard",
+              "fr/verification"
             ]
           },
           {
@@ -310,7 +311,8 @@
               "it/enforcement",
               "it/blocklists",
               "it/impersonation",
-              "it/surge-guard"
+              "it/surge-guard",
+              "it/verification"
             ]
           },
           {

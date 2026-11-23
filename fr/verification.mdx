@@ -1,0 +1,74 @@
+---
+title: "Vérification"
+description: "Vérifiez les nouveaux membres avant qu'ils puissent écrire dans votre groupe Telegram ou serveur Discord, avec des préréglages allant d'un simple appui à un filtre d'ancienneté du compte et une question."
+---
+
+La vérification contrôle les personnes qui rejoignent avant qu'elles puissent écrire. Ouvrez-la depuis l'onglet **Verification** de la page [Protection](/fr/protection) et activez-la. Elle fonctionne sur Telegram et Discord et elle est incluse dans tous les forfaits, y compris le gratuit.
+
+La vérification arrête les bots et les comptes jetables à l'entrée. Elle ne juge pas ce que font ensuite les membres vérifiés. C'est le rôle des [règles IA](/fr/ai-rules), de l'[usurpation](/fr/impersonation) et de [Surge Guard](/fr/surge-guard).
+
+## Préréglages
+
+Choisissez un préréglage ou créez vos propres étapes avec **Custom**.
+
+| Préréglage | Ce que font les nouveaux membres |
+| --- | --- |
+| **Light** | Un appui. |
+| **Easy** | Passer une vérification Cloudflare invisible. |
+| **Standard** | La vérification Cloudflare, puis accepter vos règles. |
+| **Strict** | Standard, plus un puzzle d'image. |
+| **Fortress** | Strict, plus un filtre d'ancienneté du compte et une question. |
+| **Custom** | Seulement les étapes que vous choisissez. |
+
+Avec **Custom**, choisissez parmi ces étapes. Elles s'exécutent toujours dans le même ordre, quel que soit l'ordre dans lequel vous les cochez.
+
+- **Ancienneté du compte** : le compte doit avoir au moins 1, 3, 7, 14, 30 ou 90 jours.
+- **Appui** : un appui pour continuer.
+- **Vérification Cloudflare** : une vérification invisible qui filtre les comptes automatisés.
+- **Puzzle d'image** : un puzzle visuel à résoudre.
+- **Question** : votre propre question avec 2 à 6 réponses au choix.
+- **Règles** : jusqu'à 15 règles courtes que le membre accepte. Elles sont distinctes des règles de votre communauté dans les [règles IA](/fr/ai-rules).
+
+## Qui est vérifié
+
+- **Everyone** : chaque nouveau membre passe la vérification.
+- **Risky only** : seuls les comptes que le bot signale comme à risque sont vérifiés. Les autres rejoignent sans friction.
+
+## Délai et échecs
+
+| Réglage | Options |
+| --- | --- |
+| **Temps pour réussir** | 1, 2, 5, 10 ou 30 minutes, 1 heure ou 24 heures |
+| **Mauvaises réponses autorisées** | De 1 à 5 |
+| **En cas d'échec** | **Remove** (ils peuvent revenir), **Ban** ou **Wait** pour qu'un admin décide |
+
+## Message de vérification
+
+Écrivez votre propre message ou gardez celui par défaut. `{name}`, `{chat}` et `{time}` sont remplis pour chaque membre. Activez le nettoyage pour supprimer le message une fois la vérification terminée.
+
+## Configuration sur Discord
+
+Sur Discord, les membres en attente de vérification sont retenus avec un rôle **Unverified** et appuient sur **Verify** dans un salon de vérification. Le bot peut créer le rôle et le salon et régler les permissions de chaque salon pour vous. Il a besoin de la permission Gérer les rôles, et de Gérer les salons pour créer le salon.
+
+Pour le faire à la main :
+
+<Steps>
+  <Step title="Créez le rôle">
+    Dans Discord, ouvrez **Paramètres du serveur** > **Rôles** et créez un rôle nommé Unverified.
+  </Step>
+  <Step title="Verrouillez les autres salons">
+    Pour chaque salon sauf celui de vérification, ouvrez **Modifier le salon** > **Permissions** et refusez **Envoyer des messages** à @Unverified.
+  </Step>
+  <Step title="Ouvrez le salon de vérification">
+    Dans le salon de vérification, autorisez **Voir le salon** pour @Unverified.
+  </Step>
+  <Step title="Choisissez le rôle">
+    Dans l'onglet **Verification**, choisissez le rôle dans **Hold with**.
+  </Step>
+</Steps>
+
+Choisissez ce que voient les membres retenus : **tout le serveur en lecture seule** ou **seulement le salon de vérification**.
+
+<Warning>
+  Si vous laissez **Hold with** vide, les membres sont retenus par une exclusion temporaire. Les membres exclus ne peuvent pas appuyer sur des boutons, donc ils ne peuvent se vérifier que par message privé, et ceux qui ont fermé leurs messages privés ne peuvent pas passer. Choisissez un rôle pour éviter cela.
+</Warning>
