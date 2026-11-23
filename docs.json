@@ -189,7 +189,8 @@
               "es/enforcement",
               "es/blocklists",
               "es/impersonation",
-              "es/surge-guard"
+              "es/surge-guard",
+              "es/verification"
             ]
           },
           {
@@ -249,7 +250,8 @@
               "fr/enforcement",
               "fr/blocklists",
               "fr/impersonation",
-              "fr/surge-guard"
+              "fr/surge-guard",
+              "fr/verification"
             ]
           },
           {
@@ -309,7 +311,8 @@
               "it/enforcement",
               "it/blocklists",
               "it/impersonation",
-              "it/surge-guard"
+              "it/surge-guard",
+              "it/verification"
             ]
           },
           {
@@ -369,7 +372,8 @@
               "hi/enforcement",
               "hi/blocklists",
               "hi/impersonation",
-              "hi/surge-guard"
+              "hi/surge-guard",
+              "hi/verification"
             ]
           },
           {
@@ -429,7 +433,8 @@
               "uk/enforcement",
               "uk/blocklists",
               "uk/impersonation",
-              "uk/surge-guard"
+              "uk/surge-guard",
+              "uk/verification"
             ]
           },
           {
@@ -489,7 +494,8 @@
               "zh-Hans/enforcement",
               "zh-Hans/blocklists",
               "zh-Hans/impersonation",
-              "zh-Hans/surge-guard"
+              "zh-Hans/surge-guard",
+              "zh-Hans/verification"
             ]
           },
           {
@@ -549,7 +555,8 @@
               "zh-Hant/enforcement",
               "zh-Hant/blocklists",
               "zh-Hant/impersonation",
-              "zh-Hant/surge-guard"
+              "zh-Hant/surge-guard",
+              "zh-Hant/verification"
             ]
           },
           {
@@ -609,7 +616,8 @@
               "ru/enforcement",
               "ru/blocklists",
               "ru/impersonation",
-              "ru/surge-guard"
+              "ru/surge-guard",
+              "ru/verification"
             ]
           },
           {

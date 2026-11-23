@@ -1,0 +1,74 @@
+---
+title: "Verifica"
+description: "Controlla i nuovi membri prima che possano scrivere nel tuo gruppo Telegram o server Discord, con preset che vanno da un solo tocco a un filtro sull'età dell'account e una domanda."
+---
+
+La verifica controlla chi entra prima che possa scrivere. Aprila dalla scheda **Verification** della pagina [Protezione](/it/protection) e attivala. Funziona su Telegram e Discord ed è inclusa in tutti i piani, anche quello gratuito.
+
+La verifica ferma bot e account usa e getta all'ingresso. Non giudica cosa fanno dopo i membri verificati. Per quello ci sono le [regole IA](/it/ai-rules), il [furto d'identità](/it/impersonation) e [Surge Guard](/it/surge-guard).
+
+## Preset
+
+Scegli un preset o crea i tuoi passaggi con **Custom**.
+
+| Preset | Cosa fanno i nuovi membri |
+| --- | --- |
+| **Light** | Un tocco. |
+| **Easy** | Superano un controllo Cloudflare invisibile. |
+| **Standard** | Il controllo Cloudflare e l'accettazione delle tue regole. |
+| **Strict** | Standard più un puzzle con immagine. |
+| **Fortress** | Strict più un filtro sull'età dell'account e una domanda. |
+| **Custom** | Solo i passaggi che scegli. |
+
+Con **Custom** scegli tra questi passaggi. Vengono sempre eseguiti nello stesso ordine, qualunque sia l'ordine in cui li selezioni.
+
+- **Età dell'account**: l'account deve avere almeno 1, 3, 7, 14, 30 o 90 giorni.
+- **Tocco**: un tocco per continuare.
+- **Controllo Cloudflare**: un controllo invisibile che filtra gli account automatizzati.
+- **Puzzle con immagine**: un puzzle visivo da risolvere.
+- **Domanda**: una tua domanda con 2-6 risposte tra cui scegliere.
+- **Regole**: fino a 15 regole brevi che il membro accetta. Sono separate dalle regole della community nelle [regole IA](/it/ai-rules).
+
+## Chi viene controllato
+
+- **Everyone**: ogni nuovo membro passa la verifica.
+- **Risky only**: vengono controllati solo gli account che il bot segnala come a rischio. Gli altri entrano senza attrito.
+
+## Tempi ed errori
+
+| Impostazione | Opzioni |
+| --- | --- |
+| **Tempo per superarla** | 1, 2, 5, 10 o 30 minuti, 1 ora o 24 ore |
+| **Risposte sbagliate consentite** | Da 1 a 5 |
+| **Se falliscono** | **Remove** (possono rientrare), **Ban** o **Wait** finché decide un admin |
+
+## Messaggio di verifica
+
+Scrivi il tuo messaggio o lascia quello predefinito. `{name}`, `{chat}` e `{time}` vengono compilati per ogni membro. Attiva la pulizia per eliminare il messaggio a verifica conclusa.
+
+## Configurazione su Discord
+
+Su Discord i membri in attesa di verifica vengono trattenuti con un ruolo **Unverified** e premono **Verify** in un canale di verifica. Il bot può creare il ruolo e il canale e impostare i permessi di tutti i canali per te. Gli serve il permesso Gestire i ruoli, e Gestire i canali per creare il canale.
+
+Per farlo a mano:
+
+<Steps>
+  <Step title="Crea il ruolo">
+    In Discord apri **Impostazioni server** > **Ruoli** e crea un ruolo chiamato Unverified.
+  </Step>
+  <Step title="Blocca gli altri canali">
+    Per ogni canale tranne quello di verifica apri **Modifica canale** > **Permessi** e nega **Inviare messaggi** a @Unverified.
+  </Step>
+  <Step title="Apri il canale di verifica">
+    Nel canale di verifica consenti **Visualizzare il canale** a @Unverified.
+  </Step>
+  <Step title="Scegli il ruolo">
+    Nella scheda **Verification** scegli il ruolo in **Hold with**.
+  </Step>
+</Steps>
+
+Scegli cosa vedono i membri trattenuti: **tutto il server in sola lettura** oppure **solo il canale di verifica**.
+
+<Warning>
+  Se lasci **Hold with** vuoto, i membri vengono trattenuti con un timeout. I membri in timeout non possono premere pulsanti, quindi possono verificarsi solo tramite messaggio diretto, e chi ha i messaggi diretti chiusi non può passare. Scegli un ruolo per evitarlo.
+</Warning>
