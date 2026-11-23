@@ -189,7 +189,8 @@
               "es/enforcement",
               "es/blocklists",
               "es/impersonation",
-              "es/surge-guard"
+              "es/surge-guard",
+              "es/verification"
             ]
           },
           {
