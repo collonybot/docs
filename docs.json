@@ -372,7 +372,8 @@
               "hi/enforcement",
               "hi/blocklists",
               "hi/impersonation",
-              "hi/surge-guard"
+              "hi/surge-guard",
+              "hi/verification"
             ]
           },
           {
@@ -493,7 +494,8 @@
               "zh-Hans/enforcement",
               "zh-Hans/blocklists",
               "zh-Hans/impersonation",
-              "zh-Hans/surge-guard"
+              "zh-Hans/surge-guard",
+              "zh-Hans/verification"
             ]
           },
           {
@@ -553,7 +555,8 @@
               "zh-Hant/enforcement",
               "zh-Hant/blocklists",
               "zh-Hant/impersonation",
-              "zh-Hant/surge-guard"
+              "zh-Hant/surge-guard",
+              "zh-Hant/verification"
             ]
           },
           {
