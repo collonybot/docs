@@ -432,7 +432,8 @@
               "uk/enforcement",
               "uk/blocklists",
               "uk/impersonation",
-              "uk/surge-guard"
+              "uk/surge-guard",
+              "uk/verification"
             ]
           },
           {
@@ -612,7 +613,8 @@
               "ru/enforcement",
               "ru/blocklists",
               "ru/impersonation",
-              "ru/surge-guard"
+              "ru/surge-guard",
+              "ru/verification"
             ]
           },
           {
