@@ -1,0 +1,81 @@
+---
+title: "Verification"
+description: "Check new members before they can post in your Telegram group or Discord server, with presets from a single tap to an account-age gate and a question."
+keywords:
+  - "verification"
+  - "new member verification"
+  - "captcha"
+  - "anti-bot"
+  - "discord verification"
+  - "telegram verification"
+---
+
+Verification checks people who join before they can post. Open it from the **Verification** tab on the [Protection](/protection) page and switch it on. It works on Telegram and Discord, and it is included on every plan, including Free.
+
+Verification stops bots and throwaway accounts at the door. It does not judge what verified members do later, which is what [AI rules](/ai-rules), [Impersonation](/impersonation) and [Surge Guard](/surge-guard) are for.
+
+## Presets
+
+Pick a preset, or build your own steps with **Custom**.
+
+| Preset | What new members do |
+| --- | --- |
+| **Light** | Tap once. |
+| **Easy** | Pass an invisible Cloudflare check. |
+| **Standard** | Pass the Cloudflare check and agree to your rules. |
+| **Strict** | Standard, plus a picture puzzle. |
+| **Fortress** | Strict, plus an account-age gate and a question. |
+| **Custom** | Only the steps you choose. |
+
+With **Custom**, choose from these steps. They always run in the same order, whatever order you pick them in.
+
+- **Account age**: the account must be at least 1, 3, 7, 14, 30 or 90 days old.
+- **Tap**: one tap to continue.
+- **Cloudflare check**: an invisible check that filters scripted accounts.
+- **Picture puzzle**: a visual puzzle to solve.
+- **Question**: your own question with 2 to 6 answers to choose from.
+- **Rules**: up to 15 short rules the member agrees to. These are separate from your community rules in [AI rules](/ai-rules).
+
+## Who gets checked
+
+- **Everyone**: every new member goes through verification.
+- **Risky only**: only accounts the bot flags as risky are checked. Everyone else joins without friction.
+
+## Timing and failures
+
+| Setting | Options |
+| --- | --- |
+| **Time to pass** | 1, 2, 5, 10 or 30 minutes, 1 hour or 24 hours |
+| **Wrong answers allowed** | 1 to 5 |
+| **If they fail** | **Remove** (they can rejoin), **Ban**, or **Wait** for an admin to decide |
+
+## Check message
+
+Write your own check message, or keep the default. `{name}`, `{chat}` and `{time}` are filled in for each member. Turn on cleanup to delete the check message once it is done.
+
+## Discord setup
+
+On Discord, members waiting for verification are held with an **Unverified** role and press **Verify** in a Verify channel. The bot can create the role and the Verify channel and set every channel's permissions for you. It needs the Manage Roles permission, and Manage Channels to create the channel.
+
+To set it up by hand instead:
+
+<Steps>
+  <Step title="Create the role">
+    In Discord, open **Server Settings** > **Roles** and create a role named Unverified.
+  </Step>
+  <Step title="Lock the other channels">
+    For every channel except the Verify channel, open **Edit channel** > **Permissions** and deny **Send messages** to @Unverified.
+  </Step>
+  <Step title="Open the Verify channel">
+    In the Verify channel, allow **View channel** for @Unverified.
+  </Step>
+  <Step title="Pick the role">
+    On the **Verification** tab, choose the role in **Hold with**.
+  </Step>
+</Steps>
+
+Choose what held members can see: the **whole server read-only**, or **only the Verify channel**.
+
+<Warning>
+  If you leave **Hold with** empty, members are held with a timeout instead. Timed-out members cannot press buttons, so they can only verify through a DM, and members with closed DMs cannot pass. Pick a role to avoid this.
+</Warning>

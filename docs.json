@@ -128,7 +128,8 @@
               "enforcement",
               "blocklists",
               "impersonation",
-              "surge-guard"
+              "surge-guard",
+              "verification"
             ]
           },
           {
